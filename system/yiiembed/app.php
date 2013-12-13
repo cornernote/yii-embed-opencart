@@ -41,7 +41,8 @@
  * Add to system/engine/front.php in the __construct() function, after "$this->registry = $registry;":
  * <pre>
  * Yii::createApplication('OcWebApplication');
- * //Yii::createApplication('OcWebApplication', require(DIR_SYSTEM . 'yiiembed/config/main.php')); // or pass in a Yii config array
+ * // or pass in a Yii config array, see Configuration section
+ * //Yii::createApplication('OcWebApplication', require(DIR_SYSTEM . 'yiiembed/config/main.php'));
  * </pre>
  *
  * Add to system/library/response.php in the output() function, before "echo $ouput;":
@@ -54,7 +55,11 @@
  *
  * Create a new Yii config file, for example "system/yiiembed/config/main.php":
  * <pre>
- * return array('id' => 'My OpenCart Yii App', 'preload' => array('log'), 'components' => array( ... ));
+ * return array(
+ *     'id' => 'My OpenCart Yii App',
+ *     'preload' => array('log'),
+ *     'components' => array( ... ),
+ * );
  * </pre>
  *
  * Add Yii constants to your OpenCart config.php, defaults shown below:
@@ -75,7 +80,9 @@
  *
  * Render Yii widgets:
  * <pre>
- * Yii::app()->controller->widget('zii.widgets.CDetailView', array('data' => array('hello' => 'world')));
+ * Yii::app()->controller->widget('zii.widgets.CDetailView', array(
+ *     'data' => array('hello' => 'world'),
+ * ));
  * </pre>
  *
  * Find and save a Customer:
