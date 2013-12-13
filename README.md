@@ -1,4 +1,4 @@
-# Yii-Embed for Opencart
+# Yii-Embed for OpenCart
 
 A lightweight Yii application embedded into OpenCart
 
