@@ -12,6 +12,7 @@ exception of not using Yii's routing and controllers to handle actions.
 - Yii is available from anywhere in OpenCart using Yii::app() or Yii::foobar
 - Autoload any of your Yii models and components
 - Widgets can be rendered and will auto-include their stylesheet and javascript files
+- Controllers and Modules are handled by the OpenCart not_found.php controller
 - Fancy error messages with stack dump
 
 The following Yii components are pre-configured to work in your OpenCart:
@@ -20,6 +21,7 @@ The following Yii components are pre-configured to work in your OpenCart:
 - `Yii::app()->controller` - [CController](http://www.yiiframework.com/doc/api/1.1/CController)
 - `Yii::app()->db` - [CDbConnection](http://www.yiiframework.com/doc/api/1.1/CDbConnection)
 - `Yii::app()->session` - [CHttpSession](http://www.yiiframework.com/doc/api/1.1/CHttpSession)
+- `Yii::app()->urlManager` - [CUrlManager](http://www.yiiframework.com/doc/api/1.1/CUrlManager)
 
 
 ## Installation
@@ -41,6 +43,15 @@ Add to `system/library/response.php` in the `output()` function, before `echo $o
 ```
 Yii::app()->clientScript->render($ouput);
 ```
+
+
+## Controllers (optional)
+
+Add to `catalog/controller/error/not_found.php` and `admin/controller/error/permission.php` at the
+top of the `index()` function, after `public function index() {`:
+<pre>
+Yii::app()->runController();
+</pre>
 
 
 ## Configuration (optional)
