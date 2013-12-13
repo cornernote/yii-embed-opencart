@@ -28,6 +28,7 @@
  * - Yii::app()->controller - CController
  * - Yii::app()->db - CDbConnection
  * - Yii::app()->session - CHttpSession
+ * - Yii::app()->urlManager - CUrlManager
  *
  *
  * ## Installation
@@ -50,6 +51,14 @@
  * Yii::app()->clientScript->render($ouput);
  * </pre>
  *
+ *
+ * ## Yii Controllers (optional)
+ *
+ * Add to catalog/controller/error/not_found.php and admin/controller/error/permission.php at the 
+ * top of the index() function, after "public function index() {":
+ * <pre>
+ * Yii::app()->runController();
+ * </pre>
  *
  * ## Configuration (optional)
  *
@@ -108,7 +117,7 @@ class OcWebApplication extends CWebApplication
      * Constructor.
      * @param mixed $config application configuration.
      *
-     * Overrides the parent with the following features:
+     * Overrides parent with the following features:
      * - Sets the application basePath to a folder named "yiiembed" inside your OpenCart application directory.
      */
     public function __construct($config = null)
@@ -123,7 +132,7 @@ class OcWebApplication extends CWebApplication
     /**
      * Initializes the application.
      *
-     * Overrides the parent with the following features:
+     * Overrides parent with the following features:
      * - Sets an alias to yiiembed.
      * - Adds yiiembed.components and yiiembed.models to the import list.
      * - Creates a new controller that may be used to render widgets and partial views.
@@ -138,12 +147,37 @@ class OcWebApplication extends CWebApplication
     }
 
     /**
+     * Creates the controller and performs an action based on the OpenCart route.
+     *
+     * Overrides parent with the following features:
+     * - If controller action does not exist then do not throw an exception, let OpenCart handle it.
+     */
+    public function runController()
+    {
+        // get route
+        $routeVar = $this->urlManager->routeVar;
+        $route = isset($_GET[$routeVar]) ? $_GET[$routeVar] : '';
+
+        try {
+            // run the controller
+            parent::runController($route);
+            $this->end();
+        } catch (Exception $e) {
+            // we expect it to fail if controller does not exist
+            // otherwise, rethrow the error
+            if (!isset($e->statusCode) || $e->statusCode != 404)
+                throw $e;
+        }
+    }
+
+    /**
      * Registers the core application components.
      *
-     * Overrides the parent with the following features:
+     * Overrides parent with the following features:
      * - DbConnection is configured using OpenCart DB_* constants defined in config.php.
      * - AssetManager path and url are configured using the $_SERVER['SCRIPT_*'] superglobals.
      * - ClientScript has jquery disabled to prevent conflicts.
+     * - UrlManager routeVar is set to the same as OpenCart.
      */
     protected function registerCoreComponents()
     {
@@ -173,6 +207,9 @@ class OcWebApplication extends CWebApplication
                     'jquery.js' => false,
                     'jquery.min.js' => false,
                 ),
+            ),
+            'urlManager' => array(
+                'class' => 'OcUrlManager',
             ),
         );
         $this->setComponents($components);
