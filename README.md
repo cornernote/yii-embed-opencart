@@ -24,7 +24,7 @@ The following Yii components are pre-configured to work in your OpenCart:
 
 ## Installation
 
-Add to system/startup.php at the bottom:
+Add to `system/startup.php` at the bottom:
 ```
 require_once(DIR_SYSTEM . 'yii/framework/yii.php');
 require_once(DIR_SYSTEM . 'yiiembed/app.php');
