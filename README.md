@@ -43,8 +43,7 @@ Yii::app()->clientScript->render($ouput);
 
 ## Controllers (optional)
 
-Add to `catalog/controller/error/not_found.php` and `admin/controller/error/permission.php` at the
-top of the `index()` function, after `public function index() {`:
+Add to `catalog/controller/error/not_found.php` and `admin/controller/error/permission.php` at the top of the `index()` function, after `public function index() {`:
 <pre>
 Yii::app()->runController();
 </pre>
@@ -74,8 +73,7 @@ define('YII_ENABLE_ERROR_HANDLER', true);
 
 ## Generating Gii Code (optional)
 
-You can use Yii's awesome code generator from your OpenCart admin, just 
-like you can in any other Yii app!
+You can use Yii's awesome code generator from your OpenCart admin, just like you can in any other Yii app!
 
 - Ensure you followed the optional Controllers section for the admin.
 - Navigate to your admin your.dom.ain/admin/index.php?route=gii
