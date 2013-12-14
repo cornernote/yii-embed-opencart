@@ -20,6 +20,7 @@
  * - Yii is available from anywhere in OpenCart using Yii::app() or Yii::foobar
  * - Autoload any of your Yii models and components
  * - Widgets can be rendered and will auto-include their stylesheet and javascript files
+ * - Controllers and Modules are handled by the OpenCart not_found.php controller
  * - Fancy error messages with stack dump
  *
  * The following Yii components are pre-configured to work in your OpenCart:
@@ -54,7 +55,7 @@
  *
  * ## Yii Controllers (optional)
  *
- * Add to catalog/controller/error/not_found.php and admin/controller/error/permission.php at the 
+ * Add to catalog/controller/error/not_found.php and admin/controller/error/permission.php at the
  * top of the index() function, after "public function index() {":
  * <pre>
  * Yii::app()->runController();
@@ -210,6 +211,14 @@ class OcWebApplication extends CWebApplication
             ),
             'urlManager' => array(
                 'class' => 'OcUrlManager',
+            ),
+            'widgetFactory' => array(
+                'class' => 'CWidgetFactory',
+                'widgets' => array(
+                    'CActiveForm' => array(
+                        'htmlOptions' => array('encode' => false),
+                    ),
+                ),
             ),
         );
         $this->setComponents($components);
