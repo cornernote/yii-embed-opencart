@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcProductToCategory
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{product_to_category}}
@@ -18,9 +20,14 @@
  * @method OcProductToCategory with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcProductToCategory extends OcActiveRecord
+class OcProductToCategory extends CActiveRecord
 {
 
     /**
@@ -28,7 +35,7 @@ class OcProductToCategory extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcProductToCategory the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }
@@ -46,8 +53,7 @@ class OcProductToCategory extends OcActiveRecord
      */
     public function relations()
     {
-        return array(
-        );
+        return array();
     }
 
     /**

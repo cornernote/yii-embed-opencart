@@ -1,14 +1,5 @@
 <?php
 /**
- * OcWebApplication
- *
- * @author Brett O'Donnell <cornernote@gmail.com>
- * @link https://github.com/cornernote/yiiembed-opencart
- * @copyright 2013 Mr PHP <info@mrphp.com.au>
- * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
- */
-
-/**
  * OcWebApplication is a Yii Application for embedding Yii into OpenCart.
  *
  * It can be used in all the same ways as a normal Yii application with the
@@ -109,6 +100,11 @@
  * ## Class Information
  *
  * @method static OcWebApplication app()
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
  *
  */
 class OcWebApplication extends CWebApplication

@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcCustomerIp
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{customer_ip}}
@@ -23,9 +25,14 @@
  * @method OcCustomerIp with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcCustomerIp extends OcActiveRecord
+class OcCustomerIp extends CActiveRecord
 {
 
     /**
@@ -33,7 +40,7 @@ class OcCustomerIp extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcCustomerIp the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }

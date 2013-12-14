@@ -1,13 +1,4 @@
 <?php
-/**
- * OcGiiModule
- *
- * @author Brett O'Donnell <cornernote@gmail.com>
- * @link https://github.com/cornernote/yiiembed-opencart
- * @copyright 2013 Mr PHP <info@mrphp.com.au>
- * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
- */
-
 Yii::import('system.gii.GiiModule');
 
 /**
@@ -30,6 +21,14 @@ Yii::import('system.gii.GiiModule');
  *
  * To generate code visit the following URL in your store admin:
  * https://www.dom.ain/admin/index.php?route=gii
+ *
+ *
+ * ## Class Information
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
  *
  */
 class OcGiiModule extends GiiModule

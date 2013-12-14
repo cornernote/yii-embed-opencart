@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcReturnAction
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{return_action}}
@@ -23,9 +25,14 @@
  * @method OcReturnAction with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcReturnAction extends OcActiveRecord
+class OcReturnAction extends CActiveRecord
 {
 
     /**
@@ -33,7 +40,7 @@ class OcReturnAction extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcReturnAction the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }

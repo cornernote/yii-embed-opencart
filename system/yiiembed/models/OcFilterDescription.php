@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcFilterDescription
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{filter_description}}
@@ -20,9 +22,14 @@
  * @method OcFilterDescription with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcFilterDescription extends OcActiveRecord
+class OcFilterDescription extends CActiveRecord
 {
 
     /**
@@ -30,7 +37,7 @@ class OcFilterDescription extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcFilterDescription the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }
@@ -48,8 +55,7 @@ class OcFilterDescription extends OcActiveRecord
      */
     public function relations()
     {
-        return array(
-        );
+        return array();
     }
 
     /**

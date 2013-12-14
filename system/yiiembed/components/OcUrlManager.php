@@ -1,15 +1,11 @@
 <?php
 /**
- * OcUrlManager
+ * OcUrlManager manages the URLs of Yii within OpenCart.
  *
  * @author Brett O'Donnell <cornernote@gmail.com>
  * @link https://github.com/cornernote/yiiembed-opencart
  * @copyright 2013 Mr PHP <info@mrphp.com.au>
  * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
- */
-
-/**
- * OcUrlManager manages the URLs of Yii within OpenCart.
  */
 class OcUrlManager extends CUrlManager
 {

@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcFilterGroup
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{filter_group}}
@@ -22,9 +24,14 @@
  * @method OcFilterGroup with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcFilterGroup extends OcActiveRecord
+class OcFilterGroup extends CActiveRecord
 {
 
     /**
@@ -32,7 +39,7 @@ class OcFilterGroup extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcFilterGroup the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }

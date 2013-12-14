@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcVoucherHistory
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{voucher_history}}
@@ -25,9 +27,14 @@
  * @method OcVoucherHistory with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcVoucherHistory extends OcActiveRecord
+class OcVoucherHistory extends CActiveRecord
 {
 
     /**
@@ -35,7 +42,7 @@ class OcVoucherHistory extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcVoucherHistory the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }

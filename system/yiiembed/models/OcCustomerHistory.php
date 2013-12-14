@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcCustomerHistory
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{customer_history}}
@@ -23,9 +25,14 @@
  * @method OcCustomerHistory with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcCustomerHistory extends OcActiveRecord
+class OcCustomerHistory extends CActiveRecord
 {
 
     /**
@@ -33,7 +40,7 @@ class OcCustomerHistory extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcCustomerHistory the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }

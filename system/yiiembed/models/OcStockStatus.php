@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcStockStatus
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{stock_status}}
@@ -23,9 +25,14 @@
  * @method OcStockStatus with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcStockStatus extends OcActiveRecord
+class OcStockStatus extends CActiveRecord
 {
 
     /**
@@ -33,7 +40,7 @@ class OcStockStatus extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcStockStatus the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }

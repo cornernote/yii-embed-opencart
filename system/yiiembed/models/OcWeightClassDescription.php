@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcWeightClassDescription
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{weight_class_description}}
@@ -20,9 +22,14 @@
  * @method OcWeightClassDescription with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcWeightClassDescription extends OcActiveRecord
+class OcWeightClassDescription extends CActiveRecord
 {
 
     /**
@@ -30,7 +37,7 @@ class OcWeightClassDescription extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcWeightClassDescription the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }
@@ -48,8 +55,7 @@ class OcWeightClassDescription extends OcActiveRecord
      */
     public function relations()
     {
-        return array(
-        );
+        return array();
     }
 
     /**

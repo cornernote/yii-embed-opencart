@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcInformationToStore
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{information_to_store}}
@@ -18,9 +20,14 @@
  * @method OcInformationToStore with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcInformationToStore extends OcActiveRecord
+class OcInformationToStore extends CActiveRecord
 {
 
     /**
@@ -28,7 +35,7 @@ class OcInformationToStore extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcInformationToStore the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }
@@ -46,8 +53,7 @@ class OcInformationToStore extends OcActiveRecord
      */
     public function relations()
     {
-        return array(
-        );
+        return array();
     }
 
     /**

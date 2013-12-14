@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcGeoZone
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{geo_zone}}
@@ -25,9 +27,14 @@
  * @method OcGeoZone with() with()
  *
  * --- END GenerateProperties ---
+ *
+ * @author Brett O'Donnell <cornernote@gmail.com>
+ * @link https://github.com/cornernote/yiiembed-opencart
+ * @copyright 2013 Mr PHP <info@mrphp.com.au>
+ * @license BSD-3-Clause https://raw.github.com/cornernote/yiiembed-opencart/master/LICENSE
+ *
  */
-
-class OcGeoZone extends OcActiveRecord
+class OcGeoZone extends CActiveRecord
 {
 
     /**
@@ -35,7 +42,7 @@ class OcGeoZone extends OcActiveRecord
      * @param string $className active record class name.
      * @return OcGeoZone the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }
