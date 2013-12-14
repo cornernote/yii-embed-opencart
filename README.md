@@ -95,3 +95,17 @@ if ($customer) {
     $customer->save();
 }
 ```
+
+
+## Generating Gii Code
+
+You can use Yii's awesome code generator from your OpenCart admin, just 
+like you can in any other Yii app!
+
+- Ensure you followed the optional Controllers section for the admin.
+- Navigate to https://www.dom.ain/admin/index.php?route=gii
+- Use the PrefixModel Generator to generate all your models in one action.
+- To generate models that can be used by catalog and admin set Model Path to `yiiembed.models`.
+- Select the Code Template `yiiembed` to generate models the same as ours.
+- To tune the Gii configuration or security access edit `admin/yiiembed/config/main.php`.
+
