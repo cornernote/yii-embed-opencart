@@ -10,7 +10,7 @@ exception of not using Yii's routing and controllers to handle actions.
 ## Features
 
 - Yii is available from anywhere in OpenCart using Yii::app() or Yii::foobar
-- Models are already available to represent all OpenCart tables, including relations and docs for phpStorm
+- Models are built that represent all OpenCart tables including relations
 - Generate models for all your tables in one step using Gii
 - Autoload any of your Yii models and components
 - Widgets can be rendered and will auto-include their stylesheet and javascript files
