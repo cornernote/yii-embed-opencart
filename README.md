@@ -3,10 +3,6 @@
 A lightweight Yii application embedded into OpenCart
 
 
-It can be used in all the same ways as a normal Yii application with the
-exception of not using Yii's routing and controllers to handle actions.
-
-
 ## Features
 
 - Yii is available from anywhere in OpenCart using Yii::app() or Yii::foobar
