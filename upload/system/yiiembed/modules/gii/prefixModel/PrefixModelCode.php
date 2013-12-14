@@ -21,7 +21,7 @@ class PrefixModelCode extends CCodeModel
     /**
      * @var
      */
-    public $modelPrefix;
+    public $modelPrefix = 'Oc';
     /**
      * @var
      */

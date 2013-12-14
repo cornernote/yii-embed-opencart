@@ -34,8 +34,6 @@
  * Add to system/engine/front.php in the __construct() function, after "$this->registry = $registry;":
  * <pre>
  * Yii::createApplication('OcWebApplication');
- * // or pass in a Yii config array, see Configuration section
- * //Yii::createApplication('OcWebApplication', require(DIR_SYSTEM . 'yiiembed/config/main.php'));
  * </pre>
  *
  * Add to system/library/response.php in the output() function, before "echo $ouput;":
@@ -54,12 +52,14 @@
  *
  * ## Configuration (optional)
  *
- * Create a new Yii config file, for example "system/yiiembed/config/main.php":
+ * Edit the Yii config files in `catalog/yiiembed/config/main.php` and 
+ * `admin/yiiembed/config/main.php`, for example:
  * <pre>
  * return array(
  *     'id' => 'My OpenCart Yii App',
  *     'preload' => array('log'),
  *     'components' => array( ... ),
+ *     'modules' => array( ... ),
  * );
  * </pre>
  *

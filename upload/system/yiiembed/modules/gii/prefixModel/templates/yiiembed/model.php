@@ -18,9 +18,9 @@
  */
 echo "<?php\n";
 echo "/**\n";
-echo " * --- BEGIN GenerateProperties ---\n";
+echo " * " . $modelClass . "\n";
 echo " *\n";
-echo " * this should be replaced by generated properties using YdGeneratePropertiesAction\n";
+echo " * --- BEGIN GenerateProperties ---\n";
 echo " *\n";
 echo " * --- END GenerateProperties ---\n";
 echo " */\n";
@@ -56,18 +56,20 @@ echo "    {\n";
 echo "        return '" . $tableName . "';\n";
 echo "    }\n";
 echo "\n";
-echo "    /**\n";
-echo "     * @return array relational rules.\n";
-echo "     */\n";
-echo "    public function relations()\n";
-echo "    {\n";
-echo "        return array(\n";
-foreach ($relations as $name => $relation) {
-    echo "            '$name' => $relation,\n";
+if ($relations) {
+	echo "    /**\n";
+	echo "     * @return array relational rules.\n";
+	echo "     */\n";
+	echo "    public function relations()\n";
+	echo "    {\n";
+	echo "        return array(\n";
+	foreach ($relations as $name => $relation) {
+		echo "            '$name' => $relation,\n";
+	}
+	echo "        );\n";
+	echo "    }\n";
+	echo "\n";
 }
-echo "        );\n";
-echo "    }\n";
-echo "\n";
 echo "    /**\n";
 echo "     * @return array customized attribute labels (name=>label)\n";
 echo "     */\n";
