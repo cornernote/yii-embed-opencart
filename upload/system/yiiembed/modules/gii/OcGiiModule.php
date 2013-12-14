@@ -20,7 +20,7 @@ Yii::import('system.gii.GiiModule');
  * </pre>
  *
  * To generate code visit the following URL in your store admin:
- * https://www.dom.ain/admin/index.php?route=gii
+ * your.dom.ain/admin/index.php?route=gii
  *
  *
  * ## Class Information
