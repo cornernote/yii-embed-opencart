@@ -116,16 +116,19 @@ class OcWebApplication extends CWebApplication
      *
      * Overrides parent with the following features:
      * - Sets the application basePath to a folder named "yiiembed" inside your OpenCart application directory.
+	 * - If not provided $config will be loaded from yiiembed/config/main.php in your application.
      */
     public function __construct($config = null)
     {
+		if ($config === null)
+			$config = require(DIR_APPLICATION . 'yiiembed/config/main.php');
         if (is_string($config))
             $config = require($config);
         if (empty($config['basePath']))
             $config['basePath'] = DIR_APPLICATION . 'yiiembed';
         parent::__construct($config);
     }
-
+	
     /**
      * Initializes the application.
      *
