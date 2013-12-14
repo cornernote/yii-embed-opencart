@@ -80,6 +80,7 @@ You can use Yii's awesome code generator from your OpenCart admin, just like you
 - Use the PrefixModel Generator to generate all your models in one action.
 - To generate models that can be used by catalog and admin set Model Path to `yiiembed.models`.
 - Select the Code Template `yiiembed` to generate models the same as ours.
+- Use the ModelDoc Generator to replace the phpdoc blocks in your models.
 - To tune the Gii configuration or security access edit `admin/yiiembed/config/main.php`.
 
 
