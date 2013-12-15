@@ -2,9 +2,6 @@
 
 A lightweight Yii application embedded into OpenCart
 
-![Catalog](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/catalog.png)
-![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/admin.png)
-
 
 ## Features
 
@@ -24,6 +21,19 @@ The following Yii components are pre-configured to work in your OpenCart:
 - `Yii::app()->db` - [CDbConnection](http://www.yiiframework.com/doc/api/1.1/CDbConnection)
 - `Yii::app()->session` - [CHttpSession](http://www.yiiframework.com/doc/api/1.1/CHttpSession)
 - `Yii::app()->urlManager` - [CUrlManager](http://www.yiiframework.com/doc/api/1.1/CUrlManager)
+
+
+## Screenshots
+
+### Catalog
+
+`index.php?route=site/index`:
+![Catalog](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/catalog.png)
+
+### Admin
+
+`admin/index.php?route=site/index`:
+![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/admin.png)
 
 
 ## Installation
