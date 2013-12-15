@@ -25,11 +25,19 @@ class OcWebApplication extends CWebApplication
     public $registry;
 
     /**
+     * @var string Contains the current version of Yii-Embed for OpenCart.
+     * @see getVersion
+     */
+    private $_version = 'dev';
+
+    /**
      * @return string The current version of Yii-Embed for OpenCart.
      */
     public function getVersion()
     {
-        return '1.0.0';
+        if ($this->_version)
+            return $this->_version;
+        return $this->_version = file_get_contents(__FILE__ . DIRECTORY_SEPARATOR . 'version.txt');
     }
 
     /**
