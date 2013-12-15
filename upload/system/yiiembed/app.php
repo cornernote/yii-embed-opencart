@@ -37,7 +37,7 @@ class OcWebApplication extends CWebApplication
     {
         if ($this->_version)
             return $this->_version;
-        return $this->_version = file_get_contents(__FILE__ . DIRECTORY_SEPARATOR . 'version.txt');
+        return $this->_version = trim(file_get_contents(__FILE__ . DIRECTORY_SEPARATOR . 'version.txt'));
     }
 
     /**
