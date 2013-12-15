@@ -12,10 +12,12 @@ $this->breadcrumbs = array(
 
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
-<p>You may change the content of this page by modifying the following two files:</p>
+<p>You may change the content of this page by modifying the following files:</p>
 <ul>
     <li>View file: <code><?php echo __FILE__; ?></code></li>
-    <li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
+    <li>Layout file: <code><?php echo realpath($this->getLayoutFile($this->layout)); ?></code></li>
+    <li>Container file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
 </ul>
 
-<p>You can use Yii's CHtml::link to <?php echo CHtml::link('generate links', array('site/page', 'view' => 'about')); ?>.</p>
+<p>Browse to the <?php echo CHtml::link('examples page', array('site/page', 'view' => 'examples')); ?> to see more
+    examples of Yii-Embed for OpenCart.</p>
