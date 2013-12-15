@@ -15,7 +15,7 @@ class OcWebApplication extends CWebApplication
     /**
      * @var string the application name. Defaults to 'Yii-Embed for OpenCart'.
      */
-    public $name = 'Yii-Embed for OpenCart';
+    public $name;
 
     /**
      * @var Front is used to store OpenCart's controller
@@ -37,13 +37,12 @@ class OcWebApplication extends CWebApplication
      */
     public function __construct($config = null)
     {
-        if ($config === null)
-            $config = require(DIR_APPLICATION . 'yiiembed/config/main.php');
-        if (is_string($config))
-            $config = require($config);
-        if (empty($config['basePath']))
-            $config['basePath'] = DIR_APPLICATION . 'yiiembed';
-        parent::__construct($config);
+        $app = require(DIR_APPLICATION . 'yiiembed/config/main.php');
+        if (empty($app['basePath']))
+            $app['basePath'] = DIR_APPLICATION . 'yiiembed';
+        $app['front'] = $config['front'];
+        $app['registry'] = $config['registry'];
+        parent::__construct($app);
     }
 
     /**
@@ -54,6 +53,7 @@ class OcWebApplication extends CWebApplication
      * - Adds application.components and application.models to the import list.
      * - Adds yiiembed.components and yiiembed.models to the import list.
      * - Creates a new controller that may be used to render widgets and partial views.
+     * - Sets the site name to be the same as the OpenCart store.
      * - Adds the token into the homeUrl for admin token requests.
      */
     protected function init()
@@ -65,6 +65,8 @@ class OcWebApplication extends CWebApplication
         Yii::import('yiiembed.components.*');
         Yii::import('yiiembed.models.*');
         $this->setController(new CController('site'));
+        if ($this->name === null)
+            $this->name = $this->registry->get('config')->get('config_name');
         if (isset($_GET['token']))
             $this->setHomeUrl($this->getHomeUrl() . '?token=' . $_GET['token']);
     }

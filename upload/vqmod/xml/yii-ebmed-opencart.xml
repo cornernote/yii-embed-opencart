@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modification>
-        <id>yii-embed-opencart</id>
-        <version>1.0</version>
-        <vqmver>2.X</vqmver>
-        <author>info@mrphp.com.au</author>
-        <file name="system/startup.php">
-                <operation info="yii-embed-opencart">
-                        <search position="before"><![CDATA[?>]]></search>
-                        <add><![CDATA[
+    <id>yii-embed-opencart</id>
+    <version>1.0</version>
+    <vqmver>2.X</vqmver>
+    <author>info@mrphp.com.au</author>
+    <file name="system/startup.php">
+        <operation info="yii-embed-opencart">
+            <search position="before"><![CDATA[?>]]></search>
+            <add><![CDATA[
 // BEGIN Yii-Embed
 require_once(DIR_SYSTEM . 'yii/framework/yii.php');
 require_once(DIR_SYSTEM . 'yiiembed/app.php');
 // END Yii-Embed
                         ]]></add>
-                </operation>
-        </file>
-        <file name="system/engine/front.php">
-                <operation info="yii-embed-opencart">
-                        <search position="after"><![CDATA[$this->registry = $registry;]]></search>
-                        <add><![CDATA[
+        </operation>
+    </file>
+    <file name="system/engine/front.php">
+        <operation info="yii-embed-opencart">
+            <search position="after"><![CDATA[$this->registry = $registry;]]></search>
+            <add><![CDATA[
 // BEGIN Yii-Embed
-Yii::createApplication('OcWebApplication');
-Yii::app()->front = $this;
-Yii::app()->registry = $registry;
+Yii::createApplication('OcWebApplication', array('registry' => $registry, 'front' => $this));
 // END Yii-Embed
                         ]]></add>
-                </operation>
-        </file>
-        <file name="system/library/response.php">
-                <operation info="yii-embed-opencart">
-                        <search position="before"><![CDATA[echo $ouput;]]></search>
-                        <add><![CDATA[
+        </operation>
+    </file>
+    <file name="system/library/response.php">
+        <operation info="yii-embed-opencart">
+            <search position="before"><![CDATA[echo $ouput;]]></search>
+            <add><![CDATA[
 // BEGIN Yii-Embed
 Yii::app()->clientScript->render($ouput);
 // END Yii-Embed
                         ]]></add>
-                </operation>
-        </file>
-        <file name="catalog/controller/error/not_found.php,admin/controller/error/not_found.php,admin/controller/error/permission.php">
-                <operation info="yii-embed-opencart">
-                        <search position="after"><![CDATA[public function index() {]]></search>
-                        <add><![CDATA[
+        </operation>
+    </file>
+    <file name="catalog/controller/error/not_found.php,admin/controller/error/not_found.php,admin/controller/error/permission.php">
+        <operation info="yii-embed-opencart">
+            <search position="after"><![CDATA[public function index() {]]></search>
+            <add><![CDATA[
 // BEGIN Yii-Embed
 Yii::app()->runController();
 // END Yii-Embed
                         ]]></add>
-                </operation>
-        </file>
+        </operation>
+    </file>
 </modification>
