@@ -2,7 +2,7 @@
 
 A lightweight [Yii](http://www.yiiframework.com/) application embedded into [OpenCart](http://www.opencart.com/)
 
-![OpenCart](https://raw.github.com/cornernote/yii-embed-opencart/master/image/opencart.png) ![Yii Framework](https://raw.github.com/cornernote/yii-embed-opencart/master/image/yii.png)
+![Yii Framework](https://raw.github.com/cornernote/yii-embed-opencart/master/image/yii.png) ![OpenCart](https://raw.github.com/cornernote/yii-embed-opencart/master/image/opencart.png)
 
 
 ## Contents
