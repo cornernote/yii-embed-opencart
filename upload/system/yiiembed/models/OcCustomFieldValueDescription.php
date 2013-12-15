@@ -10,10 +10,6 @@
  * @property integer $custom_field_id
  * @property string $name
  *
- * Relations
- * @property OcCustomField $customField
- * @property OcLanguage $language
- *
  * @see CActiveRecord
  * @method OcCustomFieldValueDescription find() find($condition, array $params = array())
  * @method OcCustomFieldValueDescription findByPk() findByPk($pk, $condition = '', array $params = array())
@@ -41,7 +37,7 @@ class OcCustomFieldValueDescription extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCustomFieldValueDescription the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -52,17 +48,6 @@ class OcCustomFieldValueDescription extends CActiveRecord
     public function tableName()
     {
         return '{{custom_field_value_description}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array(
-            'customField' => array(self::BELONGS_TO, 'OcCustomField', 'custom_field_id'),
-            'language' => array(self::BELONGS_TO, 'OcLanguage', 'language_id'),
-        );
     }
 
     /**

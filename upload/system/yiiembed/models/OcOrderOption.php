@@ -15,10 +15,10 @@
  * @property string $type
  *
  * Relations
- * @property OcProductOptionValue $productOptionValue
  * @property OcOrder $order
  * @property OcOrderProduct $orderProduct
  * @property OcProductOption $productOption
+ * @property OcProductOptionValue $productOptionValue
  *
  * @see CActiveRecord
  * @method OcOrderOption find() find($condition, array $params = array())
@@ -47,7 +47,7 @@ class OcOrderOption extends CActiveRecord
      * @param string $className active record class name.
      * @return OcOrderOption the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -66,10 +66,10 @@ class OcOrderOption extends CActiveRecord
     public function relations()
     {
         return array(
-            'productOptionValue' => array(self::BELONGS_TO, 'OcProductOptionValue', 'product_option_value_id'),
             'order' => array(self::BELONGS_TO, 'OcOrder', 'order_id'),
             'orderProduct' => array(self::BELONGS_TO, 'OcOrderProduct', 'order_product_id'),
             'productOption' => array(self::BELONGS_TO, 'OcProductOption', 'product_option_id'),
+            'productOptionValue' => array(self::BELONGS_TO, 'OcProductOptionValue', 'product_option_value_id'),
         );
     }
 

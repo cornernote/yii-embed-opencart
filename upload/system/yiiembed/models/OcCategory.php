@@ -16,9 +16,10 @@
  * @property string $date_modified
  *
  * Relations
+ * @property OcParent $parent
  * @property OcLanguage[] $languages
  * @property OcFilter[] $filters
- * @property OcCategoryPath[] $categoryPaths
+ * @property OcPath[] $paths
  * @property OcStore[] $stores
  * @property OcCoupon[] $coupons
  * @property OcProduct[] $products
@@ -50,7 +51,7 @@ class OcCategory extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCategory the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -69,9 +70,10 @@ class OcCategory extends CActiveRecord
     public function relations()
     {
         return array(
+            'parent' => array(self::BELONGS_TO, 'OcParent', 'parent_id'),
             'languages' => array(self::MANY_MANY, 'OcLanguage', '{{category_description}}(category_id, language_id)'),
             'filters' => array(self::MANY_MANY, 'OcFilter', '{{category_filter}}(category_id, filter_id)'),
-            'categoryPaths' => array(self::HAS_MANY, 'OcCategoryPath', 'category_id'),
+            'paths' => array(self::MANY_MANY, 'OcPath', '{{category_path}}(category_id, path_id)'),
             'stores' => array(self::MANY_MANY, 'OcStore', '{{category_to_store}}(category_id, store_id)'),
             'coupons' => array(self::MANY_MANY, 'OcCoupon', '{{coupon_category}}(category_id, coupon_id)'),
             'products' => array(self::MANY_MANY, 'OcProduct', '{{product_to_category}}(category_id, product_id)'),

@@ -35,7 +35,7 @@ class OcCategoryFilter extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCategoryFilter the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -46,14 +46,6 @@ class OcCategoryFilter extends CActiveRecord
     public function tableName()
     {
         return '{{category_filter}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
     }
 
     /**

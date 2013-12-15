@@ -38,9 +38,8 @@
  * @property string $date_added
  *
  * Relations
- * @property OcZone $zone
  * @property OcCountry $country
- * @property OcAffiliateActivity[] $affiliateActivities
+ * @property OcZone $zone
  * @property OcAffiliateTransaction[] $affiliateTransactions
  * @property OcOrder[] $orders
  *
@@ -71,7 +70,7 @@ class OcAffiliate extends CActiveRecord
      * @param string $className active record class name.
      * @return OcAffiliate the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -90,9 +89,8 @@ class OcAffiliate extends CActiveRecord
     public function relations()
     {
         return array(
-            'zone' => array(self::BELONGS_TO, 'OcZone', 'zone_id'),
             'country' => array(self::BELONGS_TO, 'OcCountry', 'country_id'),
-            'affiliateActivities' => array(self::HAS_MANY, 'OcAffiliateActivity', 'affiliate_id'),
+            'zone' => array(self::BELONGS_TO, 'OcZone', 'zone_id'),
             'affiliateTransactions' => array(self::HAS_MANY, 'OcAffiliateTransaction', 'affiliate_id'),
             'orders' => array(self::HAS_MANY, 'OcOrder', 'affiliate_id'),
         );

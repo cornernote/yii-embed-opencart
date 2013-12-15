@@ -36,7 +36,7 @@ class OcAttributeDescription extends CActiveRecord
      * @param string $className active record class name.
      * @return OcAttributeDescription the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -47,14 +47,6 @@ class OcAttributeDescription extends CActiveRecord
     public function tableName()
     {
         return '{{attribute_description}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
     }
 
     /**

@@ -37,7 +37,7 @@ class OcCustomerGroupDescription extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCustomerGroupDescription the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -48,14 +48,6 @@ class OcCustomerGroupDescription extends CActiveRecord
     public function tableName()
     {
         return '{{customer_group_description}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
     }
 
     /**

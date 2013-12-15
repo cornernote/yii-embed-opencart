@@ -13,9 +13,9 @@
  * @property string $date_added
  *
  * Relations
- * @property OcAddress $customer
  * @property OcCoupon $coupon
  * @property OcOrder $order
+ * @property OcCustomer $customer
  *
  * @see CActiveRecord
  * @method OcCouponHistory find() find($condition, array $params = array())
@@ -44,7 +44,7 @@ class OcCouponHistory extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCouponHistory the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -63,9 +63,9 @@ class OcCouponHistory extends CActiveRecord
     public function relations()
     {
         return array(
-            'customer' => array(self::BELONGS_TO, 'OcAddress', 'customer_id'),
             'coupon' => array(self::BELONGS_TO, 'OcCoupon', 'coupon_id'),
             'order' => array(self::BELONGS_TO, 'OcOrder', 'order_id'),
+            'customer' => array(self::BELONGS_TO, 'OcCustomer', 'customer_id'),
         );
     }
 

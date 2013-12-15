@@ -12,9 +12,8 @@
  * @property integer $status
  *
  * Relations
+ * @property OcAddress[] $addresses
  * @property OcAffiliate[] $affiliates
- * @property OcOrder[] $orders
- * @property OcOrder[] $orders1
  * @property OcCountry $country
  * @property OcZoneToGeoZone[] $zoneToGeoZones
  *
@@ -45,7 +44,7 @@ class OcZone extends CActiveRecord
      * @param string $className active record class name.
      * @return OcZone the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -64,9 +63,8 @@ class OcZone extends CActiveRecord
     public function relations()
     {
         return array(
+            'addresses' => array(self::HAS_MANY, 'OcAddress', 'zone_id'),
             'affiliates' => array(self::HAS_MANY, 'OcAffiliate', 'zone_id'),
-            'orders' => array(self::HAS_MANY, 'OcOrder', 'payment_zone_id'),
-            'orders1' => array(self::HAS_MANY, 'OcOrder', 'shipping_zone_id'),
             'country' => array(self::BELONGS_TO, 'OcCountry', 'country_id'),
             'zoneToGeoZones' => array(self::HAS_MANY, 'OcZoneToGeoZone', 'zone_id'),
         );

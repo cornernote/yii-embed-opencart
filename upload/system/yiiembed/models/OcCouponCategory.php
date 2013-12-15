@@ -35,7 +35,7 @@ class OcCouponCategory extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCouponCategory the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -46,14 +46,6 @@ class OcCouponCategory extends CActiveRecord
     public function tableName()
     {
         return '{{coupon_category}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
     }
 
     /**

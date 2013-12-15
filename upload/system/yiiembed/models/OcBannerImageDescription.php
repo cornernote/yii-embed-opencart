@@ -10,10 +10,6 @@
  * @property integer $banner_id
  * @property string $title
  *
- * Relations
- * @property OcBanner $banner
- * @property OcLanguage $language
- *
  * @see CActiveRecord
  * @method OcBannerImageDescription find() find($condition, array $params = array())
  * @method OcBannerImageDescription findByPk() findByPk($pk, $condition = '', array $params = array())
@@ -26,13 +22,8 @@
  * @method OcBannerImageDescription with() with()
  *
  * --- END GenerateProperties ---
- *
- * @author Brett O'Donnell <cornernote@gmail.com>
- * @link https://github.com/cornernote/yii-embed-opencart
- * @copyright 2013 Mr PHP <info@mrphp.com.au>
- * @license BSD-3-Clause https://raw.github.com/cornernote/yii-embed-opencart/master/LICENSE
- *
  */
+
 class OcBannerImageDescription extends CActiveRecord
 {
 
@@ -41,7 +32,7 @@ class OcBannerImageDescription extends CActiveRecord
      * @param string $className active record class name.
      * @return OcBannerImageDescription the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -52,17 +43,6 @@ class OcBannerImageDescription extends CActiveRecord
     public function tableName()
     {
         return '{{banner_image_description}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array(
-            'banner' => array(self::BELONGS_TO, 'OcBanner', 'banner_id'),
-            'language' => array(self::BELONGS_TO, 'OcLanguage', 'language_id'),
-        );
     }
 
     /**

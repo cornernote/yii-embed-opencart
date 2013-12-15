@@ -13,8 +13,8 @@
  * @property string $date_added
  *
  * Relations
- * @property OcOrderStatus $orderStatus
  * @property OcOrder $order
+ * @property OcOrderStatus $orderStatus
  *
  * @see CActiveRecord
  * @method OcOrderHistory find() find($condition, array $params = array())
@@ -43,7 +43,7 @@ class OcOrderHistory extends CActiveRecord
      * @param string $className active record class name.
      * @return OcOrderHistory the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -62,8 +62,8 @@ class OcOrderHistory extends CActiveRecord
     public function relations()
     {
         return array(
-            'orderStatus' => array(self::BELONGS_TO, 'OcOrderStatus', 'order_status_id'),
             'order' => array(self::BELONGS_TO, 'OcOrder', 'order_id'),
+            'orderStatus' => array(self::BELONGS_TO, 'OcOrderStatus', 'order_status_id'),
         );
     }
 

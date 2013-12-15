@@ -8,7 +8,7 @@
  * @property integer $product_option_id
  * @property integer $product_id
  * @property integer $option_id
- * @property string $value
+ * @property string $option_value
  * @property integer $required
  *
  * Relations
@@ -44,7 +44,7 @@ class OcProductOption extends CActiveRecord
      * @param string $className active record class name.
      * @return OcProductOption the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -79,7 +79,7 @@ class OcProductOption extends CActiveRecord
             'product_option_id' => Yii::t('app', 'Product Option'),
             'product_id' => Yii::t('app', 'Product'),
             'option_id' => Yii::t('app', 'Option'),
-            'value' => Yii::t('app', 'Value'),
+            'option_value' => Yii::t('app', 'Option Value'),
             'required' => Yii::t('app', 'Required'),
         );
     }

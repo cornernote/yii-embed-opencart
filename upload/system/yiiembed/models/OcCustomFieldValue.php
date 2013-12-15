@@ -11,6 +11,9 @@
  *
  * Relations
  * @property OcCustomField $customField
+ * @property OcLanguage[] $languages
+ * @property OcCustomerField[] $customerFields
+ * @property OcOrderField[] $orderFields
  *
  * @see CActiveRecord
  * @method OcCustomFieldValue find() find($condition, array $params = array())
@@ -39,7 +42,7 @@ class OcCustomFieldValue extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCustomFieldValue the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -59,6 +62,9 @@ class OcCustomFieldValue extends CActiveRecord
     {
         return array(
             'customField' => array(self::BELONGS_TO, 'OcCustomField', 'custom_field_id'),
+            'languages' => array(self::MANY_MANY, 'OcLanguage', '{{custom_field_value_description}}(custom_field_value_id, language_id)'),
+            'customerFields' => array(self::HAS_MANY, 'OcCustomerField', 'custom_field_value_id'),
+            'orderFields' => array(self::HAS_MANY, 'OcOrderField', 'custom_field_value_id'),
         );
     }
 

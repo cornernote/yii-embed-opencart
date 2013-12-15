@@ -18,10 +18,11 @@
  * @property string $email
  * @property string $telephone
  * @property string $fax
- * @property string $custom_field
  * @property string $payment_firstname
  * @property string $payment_lastname
  * @property string $payment_company
+ * @property string $payment_company_id
+ * @property string $payment_tax_id
  * @property string $payment_address_1
  * @property string $payment_address_2
  * @property string $payment_city
@@ -31,7 +32,6 @@
  * @property string $payment_zone
  * @property integer $payment_zone_id
  * @property string $payment_address_format
- * @property string $payment_custom_field
  * @property string $payment_method
  * @property string $payment_code
  * @property string $shipping_firstname
@@ -46,7 +46,6 @@
  * @property string $shipping_zone
  * @property integer $shipping_zone_id
  * @property string $shipping_address_format
- * @property string $shipping_custom_field
  * @property string $shipping_method
  * @property string $shipping_code
  * @property string $comment
@@ -54,8 +53,6 @@
  * @property integer $order_status_id
  * @property integer $affiliate_id
  * @property number $commission
- * @property integer $marketing_id
- * @property string $tracking
  * @property integer $language_id
  * @property integer $currency_id
  * @property string $currency_code
@@ -70,23 +67,26 @@
  * Relations
  * @property OcAffiliateTransaction[] $affiliateTransactions
  * @property OcCouponHistory[] $couponHistories
+ * @property OcCustomerReward[] $customerRewards
  * @property OcCustomerTransaction[] $customerTransactions
- * @property OcCurrency $currency
  * @property OcStore $store
- * @property OcMarketing $marketing
- * @property OcLanguage $language
  * @property OcCustomer $customer
  * @property OcCustomerGroup $customerGroup
- * @property OcCountry $paymentCountry
- * @property OcZone $paymentZone
- * @property OcCountry $shippingCountry
- * @property OcZone $shippingZone
+ * @property OcPaymentCountry $paymentCountry
+ * @property OcPaymentZone $paymentZone
+ * @property OcShippingCountry $shippingCountry
+ * @property OcShippingZone $shippingZone
  * @property OcOrderStatus $orderStatus
  * @property OcAffiliate $affiliate
+ * @property OcLanguage $language
+ * @property OcCurrency $currency
+ * @property OcOrderDownload[] $orderDownloads
+ * @property OcOrderField[] $orderFields
  * @property OcOrderFraud $orderFraud
  * @property OcOrderHistory[] $orderHistories
  * @property OcOrderOption[] $orderOptions
  * @property OcOrderProduct[] $orderProducts
+ * @property OcOrderRecurring[] $orderRecurrings
  * @property OcOrderTotal[] $orderTotals
  * @property OcOrderVoucher[] $orderVouchers
  * @property OcReturn[] $returns
@@ -120,7 +120,7 @@ class OcOrder extends CActiveRecord
      * @param string $className active record class name.
      * @return OcOrder the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -141,23 +141,26 @@ class OcOrder extends CActiveRecord
         return array(
             'affiliateTransactions' => array(self::HAS_MANY, 'OcAffiliateTransaction', 'order_id'),
             'couponHistories' => array(self::HAS_MANY, 'OcCouponHistory', 'order_id'),
+            'customerRewards' => array(self::HAS_MANY, 'OcCustomerReward', 'order_id'),
             'customerTransactions' => array(self::HAS_MANY, 'OcCustomerTransaction', 'order_id'),
-            'currency' => array(self::BELONGS_TO, 'OcCurrency', 'currency_id'),
             'store' => array(self::BELONGS_TO, 'OcStore', 'store_id'),
-            'marketing' => array(self::BELONGS_TO, 'OcMarketing', 'marketing_id'),
-            'language' => array(self::BELONGS_TO, 'OcLanguage', 'language_id'),
             'customer' => array(self::BELONGS_TO, 'OcCustomer', 'customer_id'),
             'customerGroup' => array(self::BELONGS_TO, 'OcCustomerGroup', 'customer_group_id'),
-            'paymentCountry' => array(self::BELONGS_TO, 'OcCountry', 'payment_country_id'),
-            'paymentZone' => array(self::BELONGS_TO, 'OcZone', 'payment_zone_id'),
-            'shippingCountry' => array(self::BELONGS_TO, 'OcCountry', 'shipping_country_id'),
-            'shippingZone' => array(self::BELONGS_TO, 'OcZone', 'shipping_zone_id'),
+            'paymentCountry' => array(self::BELONGS_TO, 'OcPaymentCountry', 'payment_country_id'),
+            'paymentZone' => array(self::BELONGS_TO, 'OcPaymentZone', 'payment_zone_id'),
+            'shippingCountry' => array(self::BELONGS_TO, 'OcShippingCountry', 'shipping_country_id'),
+            'shippingZone' => array(self::BELONGS_TO, 'OcShippingZone', 'shipping_zone_id'),
             'orderStatus' => array(self::BELONGS_TO, 'OcOrderStatus', 'order_status_id'),
             'affiliate' => array(self::BELONGS_TO, 'OcAffiliate', 'affiliate_id'),
+            'language' => array(self::BELONGS_TO, 'OcLanguage', 'language_id'),
+            'currency' => array(self::BELONGS_TO, 'OcCurrency', 'currency_id'),
+            'orderDownloads' => array(self::HAS_MANY, 'OcOrderDownload', 'order_id'),
+            'orderFields' => array(self::HAS_MANY, 'OcOrderField', 'order_id'),
             'orderFraud' => array(self::HAS_ONE, 'OcOrderFraud', 'order_id'),
             'orderHistories' => array(self::HAS_MANY, 'OcOrderHistory', 'order_id'),
             'orderOptions' => array(self::HAS_MANY, 'OcOrderOption', 'order_id'),
             'orderProducts' => array(self::HAS_MANY, 'OcOrderProduct', 'order_id'),
+            'orderRecurrings' => array(self::HAS_MANY, 'OcOrderRecurring', 'order_id'),
             'orderTotals' => array(self::HAS_MANY, 'OcOrderTotal', 'order_id'),
             'orderVouchers' => array(self::HAS_MANY, 'OcOrderVoucher', 'order_id'),
             'returns' => array(self::HAS_MANY, 'OcReturn', 'order_id'),
@@ -185,10 +188,11 @@ class OcOrder extends CActiveRecord
             'email' => Yii::t('app', 'Email'),
             'telephone' => Yii::t('app', 'Telephone'),
             'fax' => Yii::t('app', 'Fax'),
-            'custom_field' => Yii::t('app', 'Custom Field'),
             'payment_firstname' => Yii::t('app', 'Payment Firstname'),
             'payment_lastname' => Yii::t('app', 'Payment Lastname'),
             'payment_company' => Yii::t('app', 'Payment Company'),
+            'payment_company_id' => Yii::t('app', 'Payment Company'),
+            'payment_tax_id' => Yii::t('app', 'Payment Tax'),
             'payment_address_1' => Yii::t('app', 'Payment Address 1'),
             'payment_address_2' => Yii::t('app', 'Payment Address 2'),
             'payment_city' => Yii::t('app', 'Payment City'),
@@ -198,7 +202,6 @@ class OcOrder extends CActiveRecord
             'payment_zone' => Yii::t('app', 'Payment Zone'),
             'payment_zone_id' => Yii::t('app', 'Payment Zone'),
             'payment_address_format' => Yii::t('app', 'Payment Address Format'),
-            'payment_custom_field' => Yii::t('app', 'Payment Custom Field'),
             'payment_method' => Yii::t('app', 'Payment Method'),
             'payment_code' => Yii::t('app', 'Payment Code'),
             'shipping_firstname' => Yii::t('app', 'Shipping Firstname'),
@@ -213,7 +216,6 @@ class OcOrder extends CActiveRecord
             'shipping_zone' => Yii::t('app', 'Shipping Zone'),
             'shipping_zone_id' => Yii::t('app', 'Shipping Zone'),
             'shipping_address_format' => Yii::t('app', 'Shipping Address Format'),
-            'shipping_custom_field' => Yii::t('app', 'Shipping Custom Field'),
             'shipping_method' => Yii::t('app', 'Shipping Method'),
             'shipping_code' => Yii::t('app', 'Shipping Code'),
             'comment' => Yii::t('app', 'Comment'),
@@ -221,8 +223,6 @@ class OcOrder extends CActiveRecord
             'order_status_id' => Yii::t('app', 'Order Status'),
             'affiliate_id' => Yii::t('app', 'Affiliate'),
             'commission' => Yii::t('app', 'Commission'),
-            'marketing_id' => Yii::t('app', 'Marketing'),
-            'tracking' => Yii::t('app', 'Tracking'),
             'language_id' => Yii::t('app', 'Language'),
             'currency_id' => Yii::t('app', 'Currency'),
             'currency_code' => Yii::t('app', 'Currency Code'),

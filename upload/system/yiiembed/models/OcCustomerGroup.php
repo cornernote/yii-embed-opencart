@@ -7,14 +7,19 @@
  * Table {{customer_group}}
  * @property integer $customer_group_id
  * @property integer $approval
+ * @property integer $company_id_display
+ * @property integer $company_id_required
+ * @property integer $tax_id_display
+ * @property integer $tax_id_required
  * @property integer $sort_order
  *
  * Relations
- * @property OcCustomFieldCustomerGroup[] $customFieldCustomerGroups
+ * @property OcCustomField[] $customFields
  * @property OcCustomer[] $customers
  * @property OcLanguage[] $languages
  * @property OcOrder[] $orders
  * @property OcProductDiscount[] $productDiscounts
+ * @property OcProductProfile[] $productProfiles
  * @property OcProductReward[] $productRewards
  * @property OcProductSpecial[] $productSpecials
  * @property OcTaxRate[] $taxRates
@@ -46,7 +51,7 @@ class OcCustomerGroup extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCustomerGroup the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -65,11 +70,12 @@ class OcCustomerGroup extends CActiveRecord
     public function relations()
     {
         return array(
-            'customFieldCustomerGroups' => array(self::HAS_MANY, 'OcCustomFieldCustomerGroup', 'customer_group_id'),
+            'customFields' => array(self::MANY_MANY, 'OcCustomField', '{{custom_field_to_customer_group}}(customer_group_id, custom_field_id)'),
             'customers' => array(self::HAS_MANY, 'OcCustomer', 'customer_group_id'),
             'languages' => array(self::MANY_MANY, 'OcLanguage', '{{customer_group_description}}(customer_group_id, language_id)'),
             'orders' => array(self::HAS_MANY, 'OcOrder', 'customer_group_id'),
             'productDiscounts' => array(self::HAS_MANY, 'OcProductDiscount', 'customer_group_id'),
+            'productProfiles' => array(self::HAS_MANY, 'OcProductProfile', 'customer_group_id'),
             'productRewards' => array(self::HAS_MANY, 'OcProductReward', 'customer_group_id'),
             'productSpecials' => array(self::HAS_MANY, 'OcProductSpecial', 'customer_group_id'),
             'taxRates' => array(self::MANY_MANY, 'OcTaxRate', '{{tax_rate_to_customer_group}}(customer_group_id, tax_rate_id)'),
@@ -84,6 +90,10 @@ class OcCustomerGroup extends CActiveRecord
         return array(
             'customer_group_id' => Yii::t('app', 'Customer Group'),
             'approval' => Yii::t('app', 'Approval'),
+            'company_id_display' => Yii::t('app', 'Company Id Display'),
+            'company_id_required' => Yii::t('app', 'Company Id Required'),
+            'tax_id_display' => Yii::t('app', 'Tax Id Display'),
+            'tax_id_required' => Yii::t('app', 'Tax Id Required'),
             'sort_order' => Yii::t('app', 'Sort Order'),
         );
     }

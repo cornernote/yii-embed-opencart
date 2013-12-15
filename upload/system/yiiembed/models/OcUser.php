@@ -13,7 +13,6 @@
  * @property string $firstname
  * @property string $lastname
  * @property string $email
- * @property string $image
  * @property string $code
  * @property string $ip
  * @property integer $status
@@ -49,7 +48,7 @@ class OcUser extends CActiveRecord
      * @param string $className active record class name.
      * @return OcUser the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -86,7 +85,6 @@ class OcUser extends CActiveRecord
             'firstname' => Yii::t('app', 'Firstname'),
             'lastname' => Yii::t('app', 'Lastname'),
             'email' => Yii::t('app', 'Email'),
-            'image' => Yii::t('app', 'Image'),
             'code' => Yii::t('app', 'Code'),
             'ip' => Yii::t('app', 'Ip'),
             'status' => Yii::t('app', 'Status'),

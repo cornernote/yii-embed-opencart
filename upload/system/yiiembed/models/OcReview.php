@@ -16,8 +16,8 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcCustomer $customer
  * @property OcProduct $product
+ * @property OcCustomer $customer
  *
  * @see CActiveRecord
  * @method OcReview find() find($condition, array $params = array())
@@ -46,7 +46,7 @@ class OcReview extends CActiveRecord
      * @param string $className active record class name.
      * @return OcReview the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -65,8 +65,8 @@ class OcReview extends CActiveRecord
     public function relations()
     {
         return array(
-            'customer' => array(self::BELONGS_TO, 'OcCustomer', 'customer_id'),
             'product' => array(self::BELONGS_TO, 'OcProduct', 'product_id'),
+            'customer' => array(self::BELONGS_TO, 'OcCustomer', 'customer_id'),
         );
     }
 

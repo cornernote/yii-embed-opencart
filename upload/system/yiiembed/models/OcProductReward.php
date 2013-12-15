@@ -11,8 +11,8 @@
  * @property integer $points
  *
  * Relations
- * @property OcCustomerGroup $customerGroup
  * @property OcProduct $product
+ * @property OcCustomerGroup $customerGroup
  *
  * @see CActiveRecord
  * @method OcProductReward find() find($condition, array $params = array())
@@ -41,7 +41,7 @@ class OcProductReward extends CActiveRecord
      * @param string $className active record class name.
      * @return OcProductReward the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -60,8 +60,8 @@ class OcProductReward extends CActiveRecord
     public function relations()
     {
         return array(
-            'customerGroup' => array(self::BELONGS_TO, 'OcCustomerGroup', 'customer_group_id'),
             'product' => array(self::BELONGS_TO, 'OcProduct', 'product_id'),
+            'customerGroup' => array(self::BELONGS_TO, 'OcCustomerGroup', 'customer_group_id'),
         );
     }
 

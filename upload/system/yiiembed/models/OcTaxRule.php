@@ -12,8 +12,8 @@
  * @property integer $priority
  *
  * Relations
- * @property OcTaxRate $taxRate
  * @property OcTaxClass $taxClass
+ * @property OcTaxRate $taxRate
  *
  * @see CActiveRecord
  * @method OcTaxRule find() find($condition, array $params = array())
@@ -42,7 +42,7 @@ class OcTaxRule extends CActiveRecord
      * @param string $className active record class name.
      * @return OcTaxRule the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -61,8 +61,8 @@ class OcTaxRule extends CActiveRecord
     public function relations()
     {
         return array(
-            'taxRate' => array(self::BELONGS_TO, 'OcTaxRate', 'tax_rate_id'),
             'taxClass' => array(self::BELONGS_TO, 'OcTaxClass', 'tax_class_id'),
+            'taxRate' => array(self::BELONGS_TO, 'OcTaxRate', 'tax_rate_id'),
         );
     }
 

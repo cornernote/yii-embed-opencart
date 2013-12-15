@@ -13,8 +13,8 @@
  * @property string $date_added
  *
  * Relations
- * @property OcReturnStatus $returnStatus
  * @property OcReturn $return
+ * @property OcReturnStatus $returnStatus
  *
  * @see CActiveRecord
  * @method OcReturnHistory find() find($condition, array $params = array())
@@ -43,7 +43,7 @@ class OcReturnHistory extends CActiveRecord
      * @param string $className active record class name.
      * @return OcReturnHistory the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -62,8 +62,8 @@ class OcReturnHistory extends CActiveRecord
     public function relations()
     {
         return array(
-            'returnStatus' => array(self::BELONGS_TO, 'OcReturnStatus', 'return_status_id'),
             'return' => array(self::BELONGS_TO, 'OcReturn', 'return_id'),
+            'returnStatus' => array(self::BELONGS_TO, 'OcReturnStatus', 'return_status_id'),
         );
     }
 

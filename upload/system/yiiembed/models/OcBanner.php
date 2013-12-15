@@ -1,5 +1,7 @@
 <?php
 /**
+ * OcBanner
+ *
  * --- BEGIN GenerateProperties ---
  *
  * Table {{banner}}
@@ -9,7 +11,6 @@
  *
  * Relations
  * @property OcBannerImage[] $bannerImages
- * @property OcBannerImageDescription[] $bannerImageDescriptions
  *
  * @see CActiveRecord
  * @method OcBanner find() find($condition, array $params = array())
@@ -38,7 +39,7 @@ class OcBanner extends CActiveRecord
      * @param string $className active record class name.
      * @return OcBanner the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -58,7 +59,6 @@ class OcBanner extends CActiveRecord
     {
         return array(
             'bannerImages' => array(self::HAS_MANY, 'OcBannerImage', 'banner_id'),
-            'bannerImageDescriptions' => array(self::HAS_MANY, 'OcBannerImageDescription', 'banner_id'),
         );
     }
 

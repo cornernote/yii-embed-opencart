@@ -21,6 +21,7 @@
  * @property OcOrder[] $orders
  * @property OcProduct[] $products
  * @property OcProduct[] $products1
+ * @property OcProduct[] $products2
  * @property OcSetting[] $settings
  *
  * @see CActiveRecord
@@ -50,7 +51,7 @@ class OcStore extends CActiveRecord
      * @param string $className active record class name.
      * @return OcStore the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -77,8 +78,9 @@ class OcStore extends CActiveRecord
             'layoutRoutes' => array(self::HAS_MANY, 'OcLayoutRoute', 'store_id'),
             'manufacturers' => array(self::MANY_MANY, 'OcManufacturer', '{{manufacturer_to_store}}(store_id, manufacturer_id)'),
             'orders' => array(self::HAS_MANY, 'OcOrder', 'store_id'),
-            'products' => array(self::MANY_MANY, 'OcProduct', '{{product_to_layout}}(store_id, product_id)'),
-            'products1' => array(self::MANY_MANY, 'OcProduct', '{{product_to_store}}(store_id, product_id)'),
+            'products' => array(self::MANY_MANY, 'OcProduct', '{{product_recurring}}(store_id, product_id)'),
+            'products1' => array(self::MANY_MANY, 'OcProduct', '{{product_to_layout}}(store_id, product_id)'),
+            'products2' => array(self::MANY_MANY, 'OcProduct', '{{product_to_store}}(store_id, product_id)'),
             'settings' => array(self::HAS_MANY, 'OcSetting', 'store_id'),
         );
     }

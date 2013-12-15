@@ -13,8 +13,8 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcZone $zone
  * @property OcCountry $country
+ * @property OcZone $zone
  * @property OcGeoZone $geoZone
  *
  * @see CActiveRecord
@@ -44,7 +44,7 @@ class OcZoneToGeoZone extends CActiveRecord
      * @param string $className active record class name.
      * @return OcZoneToGeoZone the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -63,8 +63,8 @@ class OcZoneToGeoZone extends CActiveRecord
     public function relations()
     {
         return array(
-            'zone' => array(self::BELONGS_TO, 'OcZone', 'zone_id'),
             'country' => array(self::BELONGS_TO, 'OcCountry', 'country_id'),
+            'zone' => array(self::BELONGS_TO, 'OcZone', 'zone_id'),
             'geoZone' => array(self::BELONGS_TO, 'OcGeoZone', 'geo_zone_id'),
         );
     }

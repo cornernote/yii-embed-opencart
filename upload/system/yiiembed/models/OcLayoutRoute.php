@@ -11,8 +11,8 @@
  * @property string $route
  *
  * Relations
- * @property OcStore $store
  * @property OcLayout $layout
+ * @property OcStore $store
  *
  * @see CActiveRecord
  * @method OcLayoutRoute find() find($condition, array $params = array())
@@ -41,7 +41,7 @@ class OcLayoutRoute extends CActiveRecord
      * @param string $className active record class name.
      * @return OcLayoutRoute the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -60,8 +60,8 @@ class OcLayoutRoute extends CActiveRecord
     public function relations()
     {
         return array(
-            'store' => array(self::BELONGS_TO, 'OcStore', 'store_id'),
             'layout' => array(self::BELONGS_TO, 'OcLayout', 'layout_id'),
+            'store' => array(self::BELONGS_TO, 'OcStore', 'store_id'),
         );
     }
 

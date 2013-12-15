@@ -9,10 +9,10 @@
  * @property integer $banner_id
  * @property string $link
  * @property string $image
- * @property integer $sort_order
  *
  * Relations
  * @property OcBanner $banner
+ * @property OcLanguage[] $languages
  *
  * @see CActiveRecord
  * @method OcBannerImage find() find($condition, array $params = array())
@@ -41,7 +41,7 @@ class OcBannerImage extends CActiveRecord
      * @param string $className active record class name.
      * @return OcBannerImage the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -61,6 +61,7 @@ class OcBannerImage extends CActiveRecord
     {
         return array(
             'banner' => array(self::BELONGS_TO, 'OcBanner', 'banner_id'),
+            'languages' => array(self::MANY_MANY, 'OcLanguage', '{{banner_image_description}}(banner_image_id, language_id)'),
         );
     }
 
@@ -74,7 +75,6 @@ class OcBannerImage extends CActiveRecord
             'banner_id' => Yii::t('app', 'Banner'),
             'link' => Yii::t('app', 'Link'),
             'image' => Yii::t('app', 'Image'),
-            'sort_order' => Yii::t('app', 'Sort Order'),
         );
     }
 

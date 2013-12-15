@@ -10,17 +10,19 @@
  * @property string $firstname
  * @property string $lastname
  * @property string $company
+ * @property string $company_id
+ * @property string $tax_id
  * @property string $address_1
  * @property string $address_2
  * @property string $city
  * @property string $postcode
  * @property integer $country_id
  * @property integer $zone_id
- * @property string $custom_field
  *
  * Relations
  * @property OcCustomer $customer
- * @property OcCouponHistory[] $couponHistories
+ * @property OcCountry $country
+ * @property OcZone $zone
  * @property OcCustomer[] $customers
  *
  * @see CActiveRecord
@@ -50,7 +52,7 @@ class OcAddress extends CActiveRecord
      * @param string $className active record class name.
      * @return OcAddress the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -70,7 +72,8 @@ class OcAddress extends CActiveRecord
     {
         return array(
             'customer' => array(self::BELONGS_TO, 'OcCustomer', 'customer_id'),
-            'couponHistories' => array(self::HAS_MANY, 'OcCouponHistory', 'customer_id'),
+            'country' => array(self::BELONGS_TO, 'OcCountry', 'country_id'),
+            'zone' => array(self::BELONGS_TO, 'OcZone', 'zone_id'),
             'customers' => array(self::HAS_MANY, 'OcCustomer', 'address_id'),
         );
     }
@@ -86,13 +89,14 @@ class OcAddress extends CActiveRecord
             'firstname' => Yii::t('app', 'Firstname'),
             'lastname' => Yii::t('app', 'Lastname'),
             'company' => Yii::t('app', 'Company'),
+            'company_id' => Yii::t('app', 'Company'),
+            'tax_id' => Yii::t('app', 'Tax'),
             'address_1' => Yii::t('app', 'Address 1'),
             'address_2' => Yii::t('app', 'Address 2'),
             'city' => Yii::t('app', 'City'),
             'postcode' => Yii::t('app', 'Postcode'),
             'country_id' => Yii::t('app', 'Country'),
             'zone_id' => Yii::t('app', 'Zone'),
-            'custom_field' => Yii::t('app', 'Custom Field'),
         );
     }
 

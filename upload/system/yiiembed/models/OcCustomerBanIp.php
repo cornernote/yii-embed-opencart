@@ -35,7 +35,7 @@ class OcCustomerBanIp extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCustomerBanIp the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -46,14 +46,6 @@ class OcCustomerBanIp extends CActiveRecord
     public function tableName()
     {
         return '{{customer_ban_ip}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
     }
 
     /**

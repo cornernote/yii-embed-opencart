@@ -8,14 +8,17 @@
  * @property integer $custom_field_id
  * @property string $type
  * @property string $value
- * @property string $storage
- * @property integer $status
+ * @property integer $required
+ * @property string $location
+ * @property integer $position
  * @property integer $sort_order
  *
  * Relations
  * @property OcLanguage[] $languages
+ * @property OcCustomerGroup[] $customerGroups
  * @property OcCustomFieldValue[] $customFieldValues
- * @property OcCustomFieldValueDescription[] $customFieldValueDescriptions
+ * @property OcCustomerField[] $customerFields
+ * @property OcOrderField[] $orderFields
  *
  * @see CActiveRecord
  * @method OcCustomField find() find($condition, array $params = array())
@@ -44,7 +47,7 @@ class OcCustomField extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCustomField the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -64,8 +67,10 @@ class OcCustomField extends CActiveRecord
     {
         return array(
             'languages' => array(self::MANY_MANY, 'OcLanguage', '{{custom_field_description}}(custom_field_id, language_id)'),
+            'customerGroups' => array(self::MANY_MANY, 'OcCustomerGroup', '{{custom_field_to_customer_group}}(custom_field_id, customer_group_id)'),
             'customFieldValues' => array(self::HAS_MANY, 'OcCustomFieldValue', 'custom_field_id'),
-            'customFieldValueDescriptions' => array(self::HAS_MANY, 'OcCustomFieldValueDescription', 'custom_field_id'),
+            'customerFields' => array(self::HAS_MANY, 'OcCustomerField', 'custom_field_id'),
+            'orderFields' => array(self::HAS_MANY, 'OcOrderField', 'custom_field_id'),
         );
     }
 
@@ -78,8 +83,9 @@ class OcCustomField extends CActiveRecord
             'custom_field_id' => Yii::t('app', 'Custom Field'),
             'type' => Yii::t('app', 'Type'),
             'value' => Yii::t('app', 'Value'),
-            'storage' => Yii::t('app', 'Storage'),
-            'status' => Yii::t('app', 'Status'),
+            'required' => Yii::t('app', 'Required'),
+            'location' => Yii::t('app', 'Location'),
+            'position' => Yii::t('app', 'Position'),
             'sort_order' => Yii::t('app', 'Sort Order'),
         );
     }

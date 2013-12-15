@@ -17,9 +17,10 @@
  * @property integer $reward
  *
  * Relations
+ * @property OcOrderDownload[] $orderDownloads
  * @property OcOrderOption[] $orderOptions
- * @property OcProduct $product
  * @property OcOrder $order
+ * @property OcProduct $product
  *
  * @see CActiveRecord
  * @method OcOrderProduct find() find($condition, array $params = array())
@@ -48,7 +49,7 @@ class OcOrderProduct extends CActiveRecord
      * @param string $className active record class name.
      * @return OcOrderProduct the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -67,9 +68,10 @@ class OcOrderProduct extends CActiveRecord
     public function relations()
     {
         return array(
+            'orderDownloads' => array(self::HAS_MANY, 'OcOrderDownload', 'order_product_id'),
             'orderOptions' => array(self::HAS_MANY, 'OcOrderOption', 'order_product_id'),
-            'product' => array(self::BELONGS_TO, 'OcProduct', 'product_id'),
             'order' => array(self::BELONGS_TO, 'OcOrder', 'order_id'),
+            'product' => array(self::BELONGS_TO, 'OcProduct', 'product_id'),
         );
     }
 

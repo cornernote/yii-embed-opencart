@@ -19,9 +19,9 @@
  * @property number $amount
  *
  * Relations
- * @property OcVoucherTheme $voucherTheme
  * @property OcOrder $order
  * @property OcVoucher $voucher
+ * @property OcVoucherTheme $voucherTheme
  *
  * @see CActiveRecord
  * @method OcOrderVoucher find() find($condition, array $params = array())
@@ -50,7 +50,7 @@ class OcOrderVoucher extends CActiveRecord
      * @param string $className active record class name.
      * @return OcOrderVoucher the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -69,9 +69,9 @@ class OcOrderVoucher extends CActiveRecord
     public function relations()
     {
         return array(
-            'voucherTheme' => array(self::BELONGS_TO, 'OcVoucherTheme', 'voucher_theme_id'),
             'order' => array(self::BELONGS_TO, 'OcOrder', 'order_id'),
             'voucher' => array(self::BELONGS_TO, 'OcVoucher', 'voucher_id'),
+            'voucherTheme' => array(self::BELONGS_TO, 'OcVoucherTheme', 'voucher_theme_id'),
         );
     }
 

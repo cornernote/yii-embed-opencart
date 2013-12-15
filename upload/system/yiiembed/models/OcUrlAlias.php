@@ -36,7 +36,7 @@ class OcUrlAlias extends CActiveRecord
      * @param string $className active record class name.
      * @return OcUrlAlias the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -47,14 +47,6 @@ class OcUrlAlias extends CActiveRecord
     public function tableName()
     {
         return '{{url_alias}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
     }
 
     /**

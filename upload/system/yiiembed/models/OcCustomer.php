@@ -19,7 +19,6 @@
  * @property integer $newsletter
  * @property integer $address_id
  * @property integer $customer_group_id
- * @property string $custom_field
  * @property string $ip
  * @property integer $status
  * @property integer $approved
@@ -28,10 +27,11 @@
  *
  * Relations
  * @property OcAddress[] $addresses
- * @property OcCustomerGroup $customerGroup
+ * @property OcCouponHistory[] $couponHistories
  * @property OcStore $store
  * @property OcAddress $address
- * @property OcCustomerActivity[] $customerActivities
+ * @property OcCustomerGroup $customerGroup
+ * @property OcCustomerField[] $customerFields
  * @property OcCustomerHistory[] $customerHistories
  * @property OcCustomerIp[] $customerIps
  * @property OcCustomerOnline[] $customerOnlines
@@ -69,7 +69,7 @@ class OcCustomer extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCustomer the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -89,10 +89,11 @@ class OcCustomer extends CActiveRecord
     {
         return array(
             'addresses' => array(self::HAS_MANY, 'OcAddress', 'customer_id'),
-            'customerGroup' => array(self::BELONGS_TO, 'OcCustomerGroup', 'customer_group_id'),
+            'couponHistories' => array(self::HAS_MANY, 'OcCouponHistory', 'customer_id'),
             'store' => array(self::BELONGS_TO, 'OcStore', 'store_id'),
             'address' => array(self::BELONGS_TO, 'OcAddress', 'address_id'),
-            'customerActivities' => array(self::HAS_MANY, 'OcCustomerActivity', 'customer_id'),
+            'customerGroup' => array(self::BELONGS_TO, 'OcCustomerGroup', 'customer_group_id'),
+            'customerFields' => array(self::HAS_MANY, 'OcCustomerField', 'customer_id'),
             'customerHistories' => array(self::HAS_MANY, 'OcCustomerHistory', 'customer_id'),
             'customerIps' => array(self::HAS_MANY, 'OcCustomerIp', 'customer_id'),
             'customerOnlines' => array(self::HAS_MANY, 'OcCustomerOnline', 'customer_id'),
@@ -125,7 +126,6 @@ class OcCustomer extends CActiveRecord
             'newsletter' => Yii::t('app', 'Newsletter'),
             'address_id' => Yii::t('app', 'Address'),
             'customer_group_id' => Yii::t('app', 'Customer Group'),
-            'custom_field' => Yii::t('app', 'Custom Field'),
             'ip' => Yii::t('app', 'Ip'),
             'status' => Yii::t('app', 'Status'),
             'approved' => Yii::t('app', 'Approved'),

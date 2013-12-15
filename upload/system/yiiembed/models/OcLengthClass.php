@@ -9,6 +9,7 @@
  * @property number $value
  *
  * Relations
+ * @property OcLanguage[] $languages
  * @property OcProduct[] $products
  *
  * @see CActiveRecord
@@ -38,7 +39,7 @@ class OcLengthClass extends CActiveRecord
      * @param string $className active record class name.
      * @return OcLengthClass the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -57,6 +58,7 @@ class OcLengthClass extends CActiveRecord
     public function relations()
     {
         return array(
+            'languages' => array(self::MANY_MANY, 'OcLanguage', '{{length_class_description}}(length_class_id, language_id)'),
             'products' => array(self::HAS_MANY, 'OcProduct', 'length_class_id'),
         );
     }

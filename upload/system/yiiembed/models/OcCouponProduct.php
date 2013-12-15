@@ -10,8 +10,8 @@
  * @property integer $product_id
  *
  * Relations
- * @property OcProduct $product
  * @property OcCoupon $coupon
+ * @property OcProduct $product
  *
  * @see CActiveRecord
  * @method OcCouponProduct find() find($condition, array $params = array())
@@ -40,7 +40,7 @@ class OcCouponProduct extends CActiveRecord
      * @param string $className active record class name.
      * @return OcCouponProduct the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -59,8 +59,8 @@ class OcCouponProduct extends CActiveRecord
     public function relations()
     {
         return array(
-            'product' => array(self::BELONGS_TO, 'OcProduct', 'product_id'),
             'coupon' => array(self::BELONGS_TO, 'OcCoupon', 'coupon_id'),
+            'product' => array(self::BELONGS_TO, 'OcProduct', 'product_id'),
         );
     }
 

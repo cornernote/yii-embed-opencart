@@ -9,6 +9,7 @@
  * @property integer $order_id
  * @property string $code
  * @property string $title
+ * @property string $text
  * @property number $value
  * @property integer $sort_order
  *
@@ -42,7 +43,7 @@ class OcOrderTotal extends CActiveRecord
      * @param string $className active record class name.
      * @return OcOrderTotal the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -75,6 +76,7 @@ class OcOrderTotal extends CActiveRecord
             'order_id' => Yii::t('app', 'Order'),
             'code' => Yii::t('app', 'Code'),
             'title' => Yii::t('app', 'Title'),
+            'text' => Yii::t('app', 'Text'),
             'value' => Yii::t('app', 'Value'),
             'sort_order' => Yii::t('app', 'Sort Order'),
         );

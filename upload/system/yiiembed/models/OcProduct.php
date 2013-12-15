@@ -33,18 +33,19 @@
  * @property integer $minimum
  * @property integer $sort_order
  * @property integer $status
- * @property integer $viewed
  * @property string $date_added
  * @property string $date_modified
+ * @property integer $viewed
  *
  * Relations
  * @property OcCouponProduct[] $couponProducts
  * @property OcOrderProduct[] $orderProducts
- * @property OcTaxClass $taxClass
+ * @property OcOrderRecurring[] $orderRecurrings
  * @property OcStockStatus $stockStatus
+ * @property OcManufacturer $manufacturer
+ * @property OcTaxClass $taxClass
  * @property OcWeightClass $weightClass
  * @property OcLengthClass $lengthClass
- * @property OcManufacturer $manufacturer
  * @property OcProductAttribute[] $productAttributes
  * @property OcLanguage[] $languages
  * @property OcProductDiscount[] $productDiscounts
@@ -52,13 +53,13 @@
  * @property OcProductImage[] $productImages
  * @property OcProductOption[] $productOptions
  * @property OcProductOptionValue[] $productOptionValues
- * @property OcProductRelated[] $productRelateds
- * @property OcProductRelated[] $productRelateds1
+ * @property OcProductProfile[] $productProfiles
+ * @property OcStore[] $stores
+ * @property OcRelated[] $relateds
  * @property OcProductReward[] $productRewards
  * @property OcProductSpecial[] $productSpecials
  * @property OcCategory[] $categories
  * @property OcDownload[] $downloads
- * @property OcStore[] $stores
  * @property OcReturn[] $returns
  * @property OcReview[] $reviews
  *
@@ -89,7 +90,7 @@ class OcProduct extends CActiveRecord
      * @param string $className active record class name.
      * @return OcProduct the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -110,11 +111,12 @@ class OcProduct extends CActiveRecord
         return array(
             'couponProducts' => array(self::HAS_MANY, 'OcCouponProduct', 'product_id'),
             'orderProducts' => array(self::HAS_MANY, 'OcOrderProduct', 'product_id'),
-            'taxClass' => array(self::BELONGS_TO, 'OcTaxClass', 'tax_class_id'),
+            'orderRecurrings' => array(self::HAS_MANY, 'OcOrderRecurring', 'product_id'),
             'stockStatus' => array(self::BELONGS_TO, 'OcStockStatus', 'stock_status_id'),
+            'manufacturer' => array(self::BELONGS_TO, 'OcManufacturer', 'manufacturer_id'),
+            'taxClass' => array(self::BELONGS_TO, 'OcTaxClass', 'tax_class_id'),
             'weightClass' => array(self::BELONGS_TO, 'OcWeightClass', 'weight_class_id'),
             'lengthClass' => array(self::BELONGS_TO, 'OcLengthClass', 'length_class_id'),
-            'manufacturer' => array(self::BELONGS_TO, 'OcManufacturer', 'manufacturer_id'),
             'productAttributes' => array(self::HAS_MANY, 'OcProductAttribute', 'product_id'),
             'languages' => array(self::MANY_MANY, 'OcLanguage', '{{product_description}}(product_id, language_id)'),
             'productDiscounts' => array(self::HAS_MANY, 'OcProductDiscount', 'product_id'),
@@ -122,13 +124,13 @@ class OcProduct extends CActiveRecord
             'productImages' => array(self::HAS_MANY, 'OcProductImage', 'product_id'),
             'productOptions' => array(self::HAS_MANY, 'OcProductOption', 'product_id'),
             'productOptionValues' => array(self::HAS_MANY, 'OcProductOptionValue', 'product_id'),
-            'productRelateds' => array(self::HAS_MANY, 'OcProductRelated', 'related_id'),
-            'productRelateds1' => array(self::HAS_MANY, 'OcProductRelated', 'product_id'),
+            'productProfiles' => array(self::HAS_MANY, 'OcProductProfile', 'product_id'),
+            'stores' => array(self::MANY_MANY, 'OcStore', '{{product_to_store}}(product_id, store_id)'),
+            'relateds' => array(self::MANY_MANY, 'OcRelated', '{{product_related}}(product_id, related_id)'),
             'productRewards' => array(self::HAS_MANY, 'OcProductReward', 'product_id'),
             'productSpecials' => array(self::HAS_MANY, 'OcProductSpecial', 'product_id'),
             'categories' => array(self::MANY_MANY, 'OcCategory', '{{product_to_category}}(product_id, category_id)'),
             'downloads' => array(self::MANY_MANY, 'OcDownload', '{{product_to_download}}(product_id, download_id)'),
-            'stores' => array(self::MANY_MANY, 'OcStore', '{{product_to_store}}(product_id, store_id)'),
             'returns' => array(self::HAS_MANY, 'OcReturn', 'product_id'),
             'reviews' => array(self::HAS_MANY, 'OcReview', 'product_id'),
         );
@@ -168,9 +170,9 @@ class OcProduct extends CActiveRecord
             'minimum' => Yii::t('app', 'Minimum'),
             'sort_order' => Yii::t('app', 'Sort Order'),
             'status' => Yii::t('app', 'Status'),
-            'viewed' => Yii::t('app', 'Viewed'),
             'date_added' => Yii::t('app', 'Date Added'),
             'date_modified' => Yii::t('app', 'Date Modified'),
+            'viewed' => Yii::t('app', 'Viewed'),
         );
     }
 

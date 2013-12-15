@@ -10,6 +10,7 @@
  *
  * Relations
  * @property OcAttribute[] $attributes
+ * @property OcLanguage[] $languages
  *
  * @see CActiveRecord
  * @method OcAttributeGroup find() find($condition, array $params = array())
@@ -38,7 +39,7 @@ class OcAttributeGroup extends CActiveRecord
      * @param string $className active record class name.
      * @return OcAttributeGroup the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -58,6 +59,7 @@ class OcAttributeGroup extends CActiveRecord
     {
         return array(
             'attributes' => array(self::HAS_MANY, 'OcAttribute', 'attribute_group_id'),
+            'languages' => array(self::MANY_MANY, 'OcLanguage', '{{attribute_group_description}}(attribute_group_id, language_id)'),
         );
     }
 

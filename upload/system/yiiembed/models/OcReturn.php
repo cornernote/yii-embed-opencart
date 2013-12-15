@@ -26,12 +26,12 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcReturnStatus $returnStatus
  * @property OcOrder $order
  * @property OcProduct $product0
  * @property OcCustomer $customer
  * @property OcReturnReason $returnReason
  * @property OcReturnAction $returnAction
+ * @property OcReturnStatus $returnStatus
  * @property OcReturnHistory[] $returnHistories
  *
  * @see CActiveRecord
@@ -61,7 +61,7 @@ class OcReturn extends CActiveRecord
      * @param string $className active record class name.
      * @return OcReturn the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -80,12 +80,12 @@ class OcReturn extends CActiveRecord
     public function relations()
     {
         return array(
-            'returnStatus' => array(self::BELONGS_TO, 'OcReturnStatus', 'return_status_id'),
             'order' => array(self::BELONGS_TO, 'OcOrder', 'order_id'),
             'product0' => array(self::BELONGS_TO, 'OcProduct', 'product_id'),
             'customer' => array(self::BELONGS_TO, 'OcCustomer', 'customer_id'),
             'returnReason' => array(self::BELONGS_TO, 'OcReturnReason', 'return_reason_id'),
             'returnAction' => array(self::BELONGS_TO, 'OcReturnAction', 'return_action_id'),
+            'returnStatus' => array(self::BELONGS_TO, 'OcReturnStatus', 'return_status_id'),
             'returnHistories' => array(self::HAS_MANY, 'OcReturnHistory', 'return_id'),
         );
     }

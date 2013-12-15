@@ -35,7 +35,7 @@ class OcInformationToStore extends CActiveRecord
      * @param string $className active record class name.
      * @return OcInformationToStore the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -46,14 +46,6 @@ class OcInformationToStore extends CActiveRecord
     public function tableName()
     {
         return '{{information_to_store}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
     }
 
     /**

@@ -10,9 +10,6 @@
  * @property string $title
  * @property string $unit
  *
- * Relations
- * @property OcLanguage $language
- *
  * @see CActiveRecord
  * @method OcLengthClassDescription find() find($condition, array $params = array())
  * @method OcLengthClassDescription findByPk() findByPk($pk, $condition = '', array $params = array())
@@ -40,7 +37,7 @@ class OcLengthClassDescription extends CActiveRecord
      * @param string $className active record class name.
      * @return OcLengthClassDescription the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -51,16 +48,6 @@ class OcLengthClassDescription extends CActiveRecord
     public function tableName()
     {
         return '{{length_class_description}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array(
-            'language' => array(self::BELONGS_TO, 'OcLanguage', 'language_id'),
-        );
     }
 
     /**

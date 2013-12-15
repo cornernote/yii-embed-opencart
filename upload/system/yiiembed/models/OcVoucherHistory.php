@@ -12,8 +12,8 @@
  * @property string $date_added
  *
  * Relations
- * @property OcOrder $order
  * @property OcVoucher $voucher
+ * @property OcOrder $order
  *
  * @see CActiveRecord
  * @method OcVoucherHistory find() find($condition, array $params = array())
@@ -42,7 +42,7 @@ class OcVoucherHistory extends CActiveRecord
      * @param string $className active record class name.
      * @return OcVoucherHistory the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -61,8 +61,8 @@ class OcVoucherHistory extends CActiveRecord
     public function relations()
     {
         return array(
-            'order' => array(self::BELONGS_TO, 'OcOrder', 'order_id'),
             'voucher' => array(self::BELONGS_TO, 'OcVoucher', 'voucher_id'),
+            'order' => array(self::BELONGS_TO, 'OcOrder', 'order_id'),
         );
     }
 

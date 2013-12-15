@@ -9,10 +9,9 @@
  * @property integer $language_id
  * @property string $name
  * @property string $description
- * @property string $tag
- * @property string $meta_title
  * @property string $meta_description
  * @property string $meta_keyword
+ * @property string $tag
  *
  * @see CActiveRecord
  * @method OcProductDescription find() find($condition, array $params = array())
@@ -41,7 +40,7 @@ class OcProductDescription extends CActiveRecord
      * @param string $className active record class name.
      * @return OcProductDescription the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -55,14 +54,6 @@ class OcProductDescription extends CActiveRecord
     }
 
     /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
-    }
-
-    /**
      * @return array customized attribute labels (name=>label)
      */
     public function attributeLabels()
@@ -72,10 +63,9 @@ class OcProductDescription extends CActiveRecord
             'language_id' => Yii::t('app', 'Language'),
             'name' => Yii::t('app', 'Name'),
             'description' => Yii::t('app', 'Description'),
-            'tag' => Yii::t('app', 'Tag'),
-            'meta_title' => Yii::t('app', 'Meta Title'),
             'meta_description' => Yii::t('app', 'Meta Description'),
             'meta_keyword' => Yii::t('app', 'Meta Keyword'),
+            'tag' => Yii::t('app', 'Tag'),
         );
     }
 

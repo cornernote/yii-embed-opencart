@@ -9,9 +9,6 @@
  * @property integer $language_id
  * @property string $name
  *
- * Relations
- * @property OcLanguage $language
- *
  * @see CActiveRecord
  * @method OcAttributeGroupDescription find() find($condition, array $params = array())
  * @method OcAttributeGroupDescription findByPk() findByPk($pk, $condition = '', array $params = array())
@@ -39,7 +36,7 @@ class OcAttributeGroupDescription extends CActiveRecord
      * @param string $className active record class name.
      * @return OcAttributeGroupDescription the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -50,16 +47,6 @@ class OcAttributeGroupDescription extends CActiveRecord
     public function tableName()
     {
         return '{{attribute_group_description}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array(
-            'language' => array(self::BELONGS_TO, 'OcLanguage', 'language_id'),
-        );
     }
 
     /**

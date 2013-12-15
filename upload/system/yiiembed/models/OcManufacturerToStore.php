@@ -35,7 +35,7 @@ class OcManufacturerToStore extends CActiveRecord
      * @param string $className active record class name.
      * @return OcManufacturerToStore the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -46,14 +46,6 @@ class OcManufacturerToStore extends CActiveRecord
     public function tableName()
     {
         return '{{manufacturer_to_store}}';
-    }
-
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        return array();
     }
 
     /**
