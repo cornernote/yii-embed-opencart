@@ -2,6 +2,9 @@
 
 A lightweight Yii application embedded into OpenCart
 
+![Catalog](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/catalog.png)
+![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/admin.png)
+
 
 ## Features
 
