@@ -38,15 +38,15 @@ class OcGiiModule extends GiiModule
      * Initializes the gii module.
      *
      * Overrides parent with the following features:
-     * - Sets the basePath to allow use of GiiModule templates.
      * - Adds to generatorPaths to allow yiiembed Gii.
+     * - Sets the basePath to allow use of GiiModule templates.
      * - Uses WidgetFactory to set CCodeForm::encode=false to allow admin token to be passed correctly.
      */
     public function init()
     {
-        parent::init();
-        $this->setBasePath(Yii::getPathOfAlias('system.gii'));
         $this->generatorPaths[] = 'yiiembed.modules.gii';
+        $this->setBasePath(Yii::getPathOfAlias('system.gii'));
+        parent::init();
         Yii::app()->setComponents(array(
             'widgetFactory' => array(
                 'class' => 'CWidgetFactory',

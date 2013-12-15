@@ -23,7 +23,7 @@ class ModelDocCode extends CCodeModel
     /**
      * @var
      */
-    public $addModelMethodDoc = true;
+    public $addModelMethodDoc = false;
     /**
      * @var string
      */
