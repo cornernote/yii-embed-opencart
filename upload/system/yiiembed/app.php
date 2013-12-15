@@ -3,6 +3,7 @@
  * OcWebApplication is a lightweight Yii application embedded into OpenCart.
  *
  * @method static OcWebApplication app()
+ * @property string $version
  *
  * @author Brett O'Donnell <cornernote@gmail.com>
  * @link https://github.com/cornernote/yii-embed-opencart
@@ -14,14 +15,22 @@ class OcWebApplication extends CWebApplication
 {
 
     /**
-     * @var Front contains OpenCart's controller
+     * @var Front Contains OpenCart's controller.
      */
     public $front;
 
     /**
-     * @var Registry contains OpenCart's registry
+     * @var Registry Contains OpenCart's registry.
      */
     public $registry;
+
+    /**
+     * @return string The current version of Yii-Embed for OpenCart.
+     */
+    public function getVersion()
+    {
+        return '1.0.0';
+    }
 
     /**
      * Constructor.
