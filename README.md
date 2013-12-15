@@ -55,27 +55,27 @@ If you have installed [vQmod](https://code.google.com/p/vqmod/) then no further 
 ### Manual Installation
 
 Add to `system/startup.php` at the bottom:
-```
+```php
 require_once(DIR_SYSTEM . 'yii/framework/yii.php');
 require_once(DIR_SYSTEM . 'yiiembed/app.php');
 ```
 
 Add to `system/engine/front.php` in the `__construct()` function, after `$this->registry = $registry;`:
-```
+```php
 Yii::createApplication('OcWebApplication');
 Yii::app()->front = $this;
 Yii::app()->registry = $registry;
 ```
 
 Add to `system/library/response.php` in the `output()` function, before `echo $ouput;`:
-```
+```php
 Yii::app()->clientScript->render($ouput);
 ```
 
 Add to `catalog/controller/error/not_found.php`, `admin/controller/error/not_found.php` and `admin/controller/error/permission.php` at the top of the `index()` function, after `public function index() {`:
-<pre>
+```php
 Yii::app()->runController();
-</pre>
+```
 
 
 ## Extending and Upgrading
@@ -89,7 +89,7 @@ The files in `system/yiiembed` are intended to be in-sync with this project.  Pl
 
 Edit the Yii config files in `catalog/yiiembed/config/main.php` and 
 `admin/yiiembed/config/main.php`, for example:
-```
+```php
 return array(
     'name' => 'My OpenCart Yii App', 
     'preload' => array('log'), 
@@ -99,7 +99,7 @@ return array(
 ```
 
 Add Yii constants to your OpenCart config.php, defaults shown below:
-```
+```php
 define('YII_DEBUG', false); // set to true for fancy error messages
 define('YII_TRACE_LEVEL', 0);
 define('YII_ENABLE_EXCEPTION_HANDLER', true);
@@ -122,7 +122,7 @@ You can use Yii's awesome code generator from your OpenCart admin, just like you
 ## Examples
 
 Find and save a Customer:
-```
+```php
 $customer = OcCustomer::model()->findByPk($this->customer->getId());
 if ($customer) {
     $customer->firstname = 'Foo';
@@ -132,24 +132,24 @@ if ($customer) {
 ```
 
 Render Yii partial views:
-```
+```php
 Yii::app()->controller->renderPartial('site/_partial');
 ```
 
 Render Yii widgets:
-```
+```php
 Yii::app()->controller->widget('zii.widgets.CDetailView', array(
     'data' => array('hello' => 'world'),
 ));
 ```
 
 Run OpenCart controller:
-```
+```php
 Yii::app()->runOcController('common/home');
 ```
 
 Get OpenCart controller output:
-```
+```php
 echo Yii::app()->getOcControllerOutput('common/header');
 echo 'hello world';
 echo Yii::app()->getOcControllerOutput('common/footer');
