@@ -5,7 +5,8 @@ A lightweight Yii application embedded into OpenCart
 
 ## Features
 
-- Yii is available from anywhere in OpenCart using Yii::app() or Yii::foobar
+- Yii is available from anywhere in OpenCart using `Yii::app()` or `Yii::foobar`
+- OpenCart registry is available from anywhere in Yii using `Yii::app()->registry`
 - Models are built that represent all OpenCart tables including relations
 - Generate models for all your tables in one step and create standard Yii Crud using Gii
 - Autoload any of your Yii models and components
