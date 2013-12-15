@@ -95,13 +95,6 @@ Yii::app()->runController();
 ```
 
 
-## Extending and Upgrading
-
-The files in `catalog/yiiembed` and `admin/yiiembed` are intended to be modified by you.  When upgrading please ensure you do not overwrite your modified yiiembed applications with the default applications.
-
-The files in `system/yiiembed` are intended to be in-sync with this project.  Please avoid changing them, you can extend them if you require modifications.
-
-
 ## Configuration
 
 Edit the Yii config files in `catalog/yiiembed/config/main.php` and 
@@ -124,16 +117,34 @@ define('YII_ENABLE_ERROR_HANDLER', true);
 ```
 
 
-## Generating Code with Gii
+## Gii
 
-You can use Yii's awesome code generator from your OpenCart admin, just like you can in any other Yii app!
+You can use Yii's awesome code generator from your OpenCart admin, just like you can in any other Yii app.  Simply browse to your admin `admin/index.php?route=gii`.
 
-- Navigate to your admin `admin/index.php?route=gii`
-- Use the PrefixModel Generator to generate all your models in one action.
-- To generate models that can be used by catalog and admin set Model Path to `yiiembed.models`.
-- Select the Code Template `yiiembed` to generate models the same as ours.
-- Use the ModelDoc Generator to replace the phpdoc blocks in your models.
-- To tune the Gii configuration or security access edit `admin/yiiembed/config/main.php`.
+To tune the Gii configuration or security access edit `admin/yiiembed/config/main.php`.
+
+### PrefixModel Generator
+
+Use the PrefixModel Generator to generate all your models in one action.  
+
+Select the Code Template `yiiembed` to generate models the same as ours.
+
+### ModelDoc Generator
+
+Use the ModelDoc Generator to replace the phpdoc blocks in your models.
+
+### Other Generators
+
+All the default Gii Generators including Controller Generator, Crud Generator, Form Generator, Model Generator and Module Generator are also available.
+
+
+## Notes
+
+### Extending and Upgrading
+
+The files in `catalog/yiiembed` and `admin/yiiembed` are intended to be modified by you.  When upgrading please ensure you do not overwrite your modified yiiembed applications with the default applications.
+
+The files in `system/yiiembed` are intended to be in-sync with this project.  Please avoid changing them, you can extend them if you require modifications.
 
 
 ## Examples
