@@ -80,7 +80,7 @@ Yii::app()->runController();
 
 ## Extending and Upgrading
 
-The files in `catalog/yiiembed` and `/admin/yiiembed` are intended to be modified by you.  Please do not replace your files with the default application.
+The files in `catalog/yiiembed` and `admin/yiiembed` are intended to be modified by you.  Please do not replace your files with the default application.
 
 The files in `system/yiiembed` are intended to be in-sync with this project.  Please avoid changing them, you can extend them if you require modifications.
 
