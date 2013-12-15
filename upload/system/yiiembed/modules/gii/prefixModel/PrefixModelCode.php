@@ -366,7 +366,7 @@ class PrefixModelCode extends CCodeModel
 
             if ($this->isRelationTable($table)) {
                 $pks = $table->primaryKey;
-                $fks = $table->foreignKeys;
+                $fks = $this->getForeignKeys($table);
 
                 $table0 = $fks[$pks[0]][0];
                 $table1 = $fks[$pks[1]][0];
@@ -389,7 +389,7 @@ class PrefixModelCode extends CCodeModel
             }
             else {
                 $className = $this->generateClassName($tableName);
-                foreach ($table->foreignKeys as $fkName => $fkEntry) {
+                foreach ($this->getForeignKeys($table) as $fkName => $fkEntry) {
                     // Put table and key name in variables for easier reading
                     $refTable = $fkEntry[0]; // Table name that current fk references to
                     $refKey = $fkEntry[1]; // Key in that table being referenced
@@ -414,6 +414,26 @@ class PrefixModelCode extends CCodeModel
     }
 
     /**
+     * Generates foreign keys based on related fields being called [foreign_table]_id
+     * @param $table
+     * @return array
+     */
+    public function getForeignKeys($table)
+    {
+        $foreignKeys = array();
+        $schema = $this->getTableSchema($table->name);
+        foreach ($schema->columns as $columnName => $column) {
+            if (substr($columnName, -3) == '_id' && $column->type == 'integer') {
+                $relationTable = $this->tablePrefix . substr($columnName, 0, -3);
+                if ($table->name == $relationTable)
+                    continue;
+                $foreignKeys[$columnName] = array($relationTable, $columnName);
+            }
+        }
+        return $foreignKeys;
+    }
+
+    /**
      * Checks if the given table is a "many to many" pivot table.
      * Their PK has 2 fields, and both of those fields are also FK to other separate tables.
      * @param CDbTableSchema table to inspect
@@ -422,10 +442,11 @@ class PrefixModelCode extends CCodeModel
     protected function isRelationTable($table)
     {
         $pk = $table->primaryKey;
+        $fks = $this->getForeignKeys($table);
         return (count($pk) === 2 // we want 2 columns
-            && isset($table->foreignKeys[$pk[0]]) // pk column 1 is also a foreign key
-            && isset($table->foreignKeys[$pk[1]]) // pk column 2 is also a foriegn key
-            && $table->foreignKeys[$pk[0]][0] !== $table->foreignKeys[$pk[1]][0]); // and the foreign keys point different tables
+            && isset($fks[$pk[0]]) // pk column 1 is also a foreign key
+            && isset($fks[$pk[1]]) // pk column 2 is also a foriegn key
+            && $fks[$pk[0]][0] !== $fks[$pk[1]][0]); // and the foreign keys point different tables
     }
 
     /**
