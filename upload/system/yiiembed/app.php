@@ -12,18 +12,14 @@
  */
 class OcWebApplication extends CWebApplication
 {
-    /**
-     * @var string the application name. Defaults to 'Yii-Embed for OpenCart'.
-     */
-    public $name;
 
     /**
-     * @var Front is used to store OpenCart's controller
+     * @var Front contains OpenCart's controller
      */
     public $front;
 
     /**
-     * @var Registry is used to store OpenCart's registry
+     * @var Registry contains OpenCart's registry
      */
     public $registry;
 
