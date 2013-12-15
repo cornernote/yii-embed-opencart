@@ -1,0 +1,5 @@
+The logo is licensed under a Creative Commons Attribution-No Derivative Works 3.0 Unported License.
+
+source: http://static.yiiframework.com/files/logo/yii.png
+link: http://www.yiiframework.com/logo/
+license: http://creativecommons.org/licenses/by-nd/3.0/

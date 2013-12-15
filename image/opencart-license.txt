@@ -1,0 +1,5 @@
+The logo is licensed under a GNU GPL License.
+
+source: http://www.opencart.com/opencart/application/view/image/logo.png
+link: http://www.opencart.com/
+license: http://www.gnu.org/licenses/quick-guide-gplv3.html
