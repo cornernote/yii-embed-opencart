@@ -51,6 +51,14 @@ An error with `YII_DEBUG` set to `false`
 ![Error Live](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/error-live.png)
 
 
+## Requirements
+
+The application has been tested with the following software versions, however should work with any minor revision change:
+- [OpenCart-1.5.6](http://www.opencart.com/index.php?route=download/download/download&download_id=32) (should work in OpenCart-1.5.*)
+- [Yii-1.1.14](https://github.com/yiisoft/yii/releases/download/1.1.14/yii-1.1.14.f0fee9.zip) (should work in Yii-1.1.*)
+- [PHP-5.3](http://www.php.net/downloads.php) (should work in at PHP-5.2+)
+
+
 ## Installation
 
 - Download [Yii-Embed for OpenCart](https://github.com/cornernote/yii-embed-opencart/archive/master.zip) and uncompress the upload folder into your opencart installation.
