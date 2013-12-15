@@ -43,7 +43,7 @@ Using Gii to build all models - `admin/index.php?route=gii/prefixModel/index`
 ## Installation
 
 - Download [Yii-Embed for OpenCart](https://github.com/cornernote/yii-embed-opencart/archive/master.zip) and uncompress the upload folder into your opencart installation.
-- Download [Yii](http://www.yiiframework.com/) and uncompress it into your system folder.  The `yii.php` file should be in `system/yii/framework/yii.php`.
+- Download [Yii Framework](http://www.yiiframework.com/) and uncompress it into your system folder.  The `yii.php` file should be in `system/yii/framework/yii.php`.
 - Perform a vQmod or Manual installation then visit `index.php?route=site` and `admin/index.php?route=site` to see your Yii-Embed for OpenCart.
 
 
@@ -91,7 +91,6 @@ Edit the Yii config files in `catalog/yiiembed/config/main.php` and
 `admin/yiiembed/config/main.php`, for example:
 ```php
 return array(
-    'name' => 'My OpenCart Yii App', 
     'preload' => array('log'), 
     'components' => array( ... ),
     'modules' => array( ... ),
@@ -107,11 +106,11 @@ define('YII_ENABLE_ERROR_HANDLER', true);
 ```
 
 
-## Generating Gii Code
+## Generating Code with Gii
 
 You can use Yii's awesome code generator from your OpenCart admin, just like you can in any other Yii app!
 
-- Navigate to your admin your.dom.ain/admin/index.php?route=gii
+- Navigate to your admin `admin/index.php?route=gii`
 - Use the PrefixModel Generator to generate all your models in one action.
 - To generate models that can be used by catalog and admin set Model Path to `yiiembed.models`.
 - Select the Code Template `yiiembed` to generate models the same as ours.
