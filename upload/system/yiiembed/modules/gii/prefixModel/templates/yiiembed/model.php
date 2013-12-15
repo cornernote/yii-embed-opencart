@@ -33,7 +33,7 @@ echo "     * Returns the static model of the specified AR class.\n";
 echo "     * @param string \$className active record class name.\n";
 echo "     * @return " . $modelClass . " the static model class\n";
 echo "     */\n";
-echo "    public static function model(\$className=__CLASS__)\n";
+echo "    public static function model(\$className = __CLASS__)\n";
 echo "    {\n";
 echo "        return parent::model(\$className);\n";
 echo "    }\n";
