@@ -25,14 +25,14 @@ The following Yii components are pre-configured to work in your OpenCart:
 
 ## Installation
 
-- Download (Yii-Embed for OpenCart)[https://github.com/cornernote/yii-embed-opencart/archive/master.zip] and uncompress the upload folder into your opencart installation.
-- Download (Yii)[http://www.yiiframework.com/] and uncompress it into your system folder.  The `yii.php` file should be in `system/yii/framework/yii.php`.
+- Download [Yii-Embed for OpenCart](https://github.com/cornernote/yii-embed-opencart/archive/master.zip) and uncompress the upload folder into your opencart installation.
+- Download [Yii](http://www.yiiframework.com/) and uncompress it into your system folder.  The `yii.php` file should be in `system/yii/framework/yii.php`.
 - Perform a vQmod or Manual installation then visit `index.php?route=site` and `admin/index.php?route=site` to see your Yii-Embed for OpenCart.
 
 
 ### vqMod Installation
 
-If you have installed (vQmod)[https://code.google.com/p/vqmod/] then no further installation is required.
+If you have installed [vQmod](https://code.google.com/p/vqmod/) then no further installation is required.
 
 
 ### Manual Installation
@@ -61,11 +61,11 @@ Yii::app()->runController();
 </pre>
 
 
-## Upgrading
+## Extending and Upgrading
 
-The files in `/catalog/yiiembed` and `/admin/yiiembed` are intended to be modified by you.  Please do not replace your files with the default application.
+The files in `catalog/yiiembed` and `/admin/yiiembed` are intended to be modified by you.  Please do not replace your files with the default application.
 
-The files in `/system/yiiembed` are intended to be in-sync with this project.  Please avoid changing them, you can extend them if you require modifications.
+The files in `system/yiiembed` are intended to be in-sync with this project.  Please avoid changing them, you can extend them if you require modifications.
 
 
 ## Configuration
