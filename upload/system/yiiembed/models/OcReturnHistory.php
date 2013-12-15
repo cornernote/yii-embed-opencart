@@ -43,7 +43,7 @@ class OcReturnHistory extends CActiveRecord
      * @param string $className active record class name.
      * @return OcReturnHistory the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }

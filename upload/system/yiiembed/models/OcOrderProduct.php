@@ -49,7 +49,7 @@ class OcOrderProduct extends CActiveRecord
      * @param string $className active record class name.
      * @return OcOrderProduct the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }

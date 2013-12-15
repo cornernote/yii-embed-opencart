@@ -35,7 +35,7 @@ class OcProductToDownload extends CActiveRecord
      * @param string $className active record class name.
      * @return OcProductToDownload the static model class
      */
-    public static function model($className=__CLASS__)
+    public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }
