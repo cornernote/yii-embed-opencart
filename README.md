@@ -20,6 +20,7 @@ The following Yii components are pre-configured to work in your OpenCart:
 - `Yii::app()->clientScript` - [CClientScript](http://www.yiiframework.com/doc/api/1.1/CClientScript)
 - `Yii::app()->controller` - [CController](http://www.yiiframework.com/doc/api/1.1/CController)
 - `Yii::app()->db` - [CDbConnection](http://www.yiiframework.com/doc/api/1.1/CDbConnection)
+- `Yii::app()->errorHandler` - [CErrorHandler](http://www.yiiframework.com/doc/api/1.1/CErrorHandler)
 - `Yii::app()->session` - [CHttpSession](http://www.yiiframework.com/doc/api/1.1/CHttpSession)
 - `Yii::app()->urlManager` - [CUrlManager](http://www.yiiframework.com/doc/api/1.1/CUrlManager)
 
@@ -39,7 +40,15 @@ Rendering the default admin Yii SiteController - `admin/index.php?route=site/ind
 ### Gii
 
 Using Gii to build all models - `admin/index.php?route=gii/prefixModel/index`
-![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/gii.png)
+![Gii](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/gii.png)
+
+### Errors
+
+An error with `YII_DEBUG` set to `true`
+![Error Debug](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/error-debug.png)
+
+An error with `YII_DEBUG` set to `false`
+![Error Live](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/error-live.png)
 
 
 ## Installation
@@ -94,6 +103,7 @@ return array(
     'preload' => array('log'), 
     'components' => array( ... ),
     'modules' => array( ... ),
+    'params' => array( ... ),
 );
 ```
 

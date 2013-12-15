@@ -89,12 +89,17 @@ class OcWebApplication extends CWebApplication
      *
      * Overrides parent with the following features:
      * - If controller action does not exist then do not throw an exception, let OpenCart handle it.
+     *
+     * @param string $route the route of the current request. Leave empty to get route from url.
+     * @throws Exception on any parent exception except 404 errors
      */
-    public function runController()
+    public function runController($route = null)
     {
         // get route
-        $routeVar = $this->getUrlManager()->routeVar;
-        $route = isset($_GET[$routeVar]) ? $_GET[$routeVar] : '';
+        if (!$route) {
+            $routeVar = $this->getUrlManager()->routeVar;
+            $route = isset($_GET[$routeVar]) ? $_GET[$routeVar] : '';
+        }
 
         try {
             // run the controller
@@ -192,6 +197,10 @@ class OcWebApplication extends CWebApplication
                         'htmlOptions' => array('encode' => false),
                     ),
                 ),
+            ),
+            'errorHandler' => array(
+                'class' => 'CErrorHandler',
+                'errorAction' => 'site/error',
             ),
         );
         $this->setComponents($components);
