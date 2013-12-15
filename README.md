@@ -1,6 +1,9 @@
 # Yii-Embed for OpenCart
 
-A lightweight Yii application embedded into OpenCart
+A lightweight [Yii](http://www.yiiframework.com/) application embedded into [OpenCart](http://www.opencart.com/)
+
+![OpenCart](https://raw.github.com/cornernote/yii-embed-opencart/master/image/opencart.png) ![Yii Framework](https://raw.github.com/cornernote/yii-embed-opencart/master/image/yii.png)
+
 
 ## Contents
 
@@ -13,6 +16,7 @@ A lightweight Yii application embedded into OpenCart
 [Notes](#notes)  
 [Examples](#examples)  
 [License](#license)  
+[Links](#links)  
 
 
 ## Features
@@ -202,5 +206,11 @@ echo Yii::app()->getOcControllerOutput('common/footer');
 
 - author Brett O'Donnell <cornernote@gmail.com>
 - link https://github.com/cornernote/yii-embed-opencart
-- copyright 2013 Mr PHP <info@mrphp.com.au>
+- copyright 2013 [Mr PHP](http://mrphp.com.au/)
 - license BSD-3-Clause https://raw.github.com/cornernote/yii-embed-opencart/master/LICENSE
+
+
+## Links
+
+- [Yii Extensions Page](http://www.yiiframework.com/extension/yii-embed-opencart/)
+- [OpenCart Extensions Page](http://www.opencart.com/index.php?route=extension/extension/info&extension_id=15059)
