@@ -27,12 +27,12 @@ The following Yii components are pre-configured to work in your OpenCart:
 
 ### Catalog
 
-`index.php?route=site/index`:
+Rendering the default Yii SiteController - `index.php?route=site/index`
 ![Catalog](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/catalog.png)
 
 ### Admin
 
-`admin/index.php?route=site/index`:
+Rendering the default admin Yii SiteController - `admin/index.php?route=site/index`
 ![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/admin.png)
 
 
