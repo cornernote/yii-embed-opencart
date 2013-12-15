@@ -120,9 +120,10 @@ You can use Yii's awesome code generator from your OpenCart admin, just like you
 
 ## Examples
 
-Find and save a Customer:
+Find and save a record (in this example we use a Customer):
 ```php
-$customer = OcCustomer::model()->findByPk($this->customer->getId());
+$customer_id = 123;
+$customer = OcCustomer::model()->findByPk($customer_id);
 if ($customer) {
     $customer->firstname = 'Foo';
     $customer->lastname = 'Bar';
