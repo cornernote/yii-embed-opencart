@@ -11,6 +11,7 @@ A lightweight Yii application embedded into OpenCart
 - Autoload any of your Yii models and components
 - Widgets can be rendered and will auto-include their stylesheet and javascript files
 - Controllers and Modules are handled by the OpenCart not_found.php controller
+- OpenCart controllers can be run within Yii
 - Fancy error messages with stack dump
 
 The following Yii components are pre-configured to work in your OpenCart:
@@ -33,6 +34,8 @@ require_once(DIR_SYSTEM . 'yiiembed/app.php');
 Add to `system/engine/front.php` in the `__construct()` function, after `$this->registry = $registry;`:
 ```
 Yii::createApplication('OcWebApplication');
+Yii::app()->front = $this;
+Yii::app()->registry = $registry;
 ```
 
 Add to `system/library/response.php` in the `output()` function, before `echo $ouput;`:
@@ -43,7 +46,7 @@ Yii::app()->clientScript->render($ouput);
 
 ## Controllers (optional)
 
-Add to `catalog/controller/error/not_found.php` and `admin/controller/error/permission.php` at the top of the `index()` function, after `public function index() {`:
+Add to `catalog/controller/error/not_found.php`, `admin/controller/error/not_found.php` and `admin/controller/error/permission.php` at the top of the `index()` function, after `public function index() {`:
 <pre>
 Yii::app()->runController();
 </pre>
@@ -86,9 +89,19 @@ You can use Yii's awesome code generator from your OpenCart admin, just like you
 
 ## Examples
 
+Find and save a Customer:
+```
+$customer = OcCustomer::model()->findByPk($this->customer->getId());
+if ($customer) {
+    $customer->firstname = 'Foo';
+    $customer->lastname = 'Bar';
+    $customer->save();
+}
+```
+
 Render Yii partial views:
 ```
-Yii::app()->controller->renderPartial('/site/index');
+Yii::app()->controller->renderPartial('site/_partial');
 ```
 
 Render Yii widgets:
@@ -98,12 +111,7 @@ Yii::app()->controller->widget('zii.widgets.CDetailView', array(
 ));
 ```
 
-Find and save a Customer:
+Run OpenCart controllers:
 ```
-$customer = OcCustomer::model()->findByPk($this->customer->getId());
-if ($customer) {
-    $customer->firstname = 'Foo';
-    $customer->lastname = 'Bar';
-    $customer->save();
-}
+Yii::app()->runOcController('common/home');
 ```

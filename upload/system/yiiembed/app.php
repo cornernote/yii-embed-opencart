@@ -9,18 +9,21 @@
  * ## Features
  *
  * - Yii is available from anywhere in OpenCart using Yii::app() or Yii::foobar
+ * - Models are built that represent all OpenCart tables including relations
+ * - Generate models for all your tables in one step using Gii
  * - Autoload any of your Yii models and components
  * - Widgets can be rendered and will auto-include their stylesheet and javascript files
  * - Controllers and Modules are handled by the OpenCart not_found.php controller
+ * - OpenCart pages can be rendered within Yii code
  * - Fancy error messages with stack dump
  *
  * The following Yii components are pre-configured to work in your OpenCart:
- * - Yii::app()->assetManager - CAssetManager
- * - Yii::app()->clientScript - CClientScript
- * - Yii::app()->controller - CController
- * - Yii::app()->db - CDbConnection
- * - Yii::app()->session - CHttpSession
- * - Yii::app()->urlManager - CUrlManager
+ * - `Yii::app()->assetManager` - [CAssetManager](http://www.yiiframework.com/doc/api/1.1/CAssetManager)
+ * - `Yii::app()->clientScript` - [CClientScript](http://www.yiiframework.com/doc/api/1.1/CClientScript)
+ * - `Yii::app()->controller` - [CController](http://www.yiiframework.com/doc/api/1.1/CController)
+ * - `Yii::app()->db` - [CDbConnection](http://www.yiiframework.com/doc/api/1.1/CDbConnection)
+ * - `Yii::app()->session` - [CHttpSession](http://www.yiiframework.com/doc/api/1.1/CHttpSession)
+ * - `Yii::app()->urlManager` - [CUrlManager](http://www.yiiframework.com/doc/api/1.1/CUrlManager)
  *
  *
  * ## Installation
@@ -52,7 +55,7 @@
  *
  * ## Configuration (optional)
  *
- * Edit the Yii config files in `catalog/yiiembed/config/main.php` and 
+ * Edit the Yii config files in `catalog/yiiembed/config/main.php` and
  * `admin/yiiembed/config/main.php`, for example:
  * <pre>
  * return array(
@@ -74,6 +77,16 @@
  *
  * ## Examples
  *
+ * Find and save a Customer:
+ * <pre>
+ * $customer = OcCustomer::model()->findByPk($this->customer->getId());
+ * if ($customer) {
+ *     $customer->firstname = 'Foo';
+ *     $customer->lastname = 'Bar';
+ *     $customer->save();
+ * }
+ * </pre>
+ *
  * Render Yii partial views:
  * <pre>
  * Yii::app()->controller->renderPartial('/site/index');
@@ -86,14 +99,9 @@
  * ));
  * </pre>
  *
- * Find and save a Customer:
+ * Run OpenCart controllers:
  * <pre>
- * $customer = OcCustomer::model()->findByPk($this->customer->getId());
- * if ($customer) {
- *     $customer->firstname = 'Foo';
- *     $customer->lastname = 'Bar';
- *     $customer->save();
- * }
+ * Yii::app()->runOcController('common/home');
  * </pre>
  *
  *
@@ -111,24 +119,34 @@ class OcWebApplication extends CWebApplication
 {
 
     /**
+     * @var Front is used to store OpenCart's controller
+     */
+    public $front;
+
+    /**
+     * @var Registry is used to store OpenCart's registry
+     */
+    public $registry;
+
+    /**
      * Constructor.
      * @param mixed $config application configuration.
      *
      * Overrides parent with the following features:
      * - Sets the application basePath to a folder named "yiiembed" inside your OpenCart application directory.
-	 * - If not provided $config will be loaded from yiiembed/config/main.php in your application.
+     * - If not provided $config will be loaded from yiiembed/config/main.php in your application.
      */
     public function __construct($config = null)
     {
-		if ($config === null)
-			$config = require(DIR_APPLICATION . 'yiiembed/config/main.php');
+        if ($config === null)
+            $config = require(DIR_APPLICATION . 'yiiembed/config/main.php');
         if (is_string($config))
             $config = require($config);
         if (empty($config['basePath']))
             $config['basePath'] = DIR_APPLICATION . 'yiiembed';
         parent::__construct($config);
     }
-	
+
     /**
      * Initializes the application.
      *
@@ -155,7 +173,7 @@ class OcWebApplication extends CWebApplication
     public function runController()
     {
         // get route
-        $routeVar = $this->urlManager->routeVar;
+        $routeVar = $this->getUrlManager()->routeVar;
         $route = isset($_GET[$routeVar]) ? $_GET[$routeVar] : '';
 
         try {
@@ -168,6 +186,17 @@ class OcWebApplication extends CWebApplication
             if (!isset($e->statusCode) || $e->statusCode != 404)
                 throw $e;
         }
+    }
+
+    /**
+     * Runs the OpenCart controller and performs the specified action.
+     * @param $route
+     */
+    public function runOcController($route)
+    {
+        $this->front->dispatch(new Action($route), new Action('error/not_found'));
+        $this->registry->get('response')->output();
+        Yii::app()->end();
     }
 
     /**
