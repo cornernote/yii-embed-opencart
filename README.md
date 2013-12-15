@@ -36,6 +36,8 @@ Rendering the default Yii SiteController - `index.php?route=site/index`
 Rendering the default admin Yii SiteController - `admin/index.php?route=site/index`
 ![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/admin.png)
 
+### Gii
+
 Using Gii to build all models - `admin/index.php?route=gii/prefixModel/index`
 ![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/gii.png)
 
