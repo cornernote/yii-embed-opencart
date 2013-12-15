@@ -51,6 +51,8 @@ Add to `catalog/controller/error/not_found.php`, `admin/controller/error/not_fou
 Yii::app()->runController();
 </pre>
 
+The catalog and admin each have a SiteController that is ready to roll.  Simply visit `index.php?route=site` to get started.
+
 
 ## Configuration (optional)
 
