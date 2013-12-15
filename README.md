@@ -7,15 +7,16 @@ A lightweight Yii application embedded into OpenCart
 
 - Yii is available from anywhere in OpenCart using `Yii::app()` or `Yii::foobar`
 - OpenCart registry is available from anywhere in Yii using `Yii::app()->registry`
+- Controllers and Modules are handled by the OpenCart not_found.php controller
 - Models are built that represent all OpenCart-1.5.6 tables including relations
 - Generate models for all your tables in one step and create standard Yii Crud using Gii
 - Autoload any of your Yii models and components from anywhere in OpenCart
 - Widgets can be rendered and will auto-include their stylesheet and javascript files
-- Controllers and Modules are handled by the OpenCart not_found.php controller
 - OpenCart controllers and child actions can be run within Yii
-- Fancy error messages with stack dump
+- Uses Yii pretty error message and stack dump
 
 The following Yii components are pre-configured to work in your OpenCart:
+
 - `Yii::app()->assetManager` - [CAssetManager](http://www.yiiframework.com/doc/api/1.1/CAssetManager)
 - `Yii::app()->clientScript` - [CClientScript](http://www.yiiframework.com/doc/api/1.1/CClientScript)
 - `Yii::app()->controller` - [CController](http://www.yiiframework.com/doc/api/1.1/CController)
