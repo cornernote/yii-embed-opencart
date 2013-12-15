@@ -64,9 +64,7 @@ require_once(DIR_SYSTEM . 'yiiembed/app.php');
 
 Add to `system/engine/front.php` in the `__construct()` function, after `$this->registry = $registry;`:
 ```php
-Yii::createApplication('OcWebApplication');
-Yii::app()->front = $this;
-Yii::app()->registry = $registry;
+Yii::createApplication('OcWebApplication', array('registry' => $registry, 'front' => $this));
 ```
 
 Add to `system/library/response.php` in the `output()` function, before `echo $ouput;`:
