@@ -7,7 +7,7 @@ A lightweight Yii application embedded into OpenCart
 
 - Yii is available from anywhere in OpenCart using Yii::app() or Yii::foobar
 - Models are built that represent all OpenCart tables including relations
-- Generate models for all your tables in one step using Gii
+- Generate models for all your tables in one step and create standard Yii Crud using Gii
 - Autoload any of your Yii models and components
 - Widgets can be rendered and will auto-include their stylesheet and javascript files
 - Controllers and Modules are handled by the OpenCart not_found.php controller
@@ -34,6 +34,9 @@ Rendering the default Yii SiteController - `index.php?route=site/index`
 
 Rendering the default admin Yii SiteController - `admin/index.php?route=site/index`
 ![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/admin.png)
+
+Using Gii to build all models - `admin/index.php?route=gii/prefixModel/index`
+![Admin](https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/gii.png)
 
 
 ## Installation
