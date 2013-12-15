@@ -49,7 +49,7 @@ Using Gii to build all models - `admin/index.php?route=gii/prefixModel/index`
 - Perform a vQmod or Manual installation then visit `index.php?route=site` and `admin/index.php?route=site` to see your Yii-Embed for OpenCart.
 
 
-### vqMod Installation
+### vQmod Installation
 
 If you have installed [vQmod](https://code.google.com/p/vqmod/) then no further installation is required.
 
