@@ -44,7 +44,9 @@ Yii::app()->clientScript->render($ouput);
 ```
 
 
-## Controllers (optional)
+## Controllers
+
+In order to run Yii's controllers from within OpenCart we must put some code in the not found pages.  If Yii cannot find a controller action to run then it silently returns control to OpenCart.
 
 Add to `catalog/controller/error/not_found.php`, `admin/controller/error/not_found.php` and `admin/controller/error/permission.php` at the top of the `index()` function, after `public function index() {`:
 <pre>
@@ -80,7 +82,6 @@ define('YII_ENABLE_ERROR_HANDLER', true);
 
 You can use Yii's awesome code generator from your OpenCart admin, just like you can in any other Yii app!
 
-- Ensure you followed the optional Controllers section for the admin.
 - Navigate to your admin your.dom.ain/admin/index.php?route=gii
 - Use the PrefixModel Generator to generate all your models in one action.
 - To generate models that can be used by catalog and admin set Model Path to `yiiembed.models`.
