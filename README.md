@@ -25,6 +25,18 @@ The following Yii components are pre-configured to work in your OpenCart:
 
 ## Installation
 
+- Download (Yii-Embed for OpenCart)[https://github.com/cornernote/yii-embed-opencart/archive/master.zip] and uncompress the upload folder into your opencart installation.
+- Download (Yii)[http://www.yiiframework.com/] and uncompress it into your system folder.  The `yii.php` file should be in `system/yii/framework/yii.php`.
+- Perform a vQmod or Manual installation then visit `index.php?route=site` and `admin/index.php?route=site` to see your Yii-Embed for OpenCart.
+
+
+### vqMod Installation
+
+If you have installed (vQmod)[https://code.google.com/p/vqmod/] then no further installation is required.
+
+
+### Manual Installation
+
 Add to `system/startup.php` at the bottom:
 ```
 require_once(DIR_SYSTEM . 'yii/framework/yii.php');
@@ -43,26 +55,26 @@ Add to `system/library/response.php` in the `output()` function, before `echo $o
 Yii::app()->clientScript->render($ouput);
 ```
 
-
-## Controllers
-
-In order to run Yii's controllers from within OpenCart we must put some code in the not found pages.  If Yii cannot find a controller action to run then it silently returns control to OpenCart.
-
 Add to `catalog/controller/error/not_found.php`, `admin/controller/error/not_found.php` and `admin/controller/error/permission.php` at the top of the `index()` function, after `public function index() {`:
 <pre>
 Yii::app()->runController();
 </pre>
 
-The catalog and admin each have a SiteController that is ready to roll.  Simply visit `index.php?route=site` to get started.
+
+## Upgrading
+
+The files in `/catalog/yiiembed` and `/admin/yiiembed` are intended to be modified by you.  Please do not replace your files with the default application.
+
+The files in `/system/yiiembed` are intended to be in-sync with this project.  Please avoid changing them, you can extend them if you require modifications.
 
 
-## Configuration (optional)
+## Configuration
 
 Edit the Yii config files in `catalog/yiiembed/config/main.php` and 
 `admin/yiiembed/config/main.php`, for example:
 ```
 return array(
-    'id' => 'My OpenCart Yii App', 
+    'name' => 'My OpenCart Yii App', 
     'preload' => array('log'), 
     'components' => array( ... ),
     'modules' => array( ... ),
@@ -78,7 +90,7 @@ define('YII_ENABLE_ERROR_HANDLER', true);
 ```
 
 
-## Generating Gii Code (optional)
+## Generating Gii Code
 
 You can use Yii's awesome code generator from your OpenCart admin, just like you can in any other Yii app!
 
