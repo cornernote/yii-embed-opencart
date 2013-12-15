@@ -11,7 +11,7 @@ A lightweight Yii application embedded into OpenCart
 - Autoload any of your Yii models and components
 - Widgets can be rendered and will auto-include their stylesheet and javascript files
 - Controllers and Modules are handled by the OpenCart not_found.php controller
-- OpenCart controllers can be run within Yii
+- OpenCart controllers and child actions can be run within Yii
 - Fancy error messages with stack dump
 
 The following Yii components are pre-configured to work in your OpenCart:
@@ -111,7 +111,14 @@ Yii::app()->controller->widget('zii.widgets.CDetailView', array(
 ));
 ```
 
-Run OpenCart controllers:
+Run OpenCart controller:
 ```
 Yii::app()->runOcController('common/home');
+```
+
+Get OpenCart controller output:
+```
+echo Yii::app()->getOcControllerOutput('common/header');
+echo 'hello world';
+echo Yii::app()->getOcControllerOutput('common/footer');
 ```

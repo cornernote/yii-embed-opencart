@@ -12,6 +12,10 @@
  */
 class OcWebApplication extends CWebApplication
 {
+    /**
+     * @var string the application name. Defaults to 'Yii-Embed for OpenCart'.
+     */
+    public $name = 'Yii-Embed for OpenCart';
 
     /**
      * @var Front is used to store OpenCart's controller
@@ -47,16 +51,22 @@ class OcWebApplication extends CWebApplication
      *
      * Overrides parent with the following features:
      * - Sets an alias to yiiembed.
+     * - Adds application.components and application.models to the import list.
      * - Adds yiiembed.components and yiiembed.models to the import list.
      * - Creates a new controller that may be used to render widgets and partial views.
+     * - Adds the token into the homeUrl for admin token requests.
      */
     protected function init()
     {
         parent::init();
         Yii::setPathOfAlias('yiiembed', dirname(__FILE__));
+        Yii::import('application.components.*');
+        Yii::import('application.models.*');
         Yii::import('yiiembed.components.*');
         Yii::import('yiiembed.models.*');
         $this->setController(new CController('site'));
+        if (isset($_GET['token']))
+            $this->setHomeUrl($this->getHomeUrl() . '?token=' . $_GET['token']);
     }
 
     /**
@@ -92,6 +102,31 @@ class OcWebApplication extends CWebApplication
         $this->front->dispatch(new Action($route), new Action('error/not_found'));
         $this->registry->get('response')->output();
         Yii::app()->end();
+    }
+
+    /**
+     * Returns the OpenCart controller child action.
+     * @param $route
+     * @param array $args
+     * @throws CException
+     * @return string
+     */
+    public function getOcControllerOutput($route, $args = array())
+    {
+        $action = new Action($route, $args);
+        if (!file_exists($action->getFile()))
+            throw new CException('Error: Could not load controller ' . $route . '!');
+
+        require_once($action->getFile());
+        // create a class that extends the controller to allow access to protected methods and properties
+        $className = 'Oc' . $action->getClass();
+        eval('class ' . $className . ' extends ' . $action->getClass() . ' {
+            public function ' . $action->getMethod() . '(){ parent::' . $action->getMethod() . '(); }
+            public function getOutput(){ return $this->output; }
+        }');
+        $controller = new $className($this->registry);
+        $controller->{$action->getMethod()}($action->getArgs());
+        return $controller->getOutput();
     }
 
     /**
