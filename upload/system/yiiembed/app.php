@@ -2,7 +2,6 @@
 /**
  * OcWebApplication is a lightweight Yii application embedded into OpenCart.
  *
- * @method static OcWebApplication app()
  * @property string $version
  *
  * @author Brett O'Donnell <cornernote@gmail.com>
@@ -140,10 +139,11 @@ class OcWebApplication extends CWebApplication
         require_once($action->getFile());
         // create a class that extends the controller to allow access to protected methods and properties
         $className = 'Oc' . $action->getClass();
-        eval('class ' . $className . ' extends ' . $action->getClass() . ' {
-            public function ' . $action->getMethod() . '(){ parent::' . $action->getMethod() . '(); }
-            public function getOutput(){ return $this->output; }
-        }');
+        if (!class_exists($className, false))
+            eval('class ' . $className . ' extends ' . $action->getClass() . ' {
+                public function ' . $action->getMethod() . '(){ parent::' . $action->getMethod() . '(); }
+                public function getOutput(){ return $this->output; }
+            }');
         $controller = new $className($this->registry);
         $controller->{$action->getMethod()}($action->getArgs());
         return $controller->getOutput();
