@@ -202,6 +202,14 @@ echo Yii::app()->getOcControllerOutput('common/footer');
 ```
 
 
+## License
+
+- Author: Brett O'Donnell <cornernote@gmail.com>
+- Source Code: https://github.com/cornernote/yii-embed-opencart
+- Copyright © 2013 Mr PHP <info@mrphp.com.au>
+- License: BSD-3-Clause https://raw.github.com/cornernote/yii-embed-opencart/master/LICENSE
+
+
 ## Links
 
 - [Yii Extensions Page](http://www.yiiframework.com/extension/yii-embed-opencart/)
