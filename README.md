@@ -212,6 +212,6 @@ echo Yii::app()->getOcControllerOutput('common/footer');
 
 ## Links
 
-- [Yii Extensions Page](http://www.yiiframework.com/extension/yii-embed-opencart/)
-- [OpenCart Extensions Page](http://www.opencart.com/index.php?route=extension/extension/info&extension_id=15059)
+- [Yii Extension](http://www.yiiframework.com/extension/yii-embed-opencart)
+- [OpenCart Extension](http://www.opencart.com/index.php?route=extension/extension/info&extension_id=15059)
 - [MrPHP](http://mrphp.com.au)
