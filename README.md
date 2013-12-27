@@ -4,6 +4,10 @@ A lightweight [Yii](http://www.yiiframework.com/) application embedded into [Ope
 
 ![Yii Framework](https://raw.github.com/cornernote/yii-embed-opencart/master/image/yii.png) & ![OpenCart](https://raw.github.com/cornernote/yii-embed-opencart/master/image/opencart.png)
 
+[![Mr PHP](https://raw.github.com/cornernote/mrphp-assets/master/img/code-banner.png)](http://mrphp.com.au) [![Project Stats](https://www.ohloh.net/p/yii-embed-opencart/widgets/project_thin_badge.gif)](https://www.ohloh.net/p/yii-embed-opencart)
+
+[![Latest Stable Version](https://poser.pugx.org/cornernote/yii-embed-opencart/v/stable.png)](https://packagist.org/packages/cornernote/yii-embed-opencart) [![Build Status](https://travis-ci.org/cornernote/yii-embed-opencart.png?branch=master)](https://travis-ci.org/cornernote/yii-embed-opencart)
+
 
 ### Contents
 
