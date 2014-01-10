@@ -1,303 +1,417 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A lightweight Yii application embedded into OpenCart">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Yii Embed Opencart : A lightweight Yii application embedded into OpenCart" />
+    <title>Yii Embed for OpenCart</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/bootstrap-flatly.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 
-    <title>Yii Embed Opencart</title>
-  </head>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
-  <body>
+    <a href="https://github.com/cornernote/yii-embed-opencart"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/cornernote/yii-embed-opencart">View on GitHub</a>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Yii Embed for OpenCart</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Features <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#features">Features</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#features/screenshots">Screenshots</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Installation <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#installation">Installation</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#installation/requirements">Requirements</a>
+                        </li>
+                        <li>
+                            <a href="#installation/vqmod-installation">vQmod Installation</a>
+                        </li>
+                        <li>
+                            <a href="#installation/manual-installation">Manual Installation</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configuration <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#configuration">Configuration</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#configuration/extending">Extending and Upgrading</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usage <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#usage">Usage</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#usage/examples">Examples</a>
+                        </li>
+                        <li>
+                            <a href="#usage/gii">Gii Code Generator</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="header">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Yii Embed for OpenCart</h1>
 
-          <h1 id="project_title">Yii Embed Opencart</h1>
-          <h2 id="project_tagline">A lightweight Yii application embedded into OpenCart</h2>
+            <p>A lightweight Yii application embedded into OpenCart.</p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/cornernote/yii-embed-opencart/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/cornernote/yii-embed-opencart/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" href="#installation">Installation</a>
+                <a class="btn btn-default btn-lg" role="button" href="#configuration">Configuration</a>
+                <a class="btn btn-default btn-lg" role="button" href="#usage">Usage</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="section">
+    <h2 id="features">Features</h2>
+    <ul>
+        <li>Yii is available from anywhere in OpenCart using <code>Yii::app()</code> or <code>Yii::foobar</code>
+        </li>
+        <li>OpenCart registry is available from anywhere in Yii using <code>Yii::app()-&gt;registry</code></li>
+        <li>Controllers and Modules are handled by the OpenCart not_found.php controller</li>
+        <li>Models are built that represent all OpenCart-1.5.6 tables including relations</li>
+        <li>Generate models for all your tables in one step and create standard Yii Crud using Gii</li>
+        <li>Autoload any of your Yii models and components from anywhere in OpenCart</li>
+        <li>Widgets can be rendered and will auto-include their stylesheet and javascript files</li>
+        <li>OpenCart controllers and child actions can be run within Yii</li>
+        <li>Uses Yii pretty error message and stack dump</li>
+    </ul>
+    <p>The following Yii components are pre-configured to work in your OpenCart:</p>
+    <ul>
+        <li>
+            <code>Yii::app()-&gt;assetManager</code> -
+            <a href="http://www.yiiframework.com/doc/api/1.1/CAssetManager">CAssetManager</a>
+        </li>
+        <li>
+            <code>Yii::app()-&gt;clientScript</code> -
+            <a href="http://www.yiiframework.com/doc/api/1.1/CClientScript">CClientScript</a>
+        </li>
+        <li>
+            <code>Yii::app()-&gt;controller</code> -
+            <a href="http://www.yiiframework.com/doc/api/1.1/CController">CController</a>
+        </li>
+        <li>
+            <code>Yii::app()-&gt;db</code> -
+            <a href="http://www.yiiframework.com/doc/api/1.1/CDbConnection">CDbConnection</a>
+        </li>
+        <li>
+            <code>Yii::app()-&gt;errorHandler</code> -
+            <a href="http://www.yiiframework.com/doc/api/1.1/CErrorHandler">CErrorHandler</a>
+        </li>
+        <li>
+            <code>Yii::app()-&gt;session</code> -
+            <a href="http://www.yiiframework.com/doc/api/1.1/CHttpSession">CHttpSession</a>
+        </li>
+        <li>
+            <code>Yii::app()-&gt;urlManager</code> -
+            <a href="http://www.yiiframework.com/doc/api/1.1/CUrlManager">CUrlManager</a>
+        </li>
+    </ul>
+
+    <h3 id="features/screenshots">Screenshots</h3>
+
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <a href="img/screenshot/catalog.png" class="fancybox" rel="screenshots"><img src="img/screenshot/catalog.png" alt="ss"></a>
+            </div>
+            <div class="caption text-center">Rendering the default Yii SiteController -
+                <code>index.php?route=site/index</code></div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <a href="img/screenshot/admin.png" class="fancybox" rel="screenshots"><img src="img/screenshot/admin.png" alt="ss"></a>
+            </div>
+            <div class="caption text-center">Rendering the default admin Yii SiteController -
+                <code>admin/index.php?route=site/index</code></div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <a href="img/screenshot/gii.png" class="fancybox" rel="screenshots"><img src="img/screenshot/gii.png" alt="ss"></a>
+            </div>
+            <div class="caption text-center">Using Gii to build all models -
+                <code>admin/index.php?route=gii/prefixModel/index</code></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <a href="img/screenshot/error-debug.png" class="fancybox" rel="screenshots"><img src="img/screenshot/error-debug.png" alt="ss"></a>
+            </div>
+            <div class="caption text-center">An error with <code>YII_DEBUG</code> set to <code>true</code></div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <a href="img/screenshot/error-live.png" class="fancybox" rel="screenshots"><img src="img/screenshot/error-live.png" alt="ss"></a>
+            </div>
+            <div class="caption text-center">An error with <code>YII_DEBUG</code> set to <code>false</code></div>
+        </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="yii-embed-for-opencart" class="anchor" href="#yii-embed-for-opencart"><span class="octicon octicon-link"></span></a>Yii-Embed for OpenCart</h1>
-
-<p>A lightweight <a href="http://www.yiiframework.com/">Yii</a> application embedded into <a href="http://www.opencart.com/">OpenCart</a></p>
-
-<p><img src="https://raw.github.com/cornernote/yii-embed-opencart/master/image/yii.png" alt="Yii Framework"> &amp; <img src="https://raw.github.com/cornernote/yii-embed-opencart/master/image/opencart.png" alt="OpenCart"></p>
-
-<p><a href="http://mrphp.com.au"><img src="https://raw.github.com/cornernote/mrphp-assets/master/img/code-banner.png" alt="Mr PHP"></a> <a href="https://www.ohloh.net/p/yii-embed-opencart"><img src="https://www.ohloh.net/p/yii-embed-opencart/widgets/project_thin_badge.gif" alt="Project Stats"></a></p>
-
-<h3>
-<a name="contents" class="anchor" href="#contents"><span class="octicon octicon-link"></span></a>Contents</h3>
-
-<p><a href="#features">Features</a><br><a href="#screenshots">Screenshots</a><br><a href="#requirements">Requirements</a><br><a href="#installation">Installation</a><br><a href="#configuration">Configuration</a><br><a href="#gii">Gii</a><br><a href="#notes">Notes</a><br><a href="#examples">Examples</a><br><a href="#license">License</a><br><a href="#links">Links</a>  </p>
-
-<h2>
-<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
-
-<ul>
-<li>Yii is available from anywhere in OpenCart using <code>Yii::app()</code> or <code>Yii::foobar</code>
-</li>
-<li>OpenCart registry is available from anywhere in Yii using <code>Yii::app()-&gt;registry</code>
-</li>
-<li>Controllers and Modules are handled by the OpenCart not_found.php controller</li>
-<li>Models are built that represent all OpenCart-1.5.6 tables including relations</li>
-<li>Generate models for all your tables in one step and create standard Yii Crud using Gii</li>
-<li>Autoload any of your Yii models and components from anywhere in OpenCart</li>
-<li>Widgets can be rendered and will auto-include their stylesheet and javascript files</li>
-<li>OpenCart controllers and child actions can be run within Yii</li>
-<li>Uses Yii pretty error message and stack dump</li>
-</ul><p>The following Yii components are pre-configured to work in your OpenCart:</p>
-
-<ul>
-<li>
-<code>Yii::app()-&gt;assetManager</code> - <a href="http://www.yiiframework.com/doc/api/1.1/CAssetManager">CAssetManager</a>
-</li>
-<li>
-<code>Yii::app()-&gt;clientScript</code> - <a href="http://www.yiiframework.com/doc/api/1.1/CClientScript">CClientScript</a>
-</li>
-<li>
-<code>Yii::app()-&gt;controller</code> - <a href="http://www.yiiframework.com/doc/api/1.1/CController">CController</a>
-</li>
-<li>
-<code>Yii::app()-&gt;db</code> - <a href="http://www.yiiframework.com/doc/api/1.1/CDbConnection">CDbConnection</a>
-</li>
-<li>
-<code>Yii::app()-&gt;errorHandler</code> - <a href="http://www.yiiframework.com/doc/api/1.1/CErrorHandler">CErrorHandler</a>
-</li>
-<li>
-<code>Yii::app()-&gt;session</code> - <a href="http://www.yiiframework.com/doc/api/1.1/CHttpSession">CHttpSession</a>
-</li>
-<li>
-<code>Yii::app()-&gt;urlManager</code> - <a href="http://www.yiiframework.com/doc/api/1.1/CUrlManager">CUrlManager</a>
-</li>
-</ul><h2>
-<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h2>
-
-<h3>
-<a name="catalog" class="anchor" href="#catalog"><span class="octicon octicon-link"></span></a>Catalog</h3>
-
-<p>Rendering the default Yii SiteController - <code>index.php?route=site/index</code>
-<img src="https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/catalog.png" alt="Catalog"></p>
-
-<h3>
-<a name="admin" class="anchor" href="#admin"><span class="octicon octicon-link"></span></a>Admin</h3>
-
-<p>Rendering the default admin Yii SiteController - <code>admin/index.php?route=site/index</code>
-<img src="https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/admin.png" alt="Admin"></p>
+</div>
 
-<h3>
-<a name="gii-prefixmodel" class="anchor" href="#gii-prefixmodel"><span class="octicon octicon-link"></span></a>Gii PrefixModel</h3>
+<div class="section">
+    <h2 id="installation">Installation</h2>
 
-<p>Using Gii to build all models - <code>admin/index.php?route=gii/prefixModel/index</code>
-<img src="https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/gii.png" alt="Gii"></p>
+    <p>Download the <a href="https://github.com/cornernote/yii-embed-opencart/releases/latest">latest release</a> or
+        <a href="https://github.com/cornernote/yii-embed-opencart/archive/master.zip">development version</a> and uncompress the upload folder into your opencart installation.
+    </p>
 
-<h3>
-<a name="errors" class="anchor" href="#errors"><span class="octicon octicon-link"></span></a>Errors</h3>
+    <h3 id="installation/requirements">Requirements</h3>
 
-<p>An error with <code>YII_DEBUG</code> set to <code>true</code>
-<img src="https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/error-debug.png" alt="Error Debug"></p>
+    <p>The application has been tested with the following software versions, however should work with any minor revision change:</p>
 
-<p>An error with <code>YII_DEBUG</code> set to <code>false</code>
-<img src="https://raw.github.com/cornernote/yii-embed-opencart/master/screenshot/error-live.png" alt="Error Live"></p>
+    <ul>
+        <li>
+            <a href="http://www.opencart.com/index.php?route=download/download/download&download_id=32">OpenCart-1.5.6</a> (should work in OpenCart-1.5.*)
+        </li>
+        <li>
+            <a href="https://github.com/yiisoft/yii/releases/download/1.1.14/yii-1.1.14.f0fee9.zip">Yii-1.1.14</a> (should work in Yii-1.1.*)
+            <br/>Uncompress it into your opencart system folder. The <code>yii.php</code> file should be in
+            <code>system/yii/framework/yii.php</code>
+        </li>
+    </ul>
 
-<h2>
-<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
-<p>The application has been tested with the following software versions, however should work with any minor revision change:</p>
+    <h3 id="installation/vqmod-installation">vQmod Installation</h3>
 
-<ul>
-<li>
-<a href="http://www.opencart.com/index.php?route=download/download/download&amp;download_id=32">OpenCart-1.5.6</a> (should work in OpenCart-1.5.*)</li>
-<li>
-<a href="https://github.com/yiisoft/yii/releases/download/1.1.14/yii-1.1.14.f0fee9.zip">Yii-1.1.14</a> (should work in Yii-1.1.*)</li>
-<li>
-<a href="http://www.php.net/downloads.php">PHP-5.3</a> (should work in at PHP-5.2+)</li>
-</ul><h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+    <p>If you have installed
+        <a href="https://code.google.com/p/vqmod/">vQmod</a> then no further installation is required.</p>
 
-<ul>
-<li>Download <a href="https://github.com/cornernote/yii-embed-opencart/archive/master.zip">Yii-Embed for OpenCart</a> and uncompress the upload folder into your opencart installation.</li>
-<li>Download <a href="http://www.yiiframework.com/">Yii Framework</a> and uncompress it into your system folder.  The <code>yii.php</code> file should be in <code>system/yii/framework/yii.php</code>.</li>
-<li>Perform a vQmod or Manual installation then visit <code>index.php?route=site</code> and <code>admin/index.php?route=site</code> to see your Yii-Embed for OpenCart.</li>
-</ul><h3>
-<a name="vqmod-installation" class="anchor" href="#vqmod-installation"><span class="octicon octicon-link"></span></a>vQmod Installation</h3>
+    <h3 id="installation/manual-installation">Manual Installation</h3>
 
-<p>If you have installed <a href="https://code.google.com/p/vqmod/">vQmod</a> then no further installation is required.</p>
+    <p>Add to <code>system/startup.php</code> at the bottom:</p>
 
-<h3>
-<a name="manual-installation" class="anchor" href="#manual-installation"><span class="octicon octicon-link"></span></a>Manual Installation</h3>
+        <pre class="prettyprint lang-php">require_once(DIR_SYSTEM . 'yii/framework/yii.php');
+require_once(DIR_SYSTEM . 'yiiembed/app.php');</pre>
 
-<p>Add to <code>system/startup.php</code> at the bottom:</p>
+    <p>Add to <code>system/engine/front.php</code> in the <code>__construct()</code> function, after
+        <code>$this-&gt;registry = $registry;</code>:</p>
 
-<div class="highlight highlight-php"><pre><span class="k">require_once</span><span class="p">(</span><span class="nx">DIR_SYSTEM</span> <span class="o">.</span> <span class="s1">'yii/framework/yii.php'</span><span class="p">);</span>
-<span class="k">require_once</span><span class="p">(</span><span class="nx">DIR_SYSTEM</span> <span class="o">.</span> <span class="s1">'yiiembed/app.php'</span><span class="p">);</span>
-</pre></div>
+    <pre class="prettyprint lang-php">Yii::createApplication('OcWebApplication', array('registry' => $registry, 'front' => $this));</pre>
 
-<p>Add to <code>system/engine/front.php</code> in the <code>__construct()</code> function, after <code>$this-&gt;registry = $registry;</code>:</p>
+    <p>Add to <code>system/library/response.php</code> in the <code>output()</code> function, before
+        <code>echo $ouput;</code>:</p>
 
-<div class="highlight highlight-php"><pre><span class="nx">Yii</span><span class="o">::</span><span class="na">createApplication</span><span class="p">(</span><span class="s1">'OcWebApplication'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'registry'</span> <span class="o">=&gt;</span> <span class="nv">$registry</span><span class="p">,</span> <span class="s1">'front'</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="p">));</span>
-</pre></div>
+    <pre class="prettyprint lang-php">Yii::app()->clientScript->render($ouput);</pre>
 
-<p>Add to <code>system/library/response.php</code> in the <code>output()</code> function, before <code>echo $ouput;</code>:</p>
+    <p>Add to <code>catalog/controller/error/not_found.php</code>,
+        <code>admin/controller/error/not_found.php</code> and
+        <code>admin/controller/error/permission.php</code> at the top of the <code>index()</code> function, after
+        <code>public function index() {</code>:</p>
 
-<div class="highlight highlight-php"><pre><span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">clientScript</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="nv">$ouput</span><span class="p">);</span>
-</pre></div>
+    <pre class="prettyprint lang-php">Yii::app()->runController();</pre>
 
-<p>Add to <code>catalog/controller/error/not_found.php</code>, <code>admin/controller/error/not_found.php</code> and <code>admin/controller/error/permission.php</code> at the top of the <code>index()</code> function, after <code>public function index() {</code>:</p>
+</div>
 
-<div class="highlight highlight-php"><pre><span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">runController</span><span class="p">();</span>
-</pre></div>
+<div class="section">
+    <h2 id="configuration">Configuration</h2>
 
-<h2>
-<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h2>
+    <p>Edit the Yii config files in <code>catalog/yiiembed/config/main.php</code> and
+        <code>admin/yiiembed/config/main.php</code>, for example:</p>
 
-<p>Edit the Yii config files in <code>catalog/yiiembed/config/main.php</code> and 
-<code>admin/yiiembed/config/main.php</code>, for example:</p>
+        <pre class="prettyprint linenums lang-php">return array(
+    'preload' => array('log'),
+    'components' => array( ... ),
+    'modules' => array( ... ),
+    'params' => array( ... ),
+);</pre>
 
-<div class="highlight highlight-php"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-    <span class="s1">'preload'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">'log'</span><span class="p">),</span> 
-    <span class="s1">'components'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="o">...</span> <span class="p">),</span>
-    <span class="s1">'modules'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="o">...</span> <span class="p">),</span>
-    <span class="s1">'params'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="o">...</span> <span class="p">),</span>
-<span class="p">);</span>
-</pre></div>
+    <p>Add Yii constants to your OpenCart config.php, defaults shown below:</p>
 
-<p>Add Yii constants to your OpenCart config.php, defaults shown below:</p>
+        <pre class="prettyprint linenums lang-php">define('YII_DEBUG', false); // set to true for fancy error messages
+define('YII_TRACE_LEVEL', 0);
+define('YII_ENABLE_EXCEPTION_HANDLER', true);
+define('YII_ENABLE_ERROR_HANDLER', true);</pre>
 
-<div class="highlight highlight-php"><pre><span class="nb">define</span><span class="p">(</span><span class="s1">'YII_DEBUG'</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span> <span class="c1">// set to true for fancy error messages</span>
-<span class="nb">define</span><span class="p">(</span><span class="s1">'YII_TRACE_LEVEL'</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-<span class="nb">define</span><span class="p">(</span><span class="s1">'YII_ENABLE_EXCEPTION_HANDLER'</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-<span class="nb">define</span><span class="p">(</span><span class="s1">'YII_ENABLE_ERROR_HANDLER'</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-</pre></div>
+    <h3 id="configuration/extending">Extending and Upgrading</h3>
 
-<h2>
-<a name="gii" class="anchor" href="#gii"><span class="octicon octicon-link"></span></a>Gii</h2>
+    <p>The files in <code>catalog/yiiembed</code> and
+        <code>admin/yiiembed</code> are intended to be modified by you. When upgrading please ensure you do not overwrite your modified yiiembed applications with the default applications.
+    </p>
 
-<p>You can use Yii's awesome code generator from your OpenCart admin, just like you can in any other Yii app.  Simply browse to your admin <code>admin/index.php?route=gii</code>.</p>
+    <p>The files in
+        <code>system/yiiembed</code> are intended to be in-sync with this project. Please avoid changing them, you can extend them if you require modifications.
+    </p>
 
-<p>To tune the Gii configuration or security access edit <code>admin/yiiembed/config/main.php</code>.</p>
+</div>
 
-<h3>
-<a name="prefixmodel-generator" class="anchor" href="#prefixmodel-generator"><span class="octicon octicon-link"></span></a>PrefixModel Generator</h3>
+<div class="section">
+    <h2 id="usage">Usage</h2>
 
-<p>Use the PrefixModel Generator to generate all your models in one action.  </p>
+    <h3 id="usage/examples">Examples</h3>
 
-<p>Select the Code Template <code>yiiembed</code> to generate models the same as ours.</p>
+    <p>Find and save a record (in this example we use a Customer):</p>
 
-<h3>
-<a name="modeldoc-generator" class="anchor" href="#modeldoc-generator"><span class="octicon octicon-link"></span></a>ModelDoc Generator</h3>
+        <pre class="prettyprint linenums lang-php">$customer_id = 123;
+$customer = OcCustomer::model()->findByPk($customer_id);
+if ($customer) {
+    $customer->firstname = 'Foo';
+    $customer->lastname = 'Bar';
+    $customer->save();
+}</pre>
 
-<p>Use the ModelDoc Generator to replace the phpdoc blocks in your models.</p>
+    <p>Render Yii partial views:</p>
 
-<h3>
-<a name="other-generators" class="anchor" href="#other-generators"><span class="octicon octicon-link"></span></a>Other Generators</h3>
+    <pre class="prettyprint linenums lang-php">Yii::app()->controller->renderPartial('site/_partial');</pre>
 
-<p>All the default Gii Generators including Controller Generator, Crud Generator, Form Generator, Model Generator and Module Generator are also available.</p>
+    <p>Render Yii widgets:</p>
 
-<h2>
-<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h2>
+        <pre class="prettyprint linenums lang-php">Yii::app()->controller->widget('zii.widgets.CDetailView', array(
+    'data' => array('hello' => 'world'),
+));</pre>
 
-<h3>
-<a name="extending-and-upgrading" class="anchor" href="#extending-and-upgrading"><span class="octicon octicon-link"></span></a>Extending and Upgrading</h3>
+    <p>Run OpenCart controller:</p>
 
-<p>The files in <code>catalog/yiiembed</code> and <code>admin/yiiembed</code> are intended to be modified by you.  When upgrading please ensure you do not overwrite your modified yiiembed applications with the default applications.</p>
+    <pre class="prettyprint linenums lang-php">Yii::app()->runOcController('common/home');</pre>
 
-<p>The files in <code>system/yiiembed</code> are intended to be in-sync with this project.  Please avoid changing them, you can extend them if you require modifications.</p>
+    <p>Get OpenCart controller output:</p>
 
-<h2>
-<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+        <pre class="prettyprint linenums lang-php">echo Yii::app()->getOcControllerOutput('common/header');
+echo 'hello world';
+echo Yii::app()->getOcControllerOutput('common/footer');</pre>
 
-<p>Find and save a record (in this example we use a Customer):</p>
 
-<div class="highlight highlight-php"><pre><span class="nv">$customer_id</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
-<span class="nv">$customer</span> <span class="o">=</span> <span class="nx">OcCustomer</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findByPk</span><span class="p">(</span><span class="nv">$customer_id</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$customer</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$customer</span><span class="o">-&gt;</span><span class="na">firstname</span> <span class="o">=</span> <span class="s1">'Foo'</span><span class="p">;</span>
-    <span class="nv">$customer</span><span class="o">-&gt;</span><span class="na">lastname</span> <span class="o">=</span> <span class="s1">'Bar'</span><span class="p">;</span>
-    <span class="nv">$customer</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
-<span class="p">}</span>
-</pre></div>
+    <h3 id="usage/gii">Gii Code Generator</h3>
 
-<p>Render Yii partial views:</p>
+    <p>You can use Yii's awesome code generator from your OpenCart admin, just like you can in any other Yii app. Simply browse to your admin
+        <code>admin/index.php?route=gii</code>.</p>
 
-<div class="highlight highlight-php"><pre><span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">controller</span><span class="o">-&gt;</span><span class="na">renderPartial</span><span class="p">(</span><span class="s1">'site/_partial'</span><span class="p">);</span>
-</pre></div>
+    <p>To tune the Gii configuration or security access edit <code>admin/yiiembed/config/main.php</code>.</p>
 
-<p>Render Yii widgets:</p>
+    <h4>PrefixModel Generator</h4>
 
-<div class="highlight highlight-php"><pre><span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">controller</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">'zii.widgets.CDetailView'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-    <span class="s1">'data'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">'hello'</span> <span class="o">=&gt;</span> <span class="s1">'world'</span><span class="p">),</span>
-<span class="p">));</span>
-</pre></div>
+    <p>Use the PrefixModel Generator to generate all your models in one action. </p>
 
-<p>Run OpenCart controller:</p>
+    <p>Select the Code Template <code>yiiembed</code> to generate models the same as ours.</p>
 
-<div class="highlight highlight-php"><pre><span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">runOcController</span><span class="p">(</span><span class="s1">'common/home'</span><span class="p">);</span>
-</pre></div>
+    <h4>ModelDoc Generator</h4>
 
-<p>Get OpenCart controller output:</p>
+    <p>Use the ModelDoc Generator to replace the phpdoc blocks in your models.</p>
 
-<div class="highlight highlight-php"><pre><span class="k">echo</span> <span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getOcControllerOutput</span><span class="p">(</span><span class="s1">'common/header'</span><span class="p">);</span>
-<span class="k">echo</span> <span class="s1">'hello world'</span><span class="p">;</span>
-<span class="k">echo</span> <span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getOcControllerOutput</span><span class="p">(</span><span class="s1">'common/footer'</span><span class="p">);</span>
-</pre></div>
+    <h4>Other Generators</h4>
 
-<h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+    <p>All the default Gii Generators including Controller Generator, Crud Generator, Form Generator, Model Generator and Module Generator are also available.</p>
 
-<ul>
-<li>Author: Brett O'Donnell <a href="mailto:cornernote@gmail.com">cornernote@gmail.com</a>
-</li>
-<li>Source Code: <a href="https://github.com/cornernote/yii-embed-opencart">https://github.com/cornernote/yii-embed-opencart</a>
-</li>
-<li>Copyright © 2013 Mr PHP <a href="mailto:info@mrphp.com.au">info@mrphp.com.au</a>
-</li>
-<li>License: BSD-3-Clause <a href="https://raw.github.com/cornernote/yii-embed-opencart/master/LICENSE">https://raw.github.com/cornernote/yii-embed-opencart/master/LICENSE</a>
-</li>
-</ul><h2>
-<a name="links" class="anchor" href="#links"><span class="octicon octicon-link"></span></a>Links</h2>
+</div>
+</div>
 
-<ul>
-<li><a href="http://www.yiiframework.com/extension/yii-embed-opencart">Yii Extension</a></li>
-<li><a href="http://www.opencart.com/index.php?route=extension/extension/info&amp;extension_id=15059">OpenCart Extension</a></li>
-<li><a href="http://mrphp.com.au">MrPHP</a></li>
-</ul>
-      </section>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3>Support</h3>
+                <ul class="list-unstyled">
+                    <li>Does this site need improvement? Go ahead and
+                        <a href="https://github.com/cornernote/yii-embed-opencart/edit/gh-pages/index.html">suggest a change</a>.
+                    </li>
+                    <li>Found a bug, or need help using this project? Check the
+                        <a href="https://github.com/cornernote/yii-embed-opencart/issues">open issues</a> or
+                        <a href="https://github.com/cornernote/yii-embed-opencart/issues/new">create an issue</a>.
+                    </li>
+                </ul>
+                <h4>License</h4>
+
+                <p>
+                    <a href="license.html" class="fancybox" data-fancybox-type="ajax">BSD-3-Clause</a>, Copyright &copy; 2013-2014
+                    <a href="mailto:info@mrphp.com.au">Mr PHP</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Yii Embed for OpenCart</h4>
+                <ul class="list-unstyled">
+                    <li><a href="http://cornernote.github.io/yii-embed-opencart">Documentation</a></li>
+                    <li><a href="https://github.com/cornernote/yii-embed-opencart">GitHub Project</a></li>
+                    <li><a href="http://www.yiiframework.com/extension/yii-embed-opencart">Yii Extension</a></li>
+                    <li>
+                        <a href="http://www.opencart.com/index.php?route=extension/extension/info&extension_id=15059">OpenCart Extension</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Yii Embed Opencart maintained by <a href="https://github.com/cornernote">cornernote</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div id="project-icons" class="text-center">
+        <p>
+            <a href="http://mrphp.com.au"><img src="https://raw.github.com/cornernote/mrphp-assets/master/img/code-banner.png" alt="Mr PHP"></a>
+            <a href="https://www.ohloh.net/p/yii-embed-opencart"><img src="https://www.ohloh.net/p/yii-embed-opencart/widgets/project_thin_badge.gif" alt="Project Stats"></a>
+        </p>
+        <!--
+        <p>
+            <a href="https://packagist.org/packages/cornernote/yii-embed-opencart"><img src="https://poser.pugx.org/cornernote/yii-embed-opencart/v/stable.png" alt="Latest Stable Version"></a>
+            <a href="https://travis-ci.org/cornernote/yii-embed-opencart"><img src="https://travis-ci.org/cornernote/yii-embed-opencart.png?branch=master" alt="Build Status"></a>
+        </p>
+        -->
     </div>
+</div>
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-46879709-5");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+<!-- load js last -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="js/main.js"></script>
 
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-46879709-3', 'cornernote.github.io');
+    ga('send', 'pageview');
+</script>
 
-  </body>
+</body>
 </html>
