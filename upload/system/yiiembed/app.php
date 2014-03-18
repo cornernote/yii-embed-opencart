@@ -99,7 +99,7 @@ class OcWebApplication extends CWebApplication
         // get route
         if (!$route) {
             $routeVar = $this->getUrlManager()->routeVar;
-            $route = isset($_GET[$routeVar]) ? $_GET[$routeVar] : '';
+            $route = isset($_GET[$routeVar]) ? urldecode($_GET[$routeVar]) : '';
         }
 
         try {
