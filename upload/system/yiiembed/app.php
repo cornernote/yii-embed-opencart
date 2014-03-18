@@ -76,7 +76,9 @@ class OcWebApplication extends CWebApplication
         Yii::import('application.models.*');
         Yii::import('yiiembed.components.*');
         Yii::import('yiiembed.models.*');
-        $this->setController(new CController('site'));
+        list($c, $a) = !empty($_GET['route']) ? explode('/', urldecode($_GET['route'])) : array('site', 'index');
+        $this->setController(new CController($c));
+        $this->controller->setAction(new CViewAction($this->controller, $a));
         if ($this->name === null)
             $this->name = $this->registry->get('config')->get('config_name');
         if (isset($_GET['token']))
