@@ -164,7 +164,7 @@ class OcWebApplication extends CWebApplication
     {
         parent::registerCoreComponents();
         $dbHost = explode(':', DB_HOSTNAME);
-        $dbHost = $dbHost[0] . (!empty($host[1]) ? ';port=' . $dbHost[1] : '');
+        $dbHost = $dbHost[0] . (!empty($dbHost[1]) ? ';port=' . $dbHost[1] : '');
         $components = array(
             'db' => array(
                 'class' => 'CDbConnection',
