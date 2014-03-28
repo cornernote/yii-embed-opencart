@@ -35,12 +35,32 @@ Yii::app()->clientScript->render($ouput);
                         ]]></add>
         </operation>
     </file>
-    <file name="catalog/controller/error/not_found.php,admin/controller/error/not_found.php,admin/controller/error/permission.php">
+    <file name="catalog/controller/error/not_found.php,admin/controller/error/not_found.php">
         <operation info="yii-embed-opencart">
             <search position="after"><![CDATA[public function index() {]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
 Yii::app()->runController();
+// END Yii-Embed
+                        ]]></add>
+        </operation>
+    </file>
+    <file name="admin/controller/user/user_permission.php">
+        <operation info="yii-embed-opencart">
+            <search position="before"><![CDATA[if (isset($this->request->post['permission'])) {]]></search>
+            <add><![CDATA[
+// BEGIN Yii-Embed
+$this->data['permissions'] = array_merge($this->data['permissions'], Yii::app()->getPermissionList());
+// END Yii-Embed
+                        ]]></add>
+        </operation>
+    </file>
+    <file name="system/library/user.php">
+        <operation info="yii-embed-opencart">
+            <search position="replace"><![CDATA[if (isset($this->request->post['permission'])) {]]></search>
+            <add><![CDATA[
+// BEGIN Yii-Embed
+return in_array($value, $this->permission[$key]) || in_array(implode('/', array_slice(explode('/', $value), 0, 1)), $this->permission[$key]);
 // END Yii-Embed
                         ]]></add>
         </operation>

@@ -158,6 +158,30 @@ class OcWebApplication extends CWebApplication
     }
 
     /**
+     * Gets a list of controllers and actions to be used for admin permission settings.
+     */
+    public function getPermissionList()
+    {
+        $permissions = array();
+        Yii::import('application.controllers.*');
+        $yiiFiles = glob(DIR_APPLICATION . 'yiiembed/controllers/*.php');
+        foreach ($yiiFiles as $yiiFile) {
+            $controller = lcfirst(basename($yiiFile, 'Controller.php'));
+            $methods = get_class_methods(basename($yiiFile, '.php'));
+            foreach ($methods as $method) {
+                if ($method == 'actions' || strpos($method, 'action') !== 0) continue;
+                $action = lcfirst(substr($method, 6));
+                $permissions[] = $controller . '/' . $action;
+            }
+        }
+        foreach (array_keys(Yii::app()->modules) as $module) {
+            $permissions[] = $module;
+            //$permissions[] = $module . '/crud';
+        }
+        return $permissions;
+    }
+
+    /**
      * Registers the core application components.
      *
      * Overrides parent with the following features:
