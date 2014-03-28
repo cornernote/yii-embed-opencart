@@ -231,8 +231,14 @@
     
     <p>Add at the bottom, before the closing php tag <code>?&gt;</code>:</p>
 
-    <pre class="prettyprint lang-php">require_once(DIR_SYSTEM . 'yii/framework/yii.php');
-require_once(DIR_SYSTEM . 'yiiembed/app.php');</pre>
+    <pre class="prettyprint lang-php">if (class_exists('VQMod', false)) { 
+    require_once(VQMod::modCheck(DIR_SYSTEM . 'yiiembed/yii.php'));
+    require_once(VQMod::modCheck(DIR_SYSTEM . 'yiiembed/app.php'));
+}
+else {
+    require_once(DIR_SYSTEM . 'yiiembed/yii.php');
+    require_once(DIR_SYSTEM . 'yiiembed/app.php');
+}</pre>
 
     <h4><code>system/engine/front.php</code></h4>
 
