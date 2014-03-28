@@ -166,19 +166,23 @@ class OcWebApplication extends CWebApplication
     {
         $permissions = array();
         Yii::import('application.controllers.*');
-        $yiiFiles = glob(DIR_APPLICATION . 'yiiembed/controllers/*.php');
-        foreach ($yiiFiles as $yiiFile) {
-            $controller = lcfirst(basename($yiiFile, 'Controller.php'));
-            $methods = get_class_methods(basename($yiiFile, '.php'));
+        $files = glob(DIR_APPLICATION . 'yiiembed/controllers/*.php');
+        foreach ($files as $file) {
+            $controllerName = lcfirst(basename($file, '.php'));
+            $controllerId = substr($controllerName, 0, -10);
+            $controller = new $controllerName($controllerId);
+            $methods = get_class_methods(basename($file, '.php'));
             foreach ($methods as $method) {
                 if ($method == 'actions' || strpos($method, 'action') !== 0) continue;
-                $action = lcfirst(substr($method, 6));
-                $permissions[] = $controller . '/' . $action;
+                $actionName = lcfirst(substr($method, 6));
+                $permissions[] = $controllerId . '/' . $actionName;
+            }
+            foreach (array_keys($controller->actions()) as $actionName) {
+                $permissions[] = $controllerId . '/' . $actionName;
             }
         }
         foreach (array_keys(Yii::app()->modules) as $module) {
             $permissions[] = $module;
-            //$permissions[] = $module . '/crud';
         }
         return $permissions;
     }
