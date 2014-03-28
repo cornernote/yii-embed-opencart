@@ -57,7 +57,7 @@ class OcWebApplication extends CWebApplication
         parent::__construct($app);
     }
 
-    /**
+     /**
      * Initializes the application.
      *
      * Overrides parent with the following features:
@@ -76,7 +76,13 @@ class OcWebApplication extends CWebApplication
         Yii::import('application.models.*');
         Yii::import('yiiembed.components.*');
         Yii::import('yiiembed.models.*');
-        list($c, $a) = !empty($_GET['route']) ? explode('/', urldecode($_GET['route'])) : array('site', 'index');
+        list($c, $a) = array('site', 'index');
+        if (!empty($_GET[Yii::app()->urlManager->routeVar])) {
+            $route = explode('/', urldecode($_GET['route']));
+            $c = $route[0];
+            if (isset($route[1]))
+                $a = $route[1];
+        }
         $this->setController(new CController($c));
         $this->controller->setAction(new CViewAction($this->controller, $a));
         if ($this->name === null)
