@@ -57,7 +57,7 @@ $this->data['permissions'] = array_merge($this->data['permissions'], Yii::app()-
     </file>
     <file name="system/library/user.php">
         <operation info="yii-embed-opencart">
-            <search position="replace"><![CDATA[if (isset($this->request->post['permission'])) {]]></search>
+            <search position="replace"><![CDATA[return in_array($value, $this->permission[$key]);]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
 return in_array($value, $this->permission[$key]) || in_array(implode('/', array_slice(explode('/', $value), 0, 1)), $this->permission[$key]);
