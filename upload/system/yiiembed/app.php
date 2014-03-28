@@ -8,7 +8,6 @@
  * @link https://github.com/cornernote/yii-embed-opencart
  * @copyright 2013 Mr PHP <info@mrphp.com.au>
  * @license BSD-3-Clause https://raw.github.com/cornernote/yii-embed-opencart/master/LICENSE
- *
  */
 class OcWebApplication extends CWebApplication
 {
@@ -71,7 +70,7 @@ class OcWebApplication extends CWebApplication
     protected function init()
     {
         parent::init();
-        Yii::setPathOfAlias('yiiembed', dirname(__FILE__));
+        Yii::setPathOfAlias('yiiembed', DIR_SYSTEM . 'yiiembed');
         Yii::import('application.components.*');
         Yii::import('application.models.*');
         Yii::import('yiiembed.components.*');
