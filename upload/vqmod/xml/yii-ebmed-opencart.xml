@@ -27,10 +27,10 @@ Yii::createApplication('OcWebApplication', array('registry' => $registry, 'front
     </file>
     <file name="system/library/response.php">
         <operation info="yii-embed-opencart">
-            <search position="before"><![CDATA[echo $ouput;]]></search>
+            <search position="before"><![CDATA[echo $output;]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
-Yii::app()->clientScript->render($ouput);
+Yii::app()->clientScript->render($output);
 // END Yii-Embed
                         ]]></add>
         </operation>
