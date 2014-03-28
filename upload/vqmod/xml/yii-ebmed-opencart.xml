@@ -47,20 +47,20 @@ Yii::app()->runController();
     </file>
     <file name="admin/controller/user/user_permission.php">
         <operation info="yii-embed-opencart">
-            <search position="replace"><![CDATA[$this->data['permissions'] = array();]]></search>
+            <search position="after"><![CDATA[$this->data['permissions'] = array();]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
-$this->data['permissions'] = Yii::app()->getPermissionList();
+$this->data['permissions'] = array_merge($this->data['permissions'], Yii::app()->getPermissionList());
 // END Yii-Embed
                         ]]></add>
         </operation>
     </file>
     <file name="system/library/user.php">
         <operation info="yii-embed-opencart">
-            <search position="replace"><![CDATA[return in_array($value, $this->permission[$key]);]]></search>
+            <search position="before"><![CDATA[return in_array($value, $this->permission[$key]);]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
-return in_array($value, $this->permission[$key]) || in_array(implode('/', array_slice(explode('/', $value), 0, 1)), $this->permission[$key]);
+if (in_array(implode('/', array_slice(explode('/', $value), 0, 1)), $this->permission[$key])) return true;
 // END Yii-Embed
                         ]]></add>
         </operation>
