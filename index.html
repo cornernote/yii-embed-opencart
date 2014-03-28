@@ -70,6 +70,9 @@
                         <li>
                             <a href="#configuration/extending">Extending and Upgrading</a>
                         </li>
+                        <li>
+                            <a href="#configuration/common-issues">Common Issues</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -301,6 +304,10 @@ define('YII_ENABLE_ERROR_HANDLER', true);</pre>
     <p>The files in
         <code>system/yiiembed</code> are intended to be in-sync with this project. Please avoid changing them, you can extend them if you require modifications.
     </p>
+
+    <h3 id="configuration/common-issues">Common Issues</h3>
+
+    <p>If your JavaScript from Yii is outputting too early then it is most likely because the <code>&lt;title&gt;</code> tag is too high on the page.  Yii outputs all the CSS/JS right before the <code>&lt;title&gt;</code> tag, so try moving it below your other CSS/JS files.</p>
 
 </div>
 
