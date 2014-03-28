@@ -143,7 +143,10 @@ class OcWebApplication extends CWebApplication
         if (!file_exists($action->getFile()))
             throw new CException('Error: Could not load controller ' . $route . '!');
 
-        require_once($action->getFile());
+        if (class_exists('VQMod', false))
+            require_once(VQMod::modCheck($action->getFile()));
+        else
+            require_once($action->getFile());
         // create a class that extends the controller to allow access to protected methods and properties
         $className = 'Oc' . $action->getClass();
         if (!class_exists($className, false))
