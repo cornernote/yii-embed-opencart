@@ -19,5 +19,4 @@ $this->breadcrumbs = array(
     <li>Container file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
 </ul>
 
-<p>Browse to the <?php echo CHtml::link('examples page', array('site/page', 'view' => 'examples')); ?> to see more
-    examples of Yii-Embed for OpenCart.</p>
+<p>Browse to the <?php echo CHtml::link('examples page', Yii::app()->createUrl('site/page', array('view' => 'examples'))); ?> to see more examples of Yii-Embed for OpenCart.</p>
