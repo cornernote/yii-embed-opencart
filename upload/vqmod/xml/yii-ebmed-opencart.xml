@@ -9,8 +9,7 @@
             <search position="before"><![CDATA[?>]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
-require_once(VQMod::modCheck(DIR_SYSTEM . 'yiiembed/yii.php'));
-require_once(VQMod::modCheck(DIR_SYSTEM . 'yiiembed/app.php'));
+require_once(DIR_SYSTEM . 'yiiembed/yiiembed.php');
 // END Yii-Embed
                         ]]></add>
         </operation>
