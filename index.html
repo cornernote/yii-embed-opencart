@@ -227,27 +227,50 @@
 
     <h3 id="installation/manual-installation">Manual Installation</h3>
 
-    <p>Add to <code>system/startup.php</code> at the bottom:</p>
+    <h4><code>system/startup.php</code></h4>
+    
+    <p>Add at the bottom, before the closing php tag <code>?&gt;</code>:</p>
 
-        <pre class="prettyprint lang-php">require_once(DIR_SYSTEM . 'yii/framework/yii.php');
+    <pre class="prettyprint lang-php">require_once(DIR_SYSTEM . 'yii/framework/yii.php');
 require_once(DIR_SYSTEM . 'yiiembed/app.php');</pre>
 
-    <p>Add to <code>system/engine/front.php</code> in the <code>__construct()</code> function, after
-        <code>$this-&gt;registry = $registry;</code>:</p>
+    <h4><code>system/engine/front.php</code></h4>
+
+    <p>In the <code>__construct()</code> function, after <code>$this-&gt;registry = $registry;</code>:</p>
 
     <pre class="prettyprint lang-php">Yii::createApplication('OcWebApplication', array('registry' => $registry, 'front' => $this));</pre>
 
-    <p>Add to <code>system/library/response.php</code> in the <code>output()</code> function, before
-        <code>echo $ouput;</code>:</p>
+    <h4><code>system/library/response.php</code></h4>
+
+    <p>In the <code>output()</code> function, before <code>echo $ouput;</code>:</p>
 
     <pre class="prettyprint lang-php">Yii::app()->clientScript->render($ouput);</pre>
 
-    <p>Add to <code>catalog/controller/error/not_found.php</code>,
-        <code>admin/controller/error/not_found.php</code> and
-        <code>admin/controller/error/permission.php</code> at the top of the <code>index()</code> function, after
-        <code>public function index() {</code>:</p>
+    <h4><code>catalog/controller/error/not_found.php</code> and <code>admin/controller/error/not_found.php</code></h4>
+
+    <p>At the top of the <code>index()</code> function, after <code>public function index() {</code>:</p>
 
     <pre class="prettyprint lang-php">Yii::app()->runController();</pre>
+
+    <h4><code>admin/controller/user/user_permission.php</code></h4>
+    
+    <p>In the <code>getForm()</code> function, replace:</p>
+
+    <pre class="prettyprint lang-php">$this->data['permissions'] = array();</pre>
+    
+    <p>With:</p>
+        
+    <pre class="prettyprint lang-php">$this->data['permissions'] = Yii::app()->getPermissionList();</pre>
+
+    <h4><code>system/library/user.php</code></h4>
+    
+    <p>In the <code>hasPermission()</code> function, replace:</p>
+
+    <pre class="prettyprint lang-php">return in_array($value, $this->permission[$key]);</pre>
+    
+    <p>With:</p>
+        
+    <pre class="prettyprint lang-php">return in_array($value, $this->permission[$key]) || in_array(implode('/', array_slice(explode('/', $value), 0, 1)), $this->permission[$key]);</pre>
 
 </div>
 
