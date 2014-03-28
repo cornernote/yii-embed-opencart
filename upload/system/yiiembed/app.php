@@ -228,6 +228,9 @@ class OcWebApplication extends CWebApplication
             'urlManager' => array(
                 'class' => 'OcUrlManager',
             ),
+            'user' => array(
+                'class' => 'OcWebUser',
+            ),
             'widgetFactory' => array(
                 'class' => 'CWidgetFactory',
                 'widgets' => array(
