@@ -76,8 +76,10 @@ class OcWebApplication extends CWebApplication
         Yii::import('yiiembed.components.*');
         Yii::import('yiiembed.models.*');
         list($c, $a) = array('site', 'index');
-        if (!empty($_GET[Yii::app()->urlManager->routeVar])) {
-            $route = explode('/', urldecode($_GET['route']));
+        $get = $this->registry->get('request')->get;
+        $routeVar = $this->getUrlManager()->routeVar;
+        if (!empty($get[$routeVar])) {
+            $route = explode('/', urldecode($get[$routeVar]));
             $c = $route[0];
             if (isset($route[1]))
                 $a = $route[1];
@@ -86,8 +88,8 @@ class OcWebApplication extends CWebApplication
         $this->controller->setAction(new CViewAction($this->controller, $a));
         if ($this->name === null)
             $this->name = $this->registry->get('config')->get('config_name');
-        if (isset($_GET['token']))
-            $this->setHomeUrl($this->getHomeUrl() . '?token=' . $_GET['token']);
+        if (isset($get['token']))
+            $this->setHomeUrl($this->getHomeUrl() . '?token=' . $get['token']);
     }
 
     /**
@@ -103,8 +105,9 @@ class OcWebApplication extends CWebApplication
     {
         // get route
         if (!$route) {
+            $get = $this->registry->get('request')->get;
             $routeVar = $this->getUrlManager()->routeVar;
-            $route = isset($_GET[$routeVar]) ? urldecode($_GET[$routeVar]) : '';
+            $route = !empty($get[$routeVar]) ? urldecode($get[$routeVar]) : '';
         }
 
         try {
