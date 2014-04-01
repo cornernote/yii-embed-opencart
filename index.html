@@ -308,6 +308,10 @@ define('YII_ENABLE_ERROR_HANDLER', true);</pre>
 
     <p>jQuery in chrome treats inline elements as hidden. In the default opencart stylesheet on line 46, there is CSS to make forms display inline.  You can remove this, or add <code>'htmlOptions' => array('style'=>'display:block;')</code> to your form.</p>
 
+    <h4>Model name conflicts</h4>
+
+    <p>If you get an error like <code>Customer::__construct() Missing argument 1 for Customer::__construct()</code>, it is because there is already a Customer class built into OpenCart.  You should name your models with a prefix, for example <code>OcCustomer</code>.</p>
+
 </div>
 
 <div class="section">
