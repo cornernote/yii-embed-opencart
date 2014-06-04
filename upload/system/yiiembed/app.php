@@ -154,11 +154,11 @@ class OcWebApplication extends CWebApplication
         $className = 'Oc' . $action->getClass();
         if (!class_exists($className, false))
             eval('class ' . $className . ' extends ' . $action->getClass() . ' {
-                public function ' . $action->getMethod() . '(){ parent::' . $action->getMethod() . '(); }
+                public function runAction($method, $args){ call_user_func_array(array($this, $method), $args); }
                 public function getOutput(){ return $this->output; }
             }');
         $controller = new $className($this->registry);
-        $controller->{$action->getMethod()}($action->getArgs());
+        call_user_func_array(array($controller, 'runAction'), array($action->getMethod(), $action->getArgs()));
         return $controller->getOutput();
     }
 
