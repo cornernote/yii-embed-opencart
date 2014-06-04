@@ -9,7 +9,6 @@
  * @property Currency $currency
  * @property Tax $tax
  * @property Url $url
- * @property ModelToolImage $model_tool_image
  */
 class OcController extends CController
 {
