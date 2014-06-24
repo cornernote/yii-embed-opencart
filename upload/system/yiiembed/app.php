@@ -216,11 +216,6 @@ class OcWebApplication extends CWebApplication
                 'schemaCachingDuration' => 3600,
                 'enableParamLogging' => YII_DEBUG,
             ),
-            'assetManager' => array(
-                'class' => 'CAssetManager',
-                'basePath' => dirname($_SERVER['SCRIPT_FILENAME']) . DIRECTORY_SEPARATOR . 'assets',
-                'baseUrl' => dirname($_SERVER['SCRIPT_NAME']) . '/assets',
-            ),
             'clientScript' => array(
                 'class' => 'CClientScript',
                 'scriptMap' => array(
