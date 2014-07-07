@@ -171,8 +171,8 @@ class OcWebApplication extends CWebApplication
         Yii::import('application.controllers.*');
         $files = glob(DIR_APPLICATION . 'yiiembed/controllers/*.php');
         foreach ($files as $file) {
-            $controllerName = lcfirst(basename($file, '.php'));
-            $controllerId = substr($controllerName, 0, -10);
+            $controllerName = basename($file, '.php');
+            $controllerId = substr(lcfirst($controllerName), 0, -10);
             $controller = new $controllerName($controllerId);
             $methods = get_class_methods(basename($file, '.php'));
             foreach ($methods as $method) {
