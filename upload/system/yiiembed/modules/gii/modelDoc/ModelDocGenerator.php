@@ -13,6 +13,6 @@ class ModelDocGenerator extends CCodeGenerator
     /**
      * @var string
      */
-    public $codeModel = 'yiiembed.modules.gii.modeldoc.ModelDocCode';
+    public $codeModel = 'yiiembed.modules.gii.modelDoc.ModelDocCode';
 
 }
