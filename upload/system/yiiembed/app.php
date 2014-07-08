@@ -8,7 +8,6 @@
  * @link https://github.com/cornernote/yii-embed-opencart
  * @copyright 2013 Mr PHP <info@mrphp.com.au>
  * @license BSD-3-Clause https://raw.github.com/cornernote/yii-embed-opencart/master/LICENSE
- *
  */
 class OcWebApplication extends CWebApplication
 {
@@ -71,14 +70,16 @@ class OcWebApplication extends CWebApplication
     protected function init()
     {
         parent::init();
-        Yii::setPathOfAlias('yiiembed', dirname(__FILE__));
+        Yii::setPathOfAlias('yiiembed', DIR_SYSTEM . 'yiiembed');
         Yii::import('application.components.*');
         Yii::import('application.models.*');
         Yii::import('yiiembed.components.*');
         Yii::import('yiiembed.models.*');
         list($c, $a) = array('site', 'index');
-        if (!empty($_GET[Yii::app()->urlManager->routeVar])) {
-            $route = explode('/', urldecode($_GET['route']));
+        $get = $this->registry->get('request')->get;
+        $routeVar = $this->getUrlManager()->routeVar;
+        if (!empty($get[$routeVar])) {
+            $route = explode('/', urldecode($get[$routeVar]));
             $c = $route[0];
             if (isset($route[1]))
                 $a = $route[1];
@@ -87,8 +88,8 @@ class OcWebApplication extends CWebApplication
         $this->controller->setAction(new CViewAction($this->controller, $a));
         if ($this->name === null)
             $this->name = $this->registry->get('config')->get('config_name');
-        if (isset($_GET['token']))
-            $this->setHomeUrl($this->getHomeUrl() . '?token=' . $_GET['token']);
+        if (isset($get['token']))
+            $this->setHomeUrl($this->getHomeUrl() . '?token=' . $get['token']);
     }
 
     /**
@@ -104,8 +105,9 @@ class OcWebApplication extends CWebApplication
     {
         // get route
         if (!$route) {
+            $get = $this->registry->get('request')->get;
             $routeVar = $this->getUrlManager()->routeVar;
-            $route = isset($_GET[$routeVar]) ? urldecode($_GET[$routeVar]) : '';
+            $route = !empty($get[$routeVar]) ? urldecode($get[$routeVar]) : '';
         }
 
         try {
@@ -144,16 +146,19 @@ class OcWebApplication extends CWebApplication
         if (!file_exists($action->getFile()))
             throw new CException('Error: Could not load controller ' . $route . '!');
 
-        require_once($action->getFile());
+        if (class_exists('VQMod', false))
+            require_once(VQMod::modCheck($action->getFile()));
+        else
+            require_once($action->getFile());
         // create a class that extends the controller to allow access to protected methods and properties
         $className = 'Oc' . $action->getClass();
         if (!class_exists($className, false))
             eval('class ' . $className . ' extends ' . $action->getClass() . ' {
-                public function ' . $action->getMethod() . '(){ parent::' . $action->getMethod() . '(); }
+                public function runAction($method, $args){ call_user_func_array(array($this, $method), $args); }
                 public function getOutput(){ return $this->output; }
             }');
         $controller = new $className($this->registry);
-        $controller->{$action->getMethod()}($action->getArgs());
+        call_user_func_array(array($controller, 'runAction'), array($action->getMethod(), $action->getArgs()));
         return $controller->getOutput();
     }
 
@@ -164,19 +169,23 @@ class OcWebApplication extends CWebApplication
     {
         $permissions = array();
         Yii::import('application.controllers.*');
-        $yiiFiles = glob(DIR_APPLICATION . 'yiiembed/controllers/*.php');
-        foreach ($yiiFiles as $yiiFile) {
-            $controller = lcfirst(basename($yiiFile, 'Controller.php'));
-            $methods = get_class_methods(basename($yiiFile, '.php'));
+        $files = glob(DIR_APPLICATION . 'yiiembed/controllers/*.php');
+        foreach ($files as $file) {
+            $controllerName = basename($file, '.php');
+            $controllerId = substr(lcfirst($controllerName), 0, -10);
+            $controller = new $controllerName($controllerId);
+            $methods = get_class_methods(basename($file, '.php'));
             foreach ($methods as $method) {
                 if ($method == 'actions' || strpos($method, 'action') !== 0) continue;
-                $action = lcfirst(substr($method, 6));
-                $permissions[] = $controller . '/' . $action;
+                $actionName = lcfirst(substr($method, 6));
+                $permissions[] = $controllerId . '/' . $actionName;
+            }
+            foreach (array_keys($controller->actions()) as $actionName) {
+                $permissions[] = $controllerId . '/' . $actionName;
             }
         }
         foreach (array_keys(Yii::app()->modules) as $module) {
             $permissions[] = $module;
-            //$permissions[] = $module . '/crud';
         }
         return $permissions;
     }
@@ -207,11 +216,6 @@ class OcWebApplication extends CWebApplication
                 'schemaCachingDuration' => 3600,
                 'enableParamLogging' => YII_DEBUG,
             ),
-            'assetManager' => array(
-                'class' => 'CAssetManager',
-                'basePath' => dirname($_SERVER['SCRIPT_FILENAME']) . DIRECTORY_SEPARATOR . 'assets',
-                'baseUrl' => dirname($_SERVER['SCRIPT_NAME']) . '/assets',
-            ),
             'clientScript' => array(
                 'class' => 'CClientScript',
                 'scriptMap' => array(
@@ -221,6 +225,9 @@ class OcWebApplication extends CWebApplication
             ),
             'urlManager' => array(
                 'class' => 'OcUrlManager',
+            ),
+            'user' => array(
+                'class' => 'OcWebUser',
             ),
             'widgetFactory' => array(
                 'class' => 'CWidgetFactory',

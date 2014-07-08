@@ -9,8 +9,7 @@
             <search position="before"><![CDATA[?>]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
-require_once(DIR_SYSTEM . 'yii/framework/yii.php');
-require_once(DIR_SYSTEM . 'yiiembed/app.php');
+require_once(DIR_SYSTEM . 'yiiembed/yiiembed.php');
 // END Yii-Embed
                         ]]></add>
         </operation>
@@ -27,10 +26,10 @@ Yii::createApplication('OcWebApplication', array('registry' => $registry, 'front
     </file>
     <file name="system/library/response.php">
         <operation info="yii-embed-opencart">
-            <search position="before"><![CDATA[echo $ouput;]]></search>
+            <search position="before"><![CDATA[echo $output;]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
-Yii::app()->clientScript->render($ouput);
+Yii::app()->clientScript->render($output);
 // END Yii-Embed
                         ]]></add>
         </operation>
@@ -47,7 +46,7 @@ Yii::app()->runController();
     </file>
     <file name="admin/controller/user/user_permission.php">
         <operation info="yii-embed-opencart">
-            <search position="before"><![CDATA[if (isset($this->request->post['permission'])) {]]></search>
+            <search position="after"><![CDATA[$this->data['permissions'] = array();]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
 $this->data['permissions'] = array_merge($this->data['permissions'], Yii::app()->getPermissionList());
@@ -57,10 +56,10 @@ $this->data['permissions'] = array_merge($this->data['permissions'], Yii::app()-
     </file>
     <file name="system/library/user.php">
         <operation info="yii-embed-opencart">
-            <search position="replace"><![CDATA[if (isset($this->request->post['permission'])) {]]></search>
+            <search position="before"><![CDATA[return in_array($value, $this->permission[$key]);]]></search>
             <add><![CDATA[
 // BEGIN Yii-Embed
-return in_array($value, $this->permission[$key]) || in_array(implode('/', array_slice(explode('/', $value), 0, 1)), $this->permission[$key]);
+if (in_array(implode('/', array_slice(explode('/', $value), 0, 1)), $this->permission[$key])) return true;
 // END Yii-Embed
                         ]]></add>
         </operation>
