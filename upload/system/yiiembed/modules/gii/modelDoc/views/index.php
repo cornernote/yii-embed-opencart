@@ -3,8 +3,8 @@
  * @author Brett O'Donnell <cornernote@gmail.com>
  * @author Zain Ul abidin <zainengineer@gmail.com>
  * @copyright 2013 Mr PHP
- * @link https://github.com/cornernote/yii-dressing
- * @license BSD-3-Clause https://raw.github.com/cornernote/yii-dressing/master/license.txt
+ * @link https://github.com/cornernote/gii-modeldoc-generator
+ * @license BSD-3-Clause https://raw.github.com/cornernote/gii-modeldoc-generator/master/LICENSE
  */
 $class = get_class($model);
 ?>
@@ -32,6 +32,22 @@ $class = get_class($model);
         It should be specified in the form of a path alias, for example, <code>application.models</code>.
     </div>
     <?php echo $form->error($model, 'modelPath'); ?>
+</div>
+<div class="row checkbox">
+    <?php echo $form->label($model, 'addModelMethodDoc'); ?>
+    <?php echo $form->checkbox($model, 'addModelMethodDoc'); ?>
+    <div class="tooltip">
+        Adds a method doc for the model function.
+    </div>
+    <?php echo $form->error($model, 'addModelMethodDoc'); ?>
+</div>
+<div class="row checkbox">
+    <?php echo $form->label($model, 'useMixin'); ?>
+    <?php echo $form->checkbox($model, 'useMixin'); ?>
+    <div class="tooltip">
+        Use @mixin tag for behaviors.
+    </div>
+    <?php echo $form->error($model, 'useMixin'); ?>
 </div>
 
 <?php $this->endWidget(); ?>

@@ -6,61 +6,71 @@
  * @author Brett O'Donnell <cornernote@gmail.com>
  * @author Zain Ul abidin <zainengineer@gmail.com>
  * @copyright 2013 Mr PHP
- * @link https://github.com/cornernote/yii-dressing
- * @license BSD-3-Clause https://raw.github.com/cornernote/yii-dressing/master/license.txt
+ * @link https://github.com/cornernote/gii-modeldoc-generator
+ * @license BSD-3-Clause https://raw.github.com/cornernote/gii-modeldoc-generator/master/LICENSE
  */
 class ModelDocCode extends CCodeModel
 {
     /**
-     * @var
+     * @var string
      */
     public $modelClass;
+
     /**
      * @var string
      */
     public $modelPath = 'application.models';
 
     /**
-     * @var
+     * @var int
      */
-    public $addModelMethodDoc = false;
-    /**
-     * @var string
-     */
-    public $beginBlock = ' * --- BEGIN GenerateProperties ---';
-    /**
-     * @var string
-     */
-    public $endBlock = ' * --- END GenerateProperties ---';
+    public $addModelMethodDoc;
 
     /**
-     * @return array
+     * @var int
+     */
+    public $useMixin = 1;
+
+    /**
+     * @var string
+     */
+    public $beginBlock = ' * --- BEGIN ModelDoc ---';
+
+    /**
+     * @var string
+     */
+    public $endBlock = ' * --- END ModelDoc ---';
+
+    /**
+     * @inheritdoc
      */
     public function rules()
     {
         return array_merge(parent::rules(), array(
             array('modelClass, modelPath', 'filter', 'filter' => 'trim'),
             array('modelPath', 'required'),
-            array('modelPath', 'match', 'pattern' => '/^(\w+[\w\.]*|\*?|\w+\.\*)$/', 'message' => '{attribute} should only contain word characters, dots, and an optional ending asterisk.'),
+            array('modelPath', 'match', 'pattern' => '/^(\w+[\w\.]*)$/', 'message' => '{attribute} should only contain word characters and dots.'),
             array('modelClass', 'match', 'pattern' => '/^[a-zA-Z_]\w*$/', 'message' => '{attribute} should only contain word characters.'),
             array('modelPath', 'validateModelPath', 'skipOnError' => true),
-            array('modelPath', 'sticky'),
+            array('modelPath,addModelMethodDoc,useMixin', 'sticky'),
+            array('addModelMethodDoc,useMixin', 'numerical', 'integerOnly' => true),
         ));
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
     public function attributeLabels()
     {
         return array_merge(parent::attributeLabels(), array(
             'modelPath' => 'Model Path',
             'modelClass' => 'Model Class',
+            'useMixin' => 'Use @mixin tag for behaviors',
         ));
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
     public function requiredTemplates()
     {
@@ -70,32 +80,61 @@ class ModelDocCode extends CCodeModel
     }
 
     /**
-     * @param $attribute
-     * @param $params
+     *
      */
-    public function validateModelPath($attribute, $params)
+    public function validateModelPath()
     {
         if (Yii::getPathOfAlias($this->modelPath) === false)
             $this->addError('modelPath', 'Model Path must be a valid path alias.');
     }
 
     /**
-     *
+     * @inheritdoc
      */
     public function prepare()
     {
         $this->files = array();
         $templatePath = $this->templatePath;
         foreach ($this->getModels() as $model) {
-            $modelClass = get_class($model);
+            $reflection = new ReflectionClass($model);
             $params = array(
                 'model' => $model,
-                'modelClass' => $modelClass,
+                'reflection' => $reflection,
             );
-            $this->files[] = new CCodeFile(
-                Yii::getPathOfAlias($this->modelPath) . '/' . $modelClass . '.php',
-                $this->render($templatePath . '/model.php', $params)
-            );
+
+            //wrap the lines below in a try..catch block so execution
+            //continues with next model file if an error occurs
+            try {
+                $this->files[] = new CCodeFile(
+                    $reflection->getFileName(),
+                    $this->render($templatePath . '/model.php', $params)
+                );
+            } catch (Exception $ex) {
+                // continue with next model file, we could also do some logging here
+                continue;
+            }
+        }
+    }
+
+    /**
+     * Tricky way to get correct model class from file name.
+     * @param string $fileName
+     * @return string
+     */
+    public function getModelClass($fileName)
+    {
+        $modelClass = '\\' . str_replace('.', '\\', $this->modelPath . '.' . $fileName);
+        if (class_exists($modelClass, false)) {
+            return $modelClass;
+        }
+        elseif (class_exists($fileName, false)) {
+            return $fileName;
+        }
+        elseif (Yii::autoload($modelClass)) {
+            return $modelClass;
+        }
+        else {
+            return $fileName;
         }
     }
 
@@ -104,85 +143,115 @@ class ModelDocCode extends CCodeModel
      */
     public function getModels()
     {
-        $modelClass = $this->modelClass;
-        if ($modelClass)
+        if ($this->modelClass) {
+            $modelClass = $this->getModelClass($this->modelClass);
             return array(CActiveRecord::model($modelClass));
+        }
         $modelList = array();
         $files = CFileHelper::findFiles(Yii::getPathOfAlias($this->modelPath), array('fileTypes' => array('php'), 'level' => 0));
         foreach ($files as $file) {
-            $modelClass = basename($file, '.php');
-            // there is dot in modelName [$modelClass] probably a version conflict file
-            if (strpos($modelClass, '.') !== false)
+            $fileName = basename($file, '.php');
+
+            // there is a dot in file name, probably a version conflict file
+            if (strpos($fileName, '.') !== false)
                 continue;
+
+            $modelClass = $this->getModelClass($fileName);
+
+            //use reflection to check if class is instantiable
+            $reflectedClass = new ReflectionClass($modelClass);
+            if ($reflectedClass->isInstantiable() === false)
+                continue; //continue if this class is not instantiable
+
             // load the model
-            $model = new $modelClass;
+            try {
+                $model = new $modelClass;
+            } catch (Exception $e) {
+                $model = null;
+            }
             if (!$model || !is_subclass_of($model, 'CActiveRecord'))
                 continue;
+
+            // everything passes, add it to the list
             $modelList[] = $model;
         }
         return $modelList;
     }
 
     /**
-     * @param $modelClass string
+     * @param string $file
+     * @throws CException
      * @return string
      */
-    public function getContent($modelClass)
+    public function getContent($file)
     {
-        $file = Yii::getPathOfAlias($this->modelPath) . '/' . $modelClass . '.php';
         if (!file_exists($file))
-            throw new CException(strtr(Yii::t('dressing', 'File :file was not found.'), array(':file' => $file)));
+            throw new CException(strtr(Yii::t('modelDocGenerator', 'File :file was not found.'), array(':file' => $file)));
         $content = file_get_contents($file);
         $content = explode($this->beginBlock, $content);
         if (!isset($content[1]))
-            throw new CException(strtr(Yii::t('dressing', 'File :file does not contain the beginBlock :beginBlock.'), array(':beginBlock' => $this->beginBlock)));
+            throw new CException(strtr(Yii::t('modelDocGenerator', 'File :file does not contain the beginBlock :beginBlock.'), array(':file' => $file, ':beginBlock' => $this->beginBlock)));
         $content[1] = explode($this->endBlock, $content[1]);
         if (!isset($content[1][1]))
-            throw new CException(strtr(Yii::t('dressing', 'File :file does not contain the endBlock :endBlock.'), array(':endBlock' => $this->endBlock)));
+            throw new CException(strtr(Yii::t('modelDocGenerator', 'File :file does not contain the endBlock :endBlock.'), array(':file' => $file, ':endBlock' => $this->endBlock)));
         $content[1] = $content[1][1];
         return $content;
     }
 
     /**
-     * @param $modelName string
+     * @param array|string $behavior
      * @return string
-     */
-    public function getTopContent($modelName)
-    {
-        $contents = $this->beginBlock . "\n" . $properties . "\n" . $this->endBlock;
-        $fileName = Yii::getPathOfAlias($this->modelPath) . '/' . $modelName . '.php';
-        if (file_exists($fileName)) {
-            $fileContents = file_get_contents($fileName);
-            $firstPos = strpos($fileContents, $this->beginBlock);
-            $lastPos = strpos($fileContents, $this->endBlock);
-            if ($firstPos && $lastPos && ($lastPos > $firstPos)) {
-                $oldDoc = $this->getBetweenString($fileContents, $begin, $this->endBlock, false, false);
-                return str_replace($oldDoc, $contents, $fileContents);
-            }
-            return $fileContents;
-        }
-        return '';
-    }
-
-    /**
-     * @param $behavior
-     * @return mixed
      */
     public function getBehaviorClass($behavior)
     {
         if (is_array($behavior))
             $behavior = $behavior['class'];
         $behavior = explode('.', $behavior);
-        return $behavior[count($behavior) - 1];
+        $behavior = $behavior[count($behavior) - 1];
+        return $behavior[0] == '\\' ? $behavior : '\\' . $behavior;
     }
 
     /**
+     * @param string $contents
+     * @param int $start
+     * @param int $end
+     * @param bool $removeStart
+     * @param bool $removeEnd
+     * @return string
+     */
+    static public function getBetweenString($contents, $start, $end, $removeStart = true, $removeEnd = true)
+    {
+        $startPos = $start ? strpos($contents, $start) : 0;
+        if ($startPos === false)
+            return false;
+
+        if ($end) {
+            $endPos = strpos($contents, $end, $startPos);
+            if ($endPos === false) {
+                $endPos = $endPos = strlen($contents);
+            }
+        }
+        else {
+            $endPos = strlen($contents);
+        }
+
+        if ($removeStart) {
+            $startPos += strlen($start);
+        }
+        $len = $endPos - $startPos;
+        if (!$removeEnd && $end && $endPos) {
+            $len = $len + strlen($end);
+        }
+        return substr($contents, $startPos, $len);
+    }
+
+    /**
+     * @param $modelClass
      * @param $behavior
      * @param array $ignoreMethods
-     * @param array $ignoreProperties
      * @return array
      */
-    public function getBehaviorProperties($behavior, $ignoreMethods = array(), $ignoreProperties = array())
+    public function getBehaviorProperties($modelClass, $behavior, $ignoreMethods = array())
     {
         $properties = array();
 
@@ -194,13 +263,14 @@ class ModelDocCode extends CCodeModel
         //}
 
         // methods
+        $ignoreMethods['__destruct'] = '__destruct';
         foreach (get_class_methods($behavior) as $methodName) {
             if (isset($ignoreMethods[$methodName]))
                 continue;
             $methodReturn = $this->getTypeFromDocComment($behavior, $methodName, 'return');
             $paramTypes = $this->getDocComment($behavior, $methodName, 'param');
             $methodReturn = $methodReturn ? current($methodReturn) . ' ' : '';
-            $property = " * @method $methodReturn$methodName() $methodName(";
+            $property = " * @method {$methodReturn}{$methodName}(";
             $r = new ReflectionMethod($behavior, $methodName);
             $params = $r->getParameters();
             $separator = '';
@@ -210,7 +280,7 @@ class ModelDocCode extends CCodeModel
                 $type = current($paramTypes);
                 $filterType = '';
                 if ($type && strpos($type, '$')) {
-                    $typeString = YdStringHelper::getBetweenString($type, false, '$');
+                    $typeString = $this->getBetweenString($type, false, '$');
                     $typeString = trim($typeString);
                     $filterType = $this->filterDocType($typeString);
                     $filterType = $filterType ? trim($filterType) . ' ' : '';
@@ -226,6 +296,7 @@ class ModelDocCode extends CCodeModel
                 $separator = ', ';
             }
             $property .= ")";
+            $property = str_replace('CActiveRecord', $modelClass, $property);
             $properties[] = $property;
 
         }
@@ -290,7 +361,7 @@ class ModelDocCode extends CCodeModel
     }
 
     /**
-     * @param $type
+     * @param string $type
      * @return mixed|string
      */
     public function filterDocType($type)
@@ -326,7 +397,7 @@ class ModelDocCode extends CCodeModel
             $filteredType = str_replace('-', ' ', $filteredType);
             $filteredType = trim($filteredType);
             if (strpos($type, ' ')) {
-                $filteredType = YdStringHelper::getBetweenString($type, false, ' ');
+                $filteredType = $this->getBetweenString($type, false, ' ');
             }
         }
 
