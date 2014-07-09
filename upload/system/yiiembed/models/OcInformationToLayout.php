@@ -2,25 +2,9 @@
 /**
  * OcInformationToLayout
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{information_to_layout}}
- * @property integer $information_id
- * @property integer $store_id
- * @property integer $layout_id
- *
- * @see CActiveRecord
- * @method OcInformationToLayout find() find($condition, array $params = array())
- * @method OcInformationToLayout findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcInformationToLayout findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcInformationToLayout findBySql() findBySql($sql, array $params = array())
- * @method OcInformationToLayout[] findAll() findAll($condition = '', array $params = array())
- * @method OcInformationToLayout[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcInformationToLayout[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcInformationToLayout[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcInformationToLayout with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcInformationToLayout extends CActiveRecord

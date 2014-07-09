@@ -2,25 +2,9 @@
 /**
  * OcCategoryPath
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{category_path}}
- * @property integer $category_id
- * @property integer $path_id
- * @property integer $level
- *
- * @see CActiveRecord
- * @method OcCategoryPath find() find($condition, array $params = array())
- * @method OcCategoryPath findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCategoryPath findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategoryPath findBySql() findBySql($sql, array $params = array())
- * @method OcCategoryPath[] findAll() findAll($condition = '', array $params = array())
- * @method OcCategoryPath[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCategoryPath[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategoryPath[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCategoryPath with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCategoryPath extends CActiveRecord

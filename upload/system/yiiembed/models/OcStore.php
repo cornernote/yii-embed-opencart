@@ -2,7 +2,7 @@
 /**
  * OcStore
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{store}}
  * @property integer $store_id
@@ -11,31 +11,36 @@
  * @property string $ssl
  *
  * Relations
- * @property OcCategory[] $categories
- * @property OcCategory[] $categories1
- * @property OcCustomer[] $customers
- * @property OcInformation[] $informations
- * @property OcInformation[] $informations1
- * @property OcLayoutRoute[] $layoutRoutes
- * @property OcManufacturer[] $manufacturers
- * @property OcOrder[] $orders
- * @property OcProduct[] $products
- * @property OcProduct[] $products1
- * @property OcProduct[] $products2
- * @property OcSetting[] $settings
+ * @property \OcCategory[] $categories
+ * @property \OcCategory[] $categories1
+ * @property \OcCustomer[] $customers
+ * @property \OcInformation[] $informations
+ * @property \OcInformation[] $informations1
+ * @property \OcLayoutRoute[] $layoutRoutes
+ * @property \OcManufacturer[] $manufacturers
+ * @property \OcOrder[] $orders
+ * @property \OcProduct[] $products
+ * @property \OcProduct[] $products1
+ * @property \OcProduct[] $products2
+ * @property \OcSetting[] $settings
  *
- * @see CActiveRecord
- * @method OcStore find() find($condition, array $params = array())
- * @method OcStore findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcStore findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcStore findBySql() findBySql($sql, array $params = array())
- * @method OcStore[] findAll() findAll($condition = '', array $params = array())
- * @method OcStore[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcStore[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcStore[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcStore with() with()
+ * @see \CActiveRecord
+ * @method \OcStore find($condition = '', array $params = array())
+ * @method \OcStore findByPk($pk, $condition = '', array $params = array())
+ * @method \OcStore findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcStore findBySql($sql, array $params = array())
+ * @method \OcStore[] findAll($condition = '', array $params = array())
+ * @method \OcStore[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcStore[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcStore[] findAllBySql($sql, array $params = array())
+ * @method \OcStore with()
+ * @method \OcStore together()
+ * @method \OcStore cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcStore resetScope($resetDefault = true)
+ * @method \OcStore populateRecord($attributes, $callAfterFind = true)
+ * @method \OcStore[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcStore extends CActiveRecord

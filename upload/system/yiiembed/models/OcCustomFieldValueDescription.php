@@ -2,26 +2,9 @@
 /**
  * OcCustomFieldValueDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{custom_field_value_description}}
- * @property integer $custom_field_value_id
- * @property integer $language_id
- * @property integer $custom_field_id
- * @property string $name
- *
- * @see CActiveRecord
- * @method OcCustomFieldValueDescription find() find($condition, array $params = array())
- * @method OcCustomFieldValueDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomFieldValueDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomFieldValueDescription findBySql() findBySql($sql, array $params = array())
- * @method OcCustomFieldValueDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomFieldValueDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomFieldValueDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomFieldValueDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomFieldValueDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomFieldValueDescription extends CActiveRecord

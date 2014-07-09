@@ -2,7 +2,7 @@
 /**
  * OcCustomerReward
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{customer_reward}}
  * @property integer $customer_reward_id
@@ -13,21 +13,26 @@
  * @property string $date_added
  *
  * Relations
- * @property OcCustomer $customer
- * @property OcOrder $order
+ * @property \OcCustomer $customer
+ * @property \OcOrder $order
  *
- * @see CActiveRecord
- * @method OcCustomerReward find() find($condition, array $params = array())
- * @method OcCustomerReward findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerReward findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerReward findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerReward[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerReward[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerReward[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerReward[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerReward with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomerReward find($condition = '', array $params = array())
+ * @method \OcCustomerReward findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerReward findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerReward findBySql($sql, array $params = array())
+ * @method \OcCustomerReward[] findAll($condition = '', array $params = array())
+ * @method \OcCustomerReward[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerReward[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerReward[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomerReward with()
+ * @method \OcCustomerReward together()
+ * @method \OcCustomerReward cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomerReward resetScope($resetDefault = true)
+ * @method \OcCustomerReward populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomerReward[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerReward extends CActiveRecord

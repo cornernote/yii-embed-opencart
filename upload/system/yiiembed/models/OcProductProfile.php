@@ -2,30 +2,9 @@
 /**
  * OcProductProfile
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_profile}}
- * @property integer $product_id
- * @property integer $profile_id
- * @property integer $customer_group_id
- *
- * Relations
- * @property OcProduct $product
- * @property OcProfile $profile
- * @property OcCustomerGroup $customerGroup
- *
- * @see CActiveRecord
- * @method OcProductProfile find() find($condition, array $params = array())
- * @method OcProductProfile findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductProfile findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductProfile findBySql() findBySql($sql, array $params = array())
- * @method OcProductProfile[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductProfile[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductProfile[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductProfile[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductProfile with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductProfile extends CActiveRecord

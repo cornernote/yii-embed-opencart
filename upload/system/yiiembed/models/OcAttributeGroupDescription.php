@@ -2,25 +2,9 @@
 /**
  * OcAttributeGroupDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{attribute_group_description}}
- * @property integer $attribute_group_id
- * @property integer $language_id
- * @property string $name
- *
- * @see CActiveRecord
- * @method OcAttributeGroupDescription find() find($condition, array $params = array())
- * @method OcAttributeGroupDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcAttributeGroupDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAttributeGroupDescription findBySql() findBySql($sql, array $params = array())
- * @method OcAttributeGroupDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcAttributeGroupDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcAttributeGroupDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAttributeGroupDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcAttributeGroupDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcAttributeGroupDescription extends CActiveRecord

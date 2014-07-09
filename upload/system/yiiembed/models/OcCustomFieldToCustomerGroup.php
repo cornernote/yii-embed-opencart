@@ -2,24 +2,9 @@
 /**
  * OcCustomFieldToCustomerGroup
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{custom_field_to_customer_group}}
- * @property integer $custom_field_id
- * @property integer $customer_group_id
- *
- * @see CActiveRecord
- * @method OcCustomFieldToCustomerGroup find() find($condition, array $params = array())
- * @method OcCustomFieldToCustomerGroup findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomFieldToCustomerGroup findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomFieldToCustomerGroup findBySql() findBySql($sql, array $params = array())
- * @method OcCustomFieldToCustomerGroup[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomFieldToCustomerGroup[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomFieldToCustomerGroup[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomFieldToCustomerGroup[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomFieldToCustomerGroup with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomFieldToCustomerGroup extends CActiveRecord

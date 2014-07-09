@@ -2,30 +2,9 @@
 /**
  * OcOrderStatus
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{order_status}}
- * @property integer $order_status_id
- * @property integer $language_id
- * @property string $name
- *
- * Relations
- * @property OcOrder[] $orders
- * @property OcOrderHistory[] $orderHistories
- * @property OcLanguage $language
- *
- * @see CActiveRecord
- * @method OcOrderStatus find() find($condition, array $params = array())
- * @method OcOrderStatus findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderStatus findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderStatus findBySql() findBySql($sql, array $params = array())
- * @method OcOrderStatus[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderStatus[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderStatus[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderStatus[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderStatus with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderStatus extends CActiveRecord

@@ -2,25 +2,9 @@
 /**
  * OcDownloadDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{download_description}}
- * @property integer $download_id
- * @property integer $language_id
- * @property string $name
- *
- * @see CActiveRecord
- * @method OcDownloadDescription find() find($condition, array $params = array())
- * @method OcDownloadDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcDownloadDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcDownloadDescription findBySql() findBySql($sql, array $params = array())
- * @method OcDownloadDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcDownloadDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcDownloadDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcDownloadDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcDownloadDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcDownloadDescription extends CActiveRecord

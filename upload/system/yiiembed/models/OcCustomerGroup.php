@@ -2,7 +2,7 @@
 /**
  * OcCustomerGroup
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{customer_group}}
  * @property integer $customer_group_id
@@ -14,28 +14,33 @@
  * @property integer $sort_order
  *
  * Relations
- * @property OcCustomField[] $customFields
- * @property OcCustomer[] $customers
- * @property OcLanguage[] $languages
- * @property OcOrder[] $orders
- * @property OcProductDiscount[] $productDiscounts
- * @property OcProductProfile[] $productProfiles
- * @property OcProductReward[] $productRewards
- * @property OcProductSpecial[] $productSpecials
- * @property OcTaxRate[] $taxRates
+ * @property \OcCustomField[] $customFields
+ * @property \OcCustomer[] $customers
+ * @property \OcLanguage[] $languages
+ * @property \OcOrder[] $orders
+ * @property \OcProductDiscount[] $productDiscounts
+ * @property \OcProductProfile[] $productProfiles
+ * @property \OcProductReward[] $productRewards
+ * @property \OcProductSpecial[] $productSpecials
+ * @property \OcTaxRate[] $taxRates
  *
- * @see CActiveRecord
- * @method OcCustomerGroup find() find($condition, array $params = array())
- * @method OcCustomerGroup findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerGroup findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerGroup findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerGroup[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerGroup[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerGroup[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerGroup[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerGroup with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomerGroup find($condition = '', array $params = array())
+ * @method \OcCustomerGroup findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerGroup findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerGroup findBySql($sql, array $params = array())
+ * @method \OcCustomerGroup[] findAll($condition = '', array $params = array())
+ * @method \OcCustomerGroup[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerGroup[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerGroup[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomerGroup with()
+ * @method \OcCustomerGroup together()
+ * @method \OcCustomerGroup cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomerGroup resetScope($resetDefault = true)
+ * @method \OcCustomerGroup populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomerGroup[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerGroup extends CActiveRecord

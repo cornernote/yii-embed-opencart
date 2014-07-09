@@ -2,7 +2,7 @@
 /**
  * OcCustomerIp
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{customer_ip}}
  * @property integer $customer_ip_id
@@ -11,20 +11,25 @@
  * @property string $date_added
  *
  * Relations
- * @property OcCustomer $customer
+ * @property \OcCustomer $customer
  *
- * @see CActiveRecord
- * @method OcCustomerIp find() find($condition, array $params = array())
- * @method OcCustomerIp findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerIp findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerIp findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerIp[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerIp[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerIp[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerIp[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerIp with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomerIp find($condition = '', array $params = array())
+ * @method \OcCustomerIp findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerIp findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerIp findBySql($sql, array $params = array())
+ * @method \OcCustomerIp[] findAll($condition = '', array $params = array())
+ * @method \OcCustomerIp[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerIp[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerIp[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomerIp with()
+ * @method \OcCustomerIp together()
+ * @method \OcCustomerIp cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomerIp resetScope($resetDefault = true)
+ * @method \OcCustomerIp populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomerIp[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerIp extends CActiveRecord

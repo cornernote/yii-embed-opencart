@@ -2,29 +2,34 @@
 /**
  * OcVoucherTheme
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{voucher_theme}}
  * @property integer $voucher_theme_id
  * @property string $image
  *
  * Relations
- * @property OcOrderVoucher[] $orderVouchers
- * @property OcVoucher[] $vouchers
- * @property OcLanguage[] $languages
+ * @property \OcOrderVoucher[] $orderVouchers
+ * @property \OcVoucher[] $vouchers
+ * @property \OcLanguage[] $languages
  *
- * @see CActiveRecord
- * @method OcVoucherTheme find() find($condition, array $params = array())
- * @method OcVoucherTheme findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcVoucherTheme findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcVoucherTheme findBySql() findBySql($sql, array $params = array())
- * @method OcVoucherTheme[] findAll() findAll($condition = '', array $params = array())
- * @method OcVoucherTheme[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcVoucherTheme[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcVoucherTheme[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcVoucherTheme with() with()
+ * @see \CActiveRecord
+ * @method \OcVoucherTheme find($condition = '', array $params = array())
+ * @method \OcVoucherTheme findByPk($pk, $condition = '', array $params = array())
+ * @method \OcVoucherTheme findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcVoucherTheme findBySql($sql, array $params = array())
+ * @method \OcVoucherTheme[] findAll($condition = '', array $params = array())
+ * @method \OcVoucherTheme[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcVoucherTheme[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcVoucherTheme[] findAllBySql($sql, array $params = array())
+ * @method \OcVoucherTheme with()
+ * @method \OcVoucherTheme together()
+ * @method \OcVoucherTheme cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcVoucherTheme resetScope($resetDefault = true)
+ * @method \OcVoucherTheme populateRecord($attributes, $callAfterFind = true)
+ * @method \OcVoucherTheme[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcVoucherTheme extends CActiveRecord

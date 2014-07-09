@@ -2,24 +2,9 @@
 /**
  * OcManufacturerToStore
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{manufacturer_to_store}}
- * @property integer $manufacturer_id
- * @property integer $store_id
- *
- * @see CActiveRecord
- * @method OcManufacturerToStore find() find($condition, array $params = array())
- * @method OcManufacturerToStore findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcManufacturerToStore findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcManufacturerToStore findBySql() findBySql($sql, array $params = array())
- * @method OcManufacturerToStore[] findAll() findAll($condition = '', array $params = array())
- * @method OcManufacturerToStore[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcManufacturerToStore[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcManufacturerToStore[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcManufacturerToStore with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcManufacturerToStore extends CActiveRecord

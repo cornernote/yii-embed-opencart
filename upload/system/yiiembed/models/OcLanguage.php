@@ -2,7 +2,7 @@
 /**
  * OcLanguage
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{language}}
  * @property integer $language_id
@@ -16,44 +16,49 @@
  * @property integer $status
  *
  * Relations
- * @property OcAttribute[] $attributes
- * @property OcAttributeGroup[] $attributeGroups
- * @property OcBannerImage[] $bannerImages
- * @property OcCategory[] $categories
- * @property OcCustomField[] $customFields
- * @property OcCustomFieldValue[] $customFieldValues
- * @property OcCustomerGroup[] $customerGroups
- * @property OcDownload[] $downloads
- * @property OcFilter[] $filters
- * @property OcFilterGroup[] $filterGroups
- * @property OcInformation[] $informations
- * @property OcLengthClass[] $lengthClasses
- * @property OcOption[] $options
- * @property OcOptionValue[] $optionValues
- * @property OcOrder[] $orders
- * @property OcOrderStatus[] $orderStatuses
- * @property OcProductAttribute[] $productAttributes
- * @property OcProduct[] $products
- * @property OcProfile[] $profiles
- * @property OcReturnAction[] $returnActions
- * @property OcReturnReason[] $returnReasons
- * @property OcReturnStatus[] $returnStatuses
- * @property OcStockStatus[] $stockStatuses
- * @property OcVoucherTheme[] $voucherThemes
- * @property OcWeightClass[] $weightClasses
+ * @property \OcAttribute[] $attributes
+ * @property \OcAttributeGroup[] $attributeGroups
+ * @property \OcBannerImage[] $bannerImages
+ * @property \OcCategory[] $categories
+ * @property \OcCustomField[] $customFields
+ * @property \OcCustomFieldValue[] $customFieldValues
+ * @property \OcCustomerGroup[] $customerGroups
+ * @property \OcDownload[] $downloads
+ * @property \OcFilter[] $filters
+ * @property \OcFilterGroup[] $filterGroups
+ * @property \OcInformation[] $informations
+ * @property \OcLengthClass[] $lengthClasses
+ * @property \OcOption[] $options
+ * @property \OcOptionValue[] $optionValues
+ * @property \OcOrder[] $orders
+ * @property \OcOrderStatus[] $orderStatuses
+ * @property \OcProductAttribute[] $productAttributes
+ * @property \OcProduct[] $products
+ * @property \OcProfile[] $profiles
+ * @property \OcReturnAction[] $returnActions
+ * @property \OcReturnReason[] $returnReasons
+ * @property \OcReturnStatus[] $returnStatuses
+ * @property \OcStockStatus[] $stockStatuses
+ * @property \OcVoucherTheme[] $voucherThemes
+ * @property \OcWeightClass[] $weightClasses
  *
- * @see CActiveRecord
- * @method OcLanguage find() find($condition, array $params = array())
- * @method OcLanguage findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcLanguage findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcLanguage findBySql() findBySql($sql, array $params = array())
- * @method OcLanguage[] findAll() findAll($condition = '', array $params = array())
- * @method OcLanguage[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcLanguage[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcLanguage[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcLanguage with() with()
+ * @see \CActiveRecord
+ * @method \OcLanguage find($condition = '', array $params = array())
+ * @method \OcLanguage findByPk($pk, $condition = '', array $params = array())
+ * @method \OcLanguage findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcLanguage findBySql($sql, array $params = array())
+ * @method \OcLanguage[] findAll($condition = '', array $params = array())
+ * @method \OcLanguage[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcLanguage[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcLanguage[] findAllBySql($sql, array $params = array())
+ * @method \OcLanguage with()
+ * @method \OcLanguage together()
+ * @method \OcLanguage cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcLanguage resetScope($resetDefault = true)
+ * @method \OcLanguage populateRecord($attributes, $callAfterFind = true)
+ * @method \OcLanguage[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcLanguage extends CActiveRecord

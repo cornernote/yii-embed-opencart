@@ -2,7 +2,7 @@
 /**
  * OcProduct
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{product}}
  * @property integer $product_id
@@ -38,43 +38,48 @@
  * @property integer $viewed
  *
  * Relations
- * @property OcCouponProduct[] $couponProducts
- * @property OcOrderProduct[] $orderProducts
- * @property OcOrderRecurring[] $orderRecurrings
- * @property OcStockStatus $stockStatus
- * @property OcManufacturer $manufacturer
- * @property OcTaxClass $taxClass
- * @property OcWeightClass $weightClass
- * @property OcLengthClass $lengthClass
- * @property OcProductAttribute[] $productAttributes
- * @property OcLanguage[] $languages
- * @property OcProductDiscount[] $productDiscounts
- * @property OcFilter[] $filters
- * @property OcProductImage[] $productImages
- * @property OcProductOption[] $productOptions
- * @property OcProductOptionValue[] $productOptionValues
- * @property OcProductProfile[] $productProfiles
- * @property OcStore[] $stores
- * @property OcRelated[] $relateds
- * @property OcProductReward[] $productRewards
- * @property OcProductSpecial[] $productSpecials
- * @property OcCategory[] $categories
- * @property OcDownload[] $downloads
- * @property OcReturn[] $returns
- * @property OcReview[] $reviews
+ * @property \OcCouponProduct[] $couponProducts
+ * @property \OcOrderProduct[] $orderProducts
+ * @property \OcOrderRecurring[] $orderRecurrings
+ * @property \OcStockStatus $stockStatus
+ * @property \OcManufacturer $manufacturer
+ * @property \OcTaxClass $taxClass
+ * @property \OcWeightClass $weightClass
+ * @property \OcLengthClass $lengthClass
+ * @property \OcProductAttribute[] $productAttributes
+ * @property \OcLanguage[] $languages
+ * @property \OcProductDiscount[] $productDiscounts
+ * @property \OcFilter[] $filters
+ * @property \OcProductImage[] $productImages
+ * @property \OcProductOption[] $productOptions
+ * @property \OcProductOptionValue[] $productOptionValues
+ * @property \OcProductProfile[] $productProfiles
+ * @property \OcStore[] $stores
+ * @property \OcRelated[] $relateds
+ * @property \OcProductReward[] $productRewards
+ * @property \OcProductSpecial[] $productSpecials
+ * @property \OcCategory[] $categories
+ * @property \OcDownload[] $downloads
+ * @property \OcReturn[] $returns
+ * @property \OcReview[] $reviews
  *
- * @see CActiveRecord
- * @method OcProduct find() find($condition, array $params = array())
- * @method OcProduct findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProduct findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProduct findBySql() findBySql($sql, array $params = array())
- * @method OcProduct[] findAll() findAll($condition = '', array $params = array())
- * @method OcProduct[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProduct[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProduct[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProduct with() with()
+ * @see \CActiveRecord
+ * @method \OcProduct find($condition = '', array $params = array())
+ * @method \OcProduct findByPk($pk, $condition = '', array $params = array())
+ * @method \OcProduct findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProduct findBySql($sql, array $params = array())
+ * @method \OcProduct[] findAll($condition = '', array $params = array())
+ * @method \OcProduct[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcProduct[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProduct[] findAllBySql($sql, array $params = array())
+ * @method \OcProduct with()
+ * @method \OcProduct together()
+ * @method \OcProduct cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcProduct resetScope($resetDefault = true)
+ * @method \OcProduct populateRecord($attributes, $callAfterFind = true)
+ * @method \OcProduct[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProduct extends CActiveRecord

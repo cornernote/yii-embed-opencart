@@ -2,26 +2,9 @@
 /**
  * OcInformationDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{information_description}}
- * @property integer $information_id
- * @property integer $language_id
- * @property string $title
- * @property string $description
- *
- * @see CActiveRecord
- * @method OcInformationDescription find() find($condition, array $params = array())
- * @method OcInformationDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcInformationDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcInformationDescription findBySql() findBySql($sql, array $params = array())
- * @method OcInformationDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcInformationDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcInformationDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcInformationDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcInformationDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcInformationDescription extends CActiveRecord

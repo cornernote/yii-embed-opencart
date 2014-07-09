@@ -2,24 +2,9 @@
 /**
  * OcCategoryToStore
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{category_to_store}}
- * @property integer $category_id
- * @property integer $store_id
- *
- * @see CActiveRecord
- * @method OcCategoryToStore find() find($condition, array $params = array())
- * @method OcCategoryToStore findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCategoryToStore findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategoryToStore findBySql() findBySql($sql, array $params = array())
- * @method OcCategoryToStore[] findAll() findAll($condition = '', array $params = array())
- * @method OcCategoryToStore[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCategoryToStore[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategoryToStore[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCategoryToStore with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCategoryToStore extends CActiveRecord

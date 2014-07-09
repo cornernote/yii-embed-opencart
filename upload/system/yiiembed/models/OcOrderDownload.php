@@ -2,7 +2,7 @@
 /**
  * OcOrderDownload
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order_download}}
  * @property integer $order_download_id
@@ -14,21 +14,26 @@
  * @property integer $remaining
  *
  * Relations
- * @property OcOrder $order
- * @property OcOrderProduct $orderProduct
+ * @property \OcOrder $order
+ * @property \OcOrderProduct $orderProduct
  *
- * @see CActiveRecord
- * @method OcOrderDownload find() find($condition, array $params = array())
- * @method OcOrderDownload findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderDownload findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderDownload findBySql() findBySql($sql, array $params = array())
- * @method OcOrderDownload[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderDownload[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderDownload[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderDownload[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderDownload with() with()
+ * @see \CActiveRecord
+ * @method \OcOrderDownload find($condition = '', array $params = array())
+ * @method \OcOrderDownload findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderDownload findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderDownload findBySql($sql, array $params = array())
+ * @method \OcOrderDownload[] findAll($condition = '', array $params = array())
+ * @method \OcOrderDownload[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderDownload[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderDownload[] findAllBySql($sql, array $params = array())
+ * @method \OcOrderDownload with()
+ * @method \OcOrderDownload together()
+ * @method \OcOrderDownload cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrderDownload resetScope($resetDefault = true)
+ * @method \OcOrderDownload populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrderDownload[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderDownload extends CActiveRecord

@@ -2,29 +2,9 @@
 /**
  * OcStockStatus
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{stock_status}}
- * @property integer $stock_status_id
- * @property integer $language_id
- * @property string $name
- *
- * Relations
- * @property OcProduct[] $products
- * @property OcLanguage $language
- *
- * @see CActiveRecord
- * @method OcStockStatus find() find($condition, array $params = array())
- * @method OcStockStatus findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcStockStatus findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcStockStatus findBySql() findBySql($sql, array $params = array())
- * @method OcStockStatus[] findAll() findAll($condition = '', array $params = array())
- * @method OcStockStatus[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcStockStatus[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcStockStatus[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcStockStatus with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcStockStatus extends CActiveRecord

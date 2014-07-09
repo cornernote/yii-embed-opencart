@@ -2,7 +2,7 @@
 /**
  * OcCustomerTransaction
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{customer_transaction}}
  * @property integer $customer_transaction_id
@@ -13,21 +13,26 @@
  * @property string $date_added
  *
  * Relations
- * @property OcCustomer $customer
- * @property OcOrder $order
+ * @property \OcCustomer $customer
+ * @property \OcOrder $order
  *
- * @see CActiveRecord
- * @method OcCustomerTransaction find() find($condition, array $params = array())
- * @method OcCustomerTransaction findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerTransaction findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerTransaction findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerTransaction[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerTransaction[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerTransaction[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerTransaction[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerTransaction with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomerTransaction find($condition = '', array $params = array())
+ * @method \OcCustomerTransaction findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerTransaction findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerTransaction findBySql($sql, array $params = array())
+ * @method \OcCustomerTransaction[] findAll($condition = '', array $params = array())
+ * @method \OcCustomerTransaction[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerTransaction[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerTransaction[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomerTransaction with()
+ * @method \OcCustomerTransaction together()
+ * @method \OcCustomerTransaction cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomerTransaction resetScope($resetDefault = true)
+ * @method \OcCustomerTransaction populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomerTransaction[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerTransaction extends CActiveRecord

@@ -2,7 +2,7 @@
 /**
  * OcZone
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{zone}}
  * @property integer $zone_id
@@ -12,23 +12,28 @@
  * @property integer $status
  *
  * Relations
- * @property OcAddress[] $addresses
- * @property OcAffiliate[] $affiliates
- * @property OcCountry $country
- * @property OcZoneToGeoZone[] $zoneToGeoZones
+ * @property \OcAddress[] $addresses
+ * @property \OcAffiliate[] $affiliates
+ * @property \OcCountry $country
+ * @property \OcZoneToGeoZone[] $zoneToGeoZones
  *
- * @see CActiveRecord
- * @method OcZone find() find($condition, array $params = array())
- * @method OcZone findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcZone findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcZone findBySql() findBySql($sql, array $params = array())
- * @method OcZone[] findAll() findAll($condition = '', array $params = array())
- * @method OcZone[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcZone[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcZone[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcZone with() with()
+ * @see \CActiveRecord
+ * @method \OcZone find($condition = '', array $params = array())
+ * @method \OcZone findByPk($pk, $condition = '', array $params = array())
+ * @method \OcZone findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcZone findBySql($sql, array $params = array())
+ * @method \OcZone[] findAll($condition = '', array $params = array())
+ * @method \OcZone[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcZone[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcZone[] findAllBySql($sql, array $params = array())
+ * @method \OcZone with()
+ * @method \OcZone together()
+ * @method \OcZone cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcZone resetScope($resetDefault = true)
+ * @method \OcZone populateRecord($attributes, $callAfterFind = true)
+ * @method \OcZone[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcZone extends CActiveRecord

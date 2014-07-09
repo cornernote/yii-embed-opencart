@@ -2,7 +2,7 @@
 /**
  * OcOrderRecurring
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order_recurring}}
  * @property integer $order_recurring_id
@@ -27,23 +27,28 @@
  * @property string $profile_reference
  *
  * Relations
- * @property OcOrder $order
- * @property OcProduct $product
- * @property OcProfile $profile
- * @property OcOrderRecurringTransaction[] $orderRecurringTransactions
+ * @property \OcOrder $order
+ * @property \OcProduct $product
+ * @property \OcProfile $profile
+ * @property \OcOrderRecurringTransaction[] $orderRecurringTransactions
  *
- * @see CActiveRecord
- * @method OcOrderRecurring find() find($condition, array $params = array())
- * @method OcOrderRecurring findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderRecurring findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderRecurring findBySql() findBySql($sql, array $params = array())
- * @method OcOrderRecurring[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderRecurring[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderRecurring[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderRecurring[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderRecurring with() with()
+ * @see \CActiveRecord
+ * @method \OcOrderRecurring find($condition = '', array $params = array())
+ * @method \OcOrderRecurring findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderRecurring findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderRecurring findBySql($sql, array $params = array())
+ * @method \OcOrderRecurring[] findAll($condition = '', array $params = array())
+ * @method \OcOrderRecurring[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderRecurring[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderRecurring[] findAllBySql($sql, array $params = array())
+ * @method \OcOrderRecurring with()
+ * @method \OcOrderRecurring together()
+ * @method \OcOrderRecurring cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrderRecurring resetScope($resetDefault = true)
+ * @method \OcOrderRecurring populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrderRecurring[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderRecurring extends CActiveRecord

@@ -2,7 +2,7 @@
 /**
  * OcInformation
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{information}}
  * @property integer $information_id
@@ -11,21 +11,26 @@
  * @property integer $status
  *
  * Relations
- * @property OcLanguage[] $languages
- * @property OcStore[] $stores
+ * @property \OcLanguage[] $languages
+ * @property \OcStore[] $stores
  *
- * @see CActiveRecord
- * @method OcInformation find() find($condition, array $params = array())
- * @method OcInformation findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcInformation findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcInformation findBySql() findBySql($sql, array $params = array())
- * @method OcInformation[] findAll() findAll($condition = '', array $params = array())
- * @method OcInformation[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcInformation[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcInformation[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcInformation with() with()
+ * @see \CActiveRecord
+ * @method \OcInformation find($condition = '', array $params = array())
+ * @method \OcInformation findByPk($pk, $condition = '', array $params = array())
+ * @method \OcInformation findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcInformation findBySql($sql, array $params = array())
+ * @method \OcInformation[] findAll($condition = '', array $params = array())
+ * @method \OcInformation[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcInformation[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcInformation[] findAllBySql($sql, array $params = array())
+ * @method \OcInformation with()
+ * @method \OcInformation together()
+ * @method \OcInformation cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcInformation resetScope($resetDefault = true)
+ * @method \OcInformation populateRecord($attributes, $callAfterFind = true)
+ * @method \OcInformation[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcInformation extends CActiveRecord

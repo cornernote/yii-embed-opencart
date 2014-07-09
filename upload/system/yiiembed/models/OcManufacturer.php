@@ -2,7 +2,7 @@
 /**
  * OcManufacturer
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{manufacturer}}
  * @property integer $manufacturer_id
@@ -11,21 +11,26 @@
  * @property integer $sort_order
  *
  * Relations
- * @property OcStore[] $stores
- * @property OcProduct[] $products
+ * @property \OcStore[] $stores
+ * @property \OcProduct[] $products
  *
- * @see CActiveRecord
- * @method OcManufacturer find() find($condition, array $params = array())
- * @method OcManufacturer findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcManufacturer findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcManufacturer findBySql() findBySql($sql, array $params = array())
- * @method OcManufacturer[] findAll() findAll($condition = '', array $params = array())
- * @method OcManufacturer[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcManufacturer[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcManufacturer[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcManufacturer with() with()
+ * @see \CActiveRecord
+ * @method \OcManufacturer find($condition = '', array $params = array())
+ * @method \OcManufacturer findByPk($pk, $condition = '', array $params = array())
+ * @method \OcManufacturer findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcManufacturer findBySql($sql, array $params = array())
+ * @method \OcManufacturer[] findAll($condition = '', array $params = array())
+ * @method \OcManufacturer[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcManufacturer[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcManufacturer[] findAllBySql($sql, array $params = array())
+ * @method \OcManufacturer with()
+ * @method \OcManufacturer together()
+ * @method \OcManufacturer cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcManufacturer resetScope($resetDefault = true)
+ * @method \OcManufacturer populateRecord($attributes, $callAfterFind = true)
+ * @method \OcManufacturer[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcManufacturer extends CActiveRecord

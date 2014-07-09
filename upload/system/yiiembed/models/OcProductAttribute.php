@@ -2,31 +2,9 @@
 /**
  * OcProductAttribute
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_attribute}}
- * @property integer $product_id
- * @property integer $attribute_id
- * @property integer $language_id
- * @property string $text
- *
- * Relations
- * @property OcProduct $product
- * @property OcAttribute $attribute
- * @property OcLanguage $language
- *
- * @see CActiveRecord
- * @method OcProductAttribute find() find($condition, array $params = array())
- * @method OcProductAttribute findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductAttribute findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductAttribute findBySql() findBySql($sql, array $params = array())
- * @method OcProductAttribute[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductAttribute[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductAttribute[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductAttribute[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductAttribute with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductAttribute extends CActiveRecord

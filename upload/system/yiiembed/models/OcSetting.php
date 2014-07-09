@@ -2,7 +2,7 @@
 /**
  * OcSetting
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{setting}}
  * @property integer $setting_id
@@ -13,20 +13,25 @@
  * @property integer $serialized
  *
  * Relations
- * @property OcStore $store
+ * @property \OcStore $store
  *
- * @see CActiveRecord
- * @method OcSetting find() find($condition, array $params = array())
- * @method OcSetting findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcSetting findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcSetting findBySql() findBySql($sql, array $params = array())
- * @method OcSetting[] findAll() findAll($condition = '', array $params = array())
- * @method OcSetting[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcSetting[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcSetting[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcSetting with() with()
+ * @see \CActiveRecord
+ * @method \OcSetting find($condition = '', array $params = array())
+ * @method \OcSetting findByPk($pk, $condition = '', array $params = array())
+ * @method \OcSetting findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcSetting findBySql($sql, array $params = array())
+ * @method \OcSetting[] findAll($condition = '', array $params = array())
+ * @method \OcSetting[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcSetting[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcSetting[] findAllBySql($sql, array $params = array())
+ * @method \OcSetting with()
+ * @method \OcSetting together()
+ * @method \OcSetting cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcSetting resetScope($resetDefault = true)
+ * @method \OcSetting populateRecord($attributes, $callAfterFind = true)
+ * @method \OcSetting[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcSetting extends CActiveRecord

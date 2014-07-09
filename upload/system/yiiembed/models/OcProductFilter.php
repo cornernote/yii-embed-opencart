@@ -2,24 +2,9 @@
 /**
  * OcProductFilter
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_filter}}
- * @property integer $product_id
- * @property integer $filter_id
- *
- * @see CActiveRecord
- * @method OcProductFilter find() find($condition, array $params = array())
- * @method OcProductFilter findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductFilter findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductFilter findBySql() findBySql($sql, array $params = array())
- * @method OcProductFilter[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductFilter[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductFilter[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductFilter[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductFilter with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductFilter extends CActiveRecord

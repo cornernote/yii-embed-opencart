@@ -2,33 +2,9 @@
 /**
  * OcCustomerField
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{customer_field}}
- * @property integer $customer_id
- * @property integer $custom_field_id
- * @property integer $custom_field_value_id
- * @property integer $name
- * @property string $value
- * @property integer $sort_order
- *
- * Relations
- * @property OcCustomer $customer
- * @property OcCustomField $customField
- * @property OcCustomFieldValue $customFieldValue
- *
- * @see CActiveRecord
- * @method OcCustomerField find() find($condition, array $params = array())
- * @method OcCustomerField findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerField findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerField findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerField[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerField[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerField[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerField[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerField with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerField extends CActiveRecord

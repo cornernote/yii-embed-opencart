@@ -2,7 +2,7 @@
 /**
  * OcDownload
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{download}}
  * @property integer $download_id
@@ -12,21 +12,26 @@
  * @property string $date_added
  *
  * Relations
- * @property OcLanguage[] $languages
- * @property OcProduct[] $products
+ * @property \OcLanguage[] $languages
+ * @property \OcProduct[] $products
  *
- * @see CActiveRecord
- * @method OcDownload find() find($condition, array $params = array())
- * @method OcDownload findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcDownload findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcDownload findBySql() findBySql($sql, array $params = array())
- * @method OcDownload[] findAll() findAll($condition = '', array $params = array())
- * @method OcDownload[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcDownload[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcDownload[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcDownload with() with()
+ * @see \CActiveRecord
+ * @method \OcDownload find($condition = '', array $params = array())
+ * @method \OcDownload findByPk($pk, $condition = '', array $params = array())
+ * @method \OcDownload findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcDownload findBySql($sql, array $params = array())
+ * @method \OcDownload[] findAll($condition = '', array $params = array())
+ * @method \OcDownload[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcDownload[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcDownload[] findAllBySql($sql, array $params = array())
+ * @method \OcDownload with()
+ * @method \OcDownload together()
+ * @method \OcDownload cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcDownload resetScope($resetDefault = true)
+ * @method \OcDownload populateRecord($attributes, $callAfterFind = true)
+ * @method \OcDownload[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcDownload extends CActiveRecord

@@ -2,25 +2,9 @@
 /**
  * OcCategoryToLayout
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{category_to_layout}}
- * @property integer $category_id
- * @property integer $store_id
- * @property integer $layout_id
- *
- * @see CActiveRecord
- * @method OcCategoryToLayout find() find($condition, array $params = array())
- * @method OcCategoryToLayout findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCategoryToLayout findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategoryToLayout findBySql() findBySql($sql, array $params = array())
- * @method OcCategoryToLayout[] findAll() findAll($condition = '', array $params = array())
- * @method OcCategoryToLayout[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCategoryToLayout[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategoryToLayout[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCategoryToLayout with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCategoryToLayout extends CActiveRecord

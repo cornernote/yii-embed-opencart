@@ -2,30 +2,9 @@
 /**
  * OcReturnStatus
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{return_status}}
- * @property integer $return_status_id
- * @property integer $language_id
- * @property string $name
- *
- * Relations
- * @property OcReturn[] $returns
- * @property OcReturnHistory[] $returnHistories
- * @property OcLanguage $language
- *
- * @see CActiveRecord
- * @method OcReturnStatus find() find($condition, array $params = array())
- * @method OcReturnStatus findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcReturnStatus findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturnStatus findBySql() findBySql($sql, array $params = array())
- * @method OcReturnStatus[] findAll() findAll($condition = '', array $params = array())
- * @method OcReturnStatus[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcReturnStatus[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturnStatus[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcReturnStatus with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcReturnStatus extends CActiveRecord

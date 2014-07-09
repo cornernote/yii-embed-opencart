@@ -2,7 +2,7 @@
 /**
  * OcReturn
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{return}}
  * @property integer $return_id
@@ -26,26 +26,31 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcOrder $order
- * @property OcProduct $product0
- * @property OcCustomer $customer
- * @property OcReturnReason $returnReason
- * @property OcReturnAction $returnAction
- * @property OcReturnStatus $returnStatus
- * @property OcReturnHistory[] $returnHistories
+ * @property \OcOrder $order
+ * @property \OcProduct $product0
+ * @property \OcCustomer $customer
+ * @property \OcReturnReason $returnReason
+ * @property \OcReturnAction $returnAction
+ * @property \OcReturnStatus $returnStatus
+ * @property \OcReturnHistory[] $returnHistories
  *
- * @see CActiveRecord
- * @method OcReturn find() find($condition, array $params = array())
- * @method OcReturn findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcReturn findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturn findBySql() findBySql($sql, array $params = array())
- * @method OcReturn[] findAll() findAll($condition = '', array $params = array())
- * @method OcReturn[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcReturn[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturn[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcReturn with() with()
+ * @see \CActiveRecord
+ * @method \OcReturn find($condition = '', array $params = array())
+ * @method \OcReturn findByPk($pk, $condition = '', array $params = array())
+ * @method \OcReturn findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcReturn findBySql($sql, array $params = array())
+ * @method \OcReturn[] findAll($condition = '', array $params = array())
+ * @method \OcReturn[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcReturn[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcReturn[] findAllBySql($sql, array $params = array())
+ * @method \OcReturn with()
+ * @method \OcReturn together()
+ * @method \OcReturn cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcReturn resetScope($resetDefault = true)
+ * @method \OcReturn populateRecord($attributes, $callAfterFind = true)
+ * @method \OcReturn[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcReturn extends CActiveRecord

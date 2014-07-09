@@ -2,7 +2,7 @@
 /**
  * OcVoucher
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{voucher}}
  * @property integer $voucher_id
@@ -19,23 +19,28 @@
  * @property string $date_added
  *
  * Relations
- * @property OcOrderVoucher[] $orderVouchers
- * @property OcOrder $order
- * @property OcVoucherTheme $voucherTheme
- * @property OcVoucherHistory[] $voucherHistories
+ * @property \OcOrderVoucher[] $orderVouchers
+ * @property \OcOrder $order
+ * @property \OcVoucherTheme $voucherTheme
+ * @property \OcVoucherHistory[] $voucherHistories
  *
- * @see CActiveRecord
- * @method OcVoucher find() find($condition, array $params = array())
- * @method OcVoucher findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcVoucher findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcVoucher findBySql() findBySql($sql, array $params = array())
- * @method OcVoucher[] findAll() findAll($condition = '', array $params = array())
- * @method OcVoucher[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcVoucher[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcVoucher[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcVoucher with() with()
+ * @see \CActiveRecord
+ * @method \OcVoucher find($condition = '', array $params = array())
+ * @method \OcVoucher findByPk($pk, $condition = '', array $params = array())
+ * @method \OcVoucher findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcVoucher findBySql($sql, array $params = array())
+ * @method \OcVoucher[] findAll($condition = '', array $params = array())
+ * @method \OcVoucher[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcVoucher[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcVoucher[] findAllBySql($sql, array $params = array())
+ * @method \OcVoucher with()
+ * @method \OcVoucher together()
+ * @method \OcVoucher cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcVoucher resetScope($resetDefault = true)
+ * @method \OcVoucher populateRecord($attributes, $callAfterFind = true)
+ * @method \OcVoucher[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcVoucher extends CActiveRecord

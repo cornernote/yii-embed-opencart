@@ -2,28 +2,33 @@
 /**
  * OcFilterGroup
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{filter_group}}
  * @property integer $filter_group_id
  * @property integer $sort_order
  *
  * Relations
- * @property OcFilter[] $filters
- * @property OcLanguage[] $languages
+ * @property \OcFilter[] $filters
+ * @property \OcLanguage[] $languages
  *
- * @see CActiveRecord
- * @method OcFilterGroup find() find($condition, array $params = array())
- * @method OcFilterGroup findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcFilterGroup findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcFilterGroup findBySql() findBySql($sql, array $params = array())
- * @method OcFilterGroup[] findAll() findAll($condition = '', array $params = array())
- * @method OcFilterGroup[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcFilterGroup[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcFilterGroup[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcFilterGroup with() with()
+ * @see \CActiveRecord
+ * @method \OcFilterGroup find($condition = '', array $params = array())
+ * @method \OcFilterGroup findByPk($pk, $condition = '', array $params = array())
+ * @method \OcFilterGroup findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcFilterGroup findBySql($sql, array $params = array())
+ * @method \OcFilterGroup[] findAll($condition = '', array $params = array())
+ * @method \OcFilterGroup[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcFilterGroup[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcFilterGroup[] findAllBySql($sql, array $params = array())
+ * @method \OcFilterGroup with()
+ * @method \OcFilterGroup together()
+ * @method \OcFilterGroup cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcFilterGroup resetScope($resetDefault = true)
+ * @method \OcFilterGroup populateRecord($attributes, $callAfterFind = true)
+ * @method \OcFilterGroup[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcFilterGroup extends CActiveRecord

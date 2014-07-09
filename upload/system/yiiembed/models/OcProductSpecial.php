@@ -2,7 +2,7 @@
 /**
  * OcProductSpecial
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{product_special}}
  * @property integer $product_special_id
@@ -14,21 +14,26 @@
  * @property string $date_end
  *
  * Relations
- * @property OcProduct $product
- * @property OcCustomerGroup $customerGroup
+ * @property \OcProduct $product
+ * @property \OcCustomerGroup $customerGroup
  *
- * @see CActiveRecord
- * @method OcProductSpecial find() find($condition, array $params = array())
- * @method OcProductSpecial findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductSpecial findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductSpecial findBySql() findBySql($sql, array $params = array())
- * @method OcProductSpecial[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductSpecial[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductSpecial[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductSpecial[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductSpecial with() with()
+ * @see \CActiveRecord
+ * @method \OcProductSpecial find($condition = '', array $params = array())
+ * @method \OcProductSpecial findByPk($pk, $condition = '', array $params = array())
+ * @method \OcProductSpecial findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProductSpecial findBySql($sql, array $params = array())
+ * @method \OcProductSpecial[] findAll($condition = '', array $params = array())
+ * @method \OcProductSpecial[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcProductSpecial[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProductSpecial[] findAllBySql($sql, array $params = array())
+ * @method \OcProductSpecial with()
+ * @method \OcProductSpecial together()
+ * @method \OcProductSpecial cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcProductSpecial resetScope($resetDefault = true)
+ * @method \OcProductSpecial populateRecord($attributes, $callAfterFind = true)
+ * @method \OcProductSpecial[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductSpecial extends CActiveRecord

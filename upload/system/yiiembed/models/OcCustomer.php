@@ -2,7 +2,7 @@
 /**
  * OcCustomer
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{customer}}
  * @property integer $customer_id
@@ -26,34 +26,39 @@
  * @property string $date_added
  *
  * Relations
- * @property OcAddress[] $addresses
- * @property OcCouponHistory[] $couponHistories
- * @property OcStore $store
- * @property OcAddress $address
- * @property OcCustomerGroup $customerGroup
- * @property OcCustomerField[] $customerFields
- * @property OcCustomerHistory[] $customerHistories
- * @property OcCustomerIp[] $customerIps
- * @property OcCustomerOnline[] $customerOnlines
- * @property OcCustomerReward[] $customerRewards
- * @property OcCustomerTransaction[] $customerTransactions
- * @property OcOrder[] $orders
- * @property OcOrderFraud[] $orderFrauds
- * @property OcReturn[] $returns
- * @property OcReview[] $reviews
+ * @property \OcAddress[] $addresses
+ * @property \OcCouponHistory[] $couponHistories
+ * @property \OcStore $store
+ * @property \OcAddress $address
+ * @property \OcCustomerGroup $customerGroup
+ * @property \OcCustomerField[] $customerFields
+ * @property \OcCustomerHistory[] $customerHistories
+ * @property \OcCustomerIp[] $customerIps
+ * @property \OcCustomerOnline[] $customerOnlines
+ * @property \OcCustomerReward[] $customerRewards
+ * @property \OcCustomerTransaction[] $customerTransactions
+ * @property \OcOrder[] $orders
+ * @property \OcOrderFraud[] $orderFrauds
+ * @property \OcReturn[] $returns
+ * @property \OcReview[] $reviews
  *
- * @see CActiveRecord
- * @method OcCustomer find() find($condition, array $params = array())
- * @method OcCustomer findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomer findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomer findBySql() findBySql($sql, array $params = array())
- * @method OcCustomer[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomer[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomer[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomer[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomer with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomer find($condition = '', array $params = array())
+ * @method \OcCustomer findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomer findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomer findBySql($sql, array $params = array())
+ * @method \OcCustomer[] findAll($condition = '', array $params = array())
+ * @method \OcCustomer[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomer[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomer[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomer with()
+ * @method \OcCustomer together()
+ * @method \OcCustomer cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomer resetScope($resetDefault = true)
+ * @method \OcCustomer populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomer[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomer extends CActiveRecord

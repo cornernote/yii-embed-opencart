@@ -2,7 +2,7 @@
 /**
  * OcBannerImage
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{banner_image}}
  * @property integer $banner_image_id
@@ -11,21 +11,26 @@
  * @property string $image
  *
  * Relations
- * @property OcBanner $banner
- * @property OcLanguage[] $languages
+ * @property \OcBanner $banner
+ * @property \OcLanguage[] $languages
  *
- * @see CActiveRecord
- * @method OcBannerImage find() find($condition, array $params = array())
- * @method OcBannerImage findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcBannerImage findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcBannerImage findBySql() findBySql($sql, array $params = array())
- * @method OcBannerImage[] findAll() findAll($condition = '', array $params = array())
- * @method OcBannerImage[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcBannerImage[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcBannerImage[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcBannerImage with() with()
+ * @see \CActiveRecord
+ * @method \OcBannerImage find($condition = '', array $params = array())
+ * @method \OcBannerImage findByPk($pk, $condition = '', array $params = array())
+ * @method \OcBannerImage findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcBannerImage findBySql($sql, array $params = array())
+ * @method \OcBannerImage[] findAll($condition = '', array $params = array())
+ * @method \OcBannerImage[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcBannerImage[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcBannerImage[] findAllBySql($sql, array $params = array())
+ * @method \OcBannerImage with()
+ * @method \OcBannerImage together()
+ * @method \OcBannerImage cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcBannerImage resetScope($resetDefault = true)
+ * @method \OcBannerImage populateRecord($attributes, $callAfterFind = true)
+ * @method \OcBannerImage[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcBannerImage extends CActiveRecord

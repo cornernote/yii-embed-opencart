@@ -2,26 +2,9 @@
 /**
  * OcCustomerGroupDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{customer_group_description}}
- * @property integer $customer_group_id
- * @property integer $language_id
- * @property string $name
- * @property string $description
- *
- * @see CActiveRecord
- * @method OcCustomerGroupDescription find() find($condition, array $params = array())
- * @method OcCustomerGroupDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerGroupDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerGroupDescription findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerGroupDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerGroupDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerGroupDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerGroupDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerGroupDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerGroupDescription extends CActiveRecord

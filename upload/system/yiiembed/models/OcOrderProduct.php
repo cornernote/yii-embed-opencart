@@ -2,7 +2,7 @@
 /**
  * OcOrderProduct
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order_product}}
  * @property integer $order_product_id
@@ -17,23 +17,28 @@
  * @property integer $reward
  *
  * Relations
- * @property OcOrderDownload[] $orderDownloads
- * @property OcOrderOption[] $orderOptions
- * @property OcOrder $order
- * @property OcProduct $product
+ * @property \OcOrderDownload[] $orderDownloads
+ * @property \OcOrderOption[] $orderOptions
+ * @property \OcOrder $order
+ * @property \OcProduct $product
  *
- * @see CActiveRecord
- * @method OcOrderProduct find() find($condition, array $params = array())
- * @method OcOrderProduct findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderProduct findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderProduct findBySql() findBySql($sql, array $params = array())
- * @method OcOrderProduct[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderProduct[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderProduct[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderProduct[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderProduct with() with()
+ * @see \CActiveRecord
+ * @method \OcOrderProduct find($condition = '', array $params = array())
+ * @method \OcOrderProduct findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderProduct findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderProduct findBySql($sql, array $params = array())
+ * @method \OcOrderProduct[] findAll($condition = '', array $params = array())
+ * @method \OcOrderProduct[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderProduct[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderProduct[] findAllBySql($sql, array $params = array())
+ * @method \OcOrderProduct with()
+ * @method \OcOrderProduct together()
+ * @method \OcOrderProduct cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrderProduct resetScope($resetDefault = true)
+ * @method \OcOrderProduct populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrderProduct[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderProduct extends CActiveRecord

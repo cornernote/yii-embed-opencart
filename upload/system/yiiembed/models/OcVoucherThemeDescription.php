@@ -2,25 +2,9 @@
 /**
  * OcVoucherThemeDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{voucher_theme_description}}
- * @property integer $voucher_theme_id
- * @property integer $language_id
- * @property string $name
- *
- * @see CActiveRecord
- * @method OcVoucherThemeDescription find() find($condition, array $params = array())
- * @method OcVoucherThemeDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcVoucherThemeDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcVoucherThemeDescription findBySql() findBySql($sql, array $params = array())
- * @method OcVoucherThemeDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcVoucherThemeDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcVoucherThemeDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcVoucherThemeDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcVoucherThemeDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcVoucherThemeDescription extends CActiveRecord

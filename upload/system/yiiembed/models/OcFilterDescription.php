@@ -2,26 +2,9 @@
 /**
  * OcFilterDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{filter_description}}
- * @property integer $filter_id
- * @property integer $language_id
- * @property integer $filter_group_id
- * @property string $name
- *
- * @see CActiveRecord
- * @method OcFilterDescription find() find($condition, array $params = array())
- * @method OcFilterDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcFilterDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcFilterDescription findBySql() findBySql($sql, array $params = array())
- * @method OcFilterDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcFilterDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcFilterDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcFilterDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcFilterDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcFilterDescription extends CActiveRecord

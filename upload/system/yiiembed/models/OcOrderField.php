@@ -2,33 +2,9 @@
 /**
  * OcOrderField
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{order_field}}
- * @property integer $order_id
- * @property integer $custom_field_id
- * @property integer $custom_field_value_id
- * @property integer $name
- * @property string $value
- * @property integer $sort_order
- *
- * Relations
- * @property OcOrder $order
- * @property OcCustomField $customField
- * @property OcCustomFieldValue $customFieldValue
- *
- * @see CActiveRecord
- * @method OcOrderField find() find($condition, array $params = array())
- * @method OcOrderField findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderField findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderField findBySql() findBySql($sql, array $params = array())
- * @method OcOrderField[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderField[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderField[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderField[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderField with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderField extends CActiveRecord

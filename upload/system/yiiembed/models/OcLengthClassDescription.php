@@ -2,26 +2,9 @@
 /**
  * OcLengthClassDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{length_class_description}}
- * @property integer $length_class_id
- * @property integer $language_id
- * @property string $title
- * @property string $unit
- *
- * @see CActiveRecord
- * @method OcLengthClassDescription find() find($condition, array $params = array())
- * @method OcLengthClassDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcLengthClassDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcLengthClassDescription findBySql() findBySql($sql, array $params = array())
- * @method OcLengthClassDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcLengthClassDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcLengthClassDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcLengthClassDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcLengthClassDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcLengthClassDescription extends CActiveRecord

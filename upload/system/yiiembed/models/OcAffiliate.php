@@ -2,7 +2,7 @@
 /**
  * OcAffiliate
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{affiliate}}
  * @property integer $affiliate_id
@@ -38,23 +38,28 @@
  * @property string $date_added
  *
  * Relations
- * @property OcCountry $country
- * @property OcZone $zone
- * @property OcAffiliateTransaction[] $affiliateTransactions
- * @property OcOrder[] $orders
+ * @property \OcCountry $country
+ * @property \OcZone $zone
+ * @property \OcAffiliateTransaction[] $affiliateTransactions
+ * @property \OcOrder[] $orders
  *
- * @see CActiveRecord
- * @method OcAffiliate find() find($condition, array $params = array())
- * @method OcAffiliate findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcAffiliate findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAffiliate findBySql() findBySql($sql, array $params = array())
- * @method OcAffiliate[] findAll() findAll($condition = '', array $params = array())
- * @method OcAffiliate[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcAffiliate[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAffiliate[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcAffiliate with() with()
+ * @see \CActiveRecord
+ * @method \OcAffiliate find($condition = '', array $params = array())
+ * @method \OcAffiliate findByPk($pk, $condition = '', array $params = array())
+ * @method \OcAffiliate findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcAffiliate findBySql($sql, array $params = array())
+ * @method \OcAffiliate[] findAll($condition = '', array $params = array())
+ * @method \OcAffiliate[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcAffiliate[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcAffiliate[] findAllBySql($sql, array $params = array())
+ * @method \OcAffiliate with()
+ * @method \OcAffiliate together()
+ * @method \OcAffiliate cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcAffiliate resetScope($resetDefault = true)
+ * @method \OcAffiliate populateRecord($attributes, $callAfterFind = true)
+ * @method \OcAffiliate[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcAffiliate extends CActiveRecord

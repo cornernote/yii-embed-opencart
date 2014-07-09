@@ -2,7 +2,7 @@
 /**
  * OcCustomFieldValue
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{custom_field_value}}
  * @property integer $custom_field_value_id
@@ -10,23 +10,28 @@
  * @property integer $sort_order
  *
  * Relations
- * @property OcCustomField $customField
- * @property OcLanguage[] $languages
- * @property OcCustomerField[] $customerFields
- * @property OcOrderField[] $orderFields
+ * @property \OcCustomField $customField
+ * @property \OcLanguage[] $languages
+ * @property \OcCustomerField[] $customerFields
+ * @property \OcOrderField[] $orderFields
  *
- * @see CActiveRecord
- * @method OcCustomFieldValue find() find($condition, array $params = array())
- * @method OcCustomFieldValue findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomFieldValue findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomFieldValue findBySql() findBySql($sql, array $params = array())
- * @method OcCustomFieldValue[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomFieldValue[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomFieldValue[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomFieldValue[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomFieldValue with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomFieldValue find($condition = '', array $params = array())
+ * @method \OcCustomFieldValue findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomFieldValue findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomFieldValue findBySql($sql, array $params = array())
+ * @method \OcCustomFieldValue[] findAll($condition = '', array $params = array())
+ * @method \OcCustomFieldValue[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomFieldValue[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomFieldValue[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomFieldValue with()
+ * @method \OcCustomFieldValue together()
+ * @method \OcCustomFieldValue cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomFieldValue resetScope($resetDefault = true)
+ * @method \OcCustomFieldValue populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomFieldValue[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomFieldValue extends CActiveRecord

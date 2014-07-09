@@ -2,24 +2,9 @@
 /**
  * OcProductRelated
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_related}}
- * @property integer $product_id
- * @property integer $related_id
- *
- * @see CActiveRecord
- * @method OcProductRelated find() find($condition, array $params = array())
- * @method OcProductRelated findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductRelated findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductRelated findBySql() findBySql($sql, array $params = array())
- * @method OcProductRelated[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductRelated[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductRelated[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductRelated[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductRelated with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductRelated extends CActiveRecord

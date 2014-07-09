@@ -2,29 +2,9 @@
 /**
  * OcReturnAction
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{return_action}}
- * @property integer $return_action_id
- * @property integer $language_id
- * @property string $name
- *
- * Relations
- * @property OcReturn[] $returns
- * @property OcLanguage $language
- *
- * @see CActiveRecord
- * @method OcReturnAction find() find($condition, array $params = array())
- * @method OcReturnAction findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcReturnAction findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturnAction findBySql() findBySql($sql, array $params = array())
- * @method OcReturnAction[] findAll() findAll($condition = '', array $params = array())
- * @method OcReturnAction[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcReturnAction[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturnAction[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcReturnAction with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcReturnAction extends CActiveRecord

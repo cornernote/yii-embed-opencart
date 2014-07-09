@@ -2,7 +2,7 @@
 /**
  * OcProductImage
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{product_image}}
  * @property integer $product_image_id
@@ -11,20 +11,25 @@
  * @property integer $sort_order
  *
  * Relations
- * @property OcProduct $product
+ * @property \OcProduct $product
  *
- * @see CActiveRecord
- * @method OcProductImage find() find($condition, array $params = array())
- * @method OcProductImage findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductImage findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductImage findBySql() findBySql($sql, array $params = array())
- * @method OcProductImage[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductImage[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductImage[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductImage[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductImage with() with()
+ * @see \CActiveRecord
+ * @method \OcProductImage find($condition = '', array $params = array())
+ * @method \OcProductImage findByPk($pk, $condition = '', array $params = array())
+ * @method \OcProductImage findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProductImage findBySql($sql, array $params = array())
+ * @method \OcProductImage[] findAll($condition = '', array $params = array())
+ * @method \OcProductImage[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcProductImage[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProductImage[] findAllBySql($sql, array $params = array())
+ * @method \OcProductImage with()
+ * @method \OcProductImage together()
+ * @method \OcProductImage cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcProductImage resetScope($resetDefault = true)
+ * @method \OcProductImage populateRecord($attributes, $callAfterFind = true)
+ * @method \OcProductImage[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductImage extends CActiveRecord

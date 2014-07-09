@@ -2,25 +2,9 @@
 /**
  * OcCustomFieldDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{custom_field_description}}
- * @property integer $custom_field_id
- * @property integer $language_id
- * @property string $name
- *
- * @see CActiveRecord
- * @method OcCustomFieldDescription find() find($condition, array $params = array())
- * @method OcCustomFieldDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomFieldDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomFieldDescription findBySql() findBySql($sql, array $params = array())
- * @method OcCustomFieldDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomFieldDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomFieldDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomFieldDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomFieldDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomFieldDescription extends CActiveRecord

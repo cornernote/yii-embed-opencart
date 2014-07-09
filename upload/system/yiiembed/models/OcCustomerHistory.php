@@ -2,7 +2,7 @@
 /**
  * OcCustomerHistory
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{customer_history}}
  * @property integer $customer_history_id
@@ -11,20 +11,25 @@
  * @property string $date_added
  *
  * Relations
- * @property OcCustomer $customer
+ * @property \OcCustomer $customer
  *
- * @see CActiveRecord
- * @method OcCustomerHistory find() find($condition, array $params = array())
- * @method OcCustomerHistory findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerHistory findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerHistory findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerHistory[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerHistory[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerHistory[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerHistory[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerHistory with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomerHistory find($condition = '', array $params = array())
+ * @method \OcCustomerHistory findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerHistory findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerHistory findBySql($sql, array $params = array())
+ * @method \OcCustomerHistory[] findAll($condition = '', array $params = array())
+ * @method \OcCustomerHistory[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerHistory[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerHistory[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomerHistory with()
+ * @method \OcCustomerHistory together()
+ * @method \OcCustomerHistory cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomerHistory resetScope($resetDefault = true)
+ * @method \OcCustomerHistory populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomerHistory[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerHistory extends CActiveRecord

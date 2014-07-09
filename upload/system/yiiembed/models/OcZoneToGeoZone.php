@@ -2,7 +2,7 @@
 /**
  * OcZoneToGeoZone
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{zone_to_geo_zone}}
  * @property integer $zone_to_geo_zone_id
@@ -13,22 +13,27 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcCountry $country
- * @property OcZone $zone
- * @property OcGeoZone $geoZone
+ * @property \OcCountry $country
+ * @property \OcZone $zone
+ * @property \OcGeoZone $geoZone
  *
- * @see CActiveRecord
- * @method OcZoneToGeoZone find() find($condition, array $params = array())
- * @method OcZoneToGeoZone findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcZoneToGeoZone findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcZoneToGeoZone findBySql() findBySql($sql, array $params = array())
- * @method OcZoneToGeoZone[] findAll() findAll($condition = '', array $params = array())
- * @method OcZoneToGeoZone[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcZoneToGeoZone[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcZoneToGeoZone[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcZoneToGeoZone with() with()
+ * @see \CActiveRecord
+ * @method \OcZoneToGeoZone find($condition = '', array $params = array())
+ * @method \OcZoneToGeoZone findByPk($pk, $condition = '', array $params = array())
+ * @method \OcZoneToGeoZone findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcZoneToGeoZone findBySql($sql, array $params = array())
+ * @method \OcZoneToGeoZone[] findAll($condition = '', array $params = array())
+ * @method \OcZoneToGeoZone[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcZoneToGeoZone[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcZoneToGeoZone[] findAllBySql($sql, array $params = array())
+ * @method \OcZoneToGeoZone with()
+ * @method \OcZoneToGeoZone together()
+ * @method \OcZoneToGeoZone cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcZoneToGeoZone resetScope($resetDefault = true)
+ * @method \OcZoneToGeoZone populateRecord($attributes, $callAfterFind = true)
+ * @method \OcZoneToGeoZone[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcZoneToGeoZone extends CActiveRecord

@@ -2,7 +2,7 @@
 /**
  * OcAttribute
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{attribute}}
  * @property integer $attribute_id
@@ -10,22 +10,27 @@
  * @property integer $sort_order
  *
  * Relations
- * @property OcAttributeGroup $attributeGroup
- * @property OcLanguage[] $languages
- * @property OcProductAttribute[] $productAttributes
+ * @property \OcAttributeGroup $attributeGroup
+ * @property \OcLanguage[] $languages
+ * @property \OcProductAttribute[] $productAttributes
  *
- * @see CActiveRecord
- * @method OcAttribute find() find($condition, array $params = array())
- * @method OcAttribute findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcAttribute findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAttribute findBySql() findBySql($sql, array $params = array())
- * @method OcAttribute[] findAll() findAll($condition = '', array $params = array())
- * @method OcAttribute[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcAttribute[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAttribute[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcAttribute with() with()
+ * @see \CActiveRecord
+ * @method \OcAttribute find($condition = '', array $params = array())
+ * @method \OcAttribute findByPk($pk, $condition = '', array $params = array())
+ * @method \OcAttribute findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcAttribute findBySql($sql, array $params = array())
+ * @method \OcAttribute[] findAll($condition = '', array $params = array())
+ * @method \OcAttribute[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcAttribute[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcAttribute[] findAllBySql($sql, array $params = array())
+ * @method \OcAttribute with()
+ * @method \OcAttribute together()
+ * @method \OcAttribute cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcAttribute resetScope($resetDefault = true)
+ * @method \OcAttribute populateRecord($attributes, $callAfterFind = true)
+ * @method \OcAttribute[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcAttribute extends CActiveRecord

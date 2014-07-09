@@ -2,7 +2,7 @@
 /**
  * OcOrderOption
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order_option}}
  * @property integer $order_option_id
@@ -15,23 +15,28 @@
  * @property string $type
  *
  * Relations
- * @property OcOrder $order
- * @property OcOrderProduct $orderProduct
- * @property OcProductOption $productOption
- * @property OcProductOptionValue $productOptionValue
+ * @property \OcOrder $order
+ * @property \OcOrderProduct $orderProduct
+ * @property \OcProductOption $productOption
+ * @property \OcProductOptionValue $productOptionValue
  *
- * @see CActiveRecord
- * @method OcOrderOption find() find($condition, array $params = array())
- * @method OcOrderOption findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderOption findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderOption findBySql() findBySql($sql, array $params = array())
- * @method OcOrderOption[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderOption[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderOption[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderOption[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderOption with() with()
+ * @see \CActiveRecord
+ * @method \OcOrderOption find($condition = '', array $params = array())
+ * @method \OcOrderOption findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderOption findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderOption findBySql($sql, array $params = array())
+ * @method \OcOrderOption[] findAll($condition = '', array $params = array())
+ * @method \OcOrderOption[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderOption[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderOption[] findAllBySql($sql, array $params = array())
+ * @method \OcOrderOption with()
+ * @method \OcOrderOption together()
+ * @method \OcOrderOption cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrderOption resetScope($resetDefault = true)
+ * @method \OcOrderOption populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrderOption[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderOption extends CActiveRecord

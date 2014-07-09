@@ -2,7 +2,7 @@
 /**
  * OcAddress
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{address}}
  * @property integer $address_id
@@ -20,23 +20,28 @@
  * @property integer $zone_id
  *
  * Relations
- * @property OcCustomer $customer
- * @property OcCountry $country
- * @property OcZone $zone
- * @property OcCustomer[] $customers
+ * @property \OcCustomer $customer
+ * @property \OcCountry $country
+ * @property \OcZone $zone
+ * @property \OcCustomer[] $customers
  *
- * @see CActiveRecord
- * @method OcAddress find() find($condition, array $params = array())
- * @method OcAddress findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcAddress findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAddress findBySql() findBySql($sql, array $params = array())
- * @method OcAddress[] findAll() findAll($condition = '', array $params = array())
- * @method OcAddress[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcAddress[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAddress[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcAddress with() with()
+ * @see \CActiveRecord
+ * @method \OcAddress find($condition = '', array $params = array())
+ * @method \OcAddress findByPk($pk, $condition = '', array $params = array())
+ * @method \OcAddress findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcAddress findBySql($sql, array $params = array())
+ * @method \OcAddress[] findAll($condition = '', array $params = array())
+ * @method \OcAddress[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcAddress[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcAddress[] findAllBySql($sql, array $params = array())
+ * @method \OcAddress with()
+ * @method \OcAddress together()
+ * @method \OcAddress cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcAddress resetScope($resetDefault = true)
+ * @method \OcAddress populateRecord($attributes, $callAfterFind = true)
+ * @method \OcAddress[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcAddress extends CActiveRecord

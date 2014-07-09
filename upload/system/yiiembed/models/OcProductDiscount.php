@@ -2,7 +2,7 @@
 /**
  * OcProductDiscount
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{product_discount}}
  * @property integer $product_discount_id
@@ -15,21 +15,26 @@
  * @property string $date_end
  *
  * Relations
- * @property OcProduct $product
- * @property OcCustomerGroup $customerGroup
+ * @property \OcProduct $product
+ * @property \OcCustomerGroup $customerGroup
  *
- * @see CActiveRecord
- * @method OcProductDiscount find() find($condition, array $params = array())
- * @method OcProductDiscount findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductDiscount findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductDiscount findBySql() findBySql($sql, array $params = array())
- * @method OcProductDiscount[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductDiscount[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductDiscount[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductDiscount[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductDiscount with() with()
+ * @see \CActiveRecord
+ * @method \OcProductDiscount find($condition = '', array $params = array())
+ * @method \OcProductDiscount findByPk($pk, $condition = '', array $params = array())
+ * @method \OcProductDiscount findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProductDiscount findBySql($sql, array $params = array())
+ * @method \OcProductDiscount[] findAll($condition = '', array $params = array())
+ * @method \OcProductDiscount[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcProductDiscount[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProductDiscount[] findAllBySql($sql, array $params = array())
+ * @method \OcProductDiscount with()
+ * @method \OcProductDiscount together()
+ * @method \OcProductDiscount cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcProductDiscount resetScope($resetDefault = true)
+ * @method \OcProductDiscount populateRecord($attributes, $callAfterFind = true)
+ * @method \OcProductDiscount[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductDiscount extends CActiveRecord

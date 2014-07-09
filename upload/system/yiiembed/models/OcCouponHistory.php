@@ -2,7 +2,7 @@
 /**
  * OcCouponHistory
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{coupon_history}}
  * @property integer $coupon_history_id
@@ -13,22 +13,27 @@
  * @property string $date_added
  *
  * Relations
- * @property OcCoupon $coupon
- * @property OcOrder $order
- * @property OcCustomer $customer
+ * @property \OcCoupon $coupon
+ * @property \OcOrder $order
+ * @property \OcCustomer $customer
  *
- * @see CActiveRecord
- * @method OcCouponHistory find() find($condition, array $params = array())
- * @method OcCouponHistory findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCouponHistory findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCouponHistory findBySql() findBySql($sql, array $params = array())
- * @method OcCouponHistory[] findAll() findAll($condition = '', array $params = array())
- * @method OcCouponHistory[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCouponHistory[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCouponHistory[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCouponHistory with() with()
+ * @see \CActiveRecord
+ * @method \OcCouponHistory find($condition = '', array $params = array())
+ * @method \OcCouponHistory findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCouponHistory findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCouponHistory findBySql($sql, array $params = array())
+ * @method \OcCouponHistory[] findAll($condition = '', array $params = array())
+ * @method \OcCouponHistory[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCouponHistory[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCouponHistory[] findAllBySql($sql, array $params = array())
+ * @method \OcCouponHistory with()
+ * @method \OcCouponHistory together()
+ * @method \OcCouponHistory cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCouponHistory resetScope($resetDefault = true)
+ * @method \OcCouponHistory populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCouponHistory[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCouponHistory extends CActiveRecord

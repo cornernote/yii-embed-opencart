@@ -2,24 +2,9 @@
 /**
  * OcCouponCategory
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{coupon_category}}
- * @property integer $coupon_id
- * @property integer $category_id
- *
- * @see CActiveRecord
- * @method OcCouponCategory find() find($condition, array $params = array())
- * @method OcCouponCategory findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCouponCategory findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCouponCategory findBySql() findBySql($sql, array $params = array())
- * @method OcCouponCategory[] findAll() findAll($condition = '', array $params = array())
- * @method OcCouponCategory[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCouponCategory[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCouponCategory[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCouponCategory with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCouponCategory extends CActiveRecord

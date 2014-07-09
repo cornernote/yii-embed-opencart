@@ -2,25 +2,30 @@
 /**
  * OcExtension
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{extension}}
  * @property integer $extension_id
  * @property string $type
  * @property string $code
  *
- * @see CActiveRecord
- * @method OcExtension find() find($condition, array $params = array())
- * @method OcExtension findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcExtension findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcExtension findBySql() findBySql($sql, array $params = array())
- * @method OcExtension[] findAll() findAll($condition = '', array $params = array())
- * @method OcExtension[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcExtension[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcExtension[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcExtension with() with()
+ * @see \CActiveRecord
+ * @method \OcExtension find($condition = '', array $params = array())
+ * @method \OcExtension findByPk($pk, $condition = '', array $params = array())
+ * @method \OcExtension findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcExtension findBySql($sql, array $params = array())
+ * @method \OcExtension[] findAll($condition = '', array $params = array())
+ * @method \OcExtension[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcExtension[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcExtension[] findAllBySql($sql, array $params = array())
+ * @method \OcExtension with()
+ * @method \OcExtension together()
+ * @method \OcExtension cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcExtension resetScope($resetDefault = true)
+ * @method \OcExtension populateRecord($attributes, $callAfterFind = true)
+ * @method \OcExtension[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcExtension extends CActiveRecord

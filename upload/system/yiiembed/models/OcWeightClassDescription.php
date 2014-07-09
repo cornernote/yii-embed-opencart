@@ -2,26 +2,9 @@
 /**
  * OcWeightClassDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{weight_class_description}}
- * @property integer $weight_class_id
- * @property integer $language_id
- * @property string $title
- * @property string $unit
- *
- * @see CActiveRecord
- * @method OcWeightClassDescription find() find($condition, array $params = array())
- * @method OcWeightClassDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcWeightClassDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcWeightClassDescription findBySql() findBySql($sql, array $params = array())
- * @method OcWeightClassDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcWeightClassDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcWeightClassDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcWeightClassDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcWeightClassDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcWeightClassDescription extends CActiveRecord

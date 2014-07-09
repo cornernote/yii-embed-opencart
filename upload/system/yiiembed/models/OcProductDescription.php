@@ -2,29 +2,9 @@
 /**
  * OcProductDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_description}}
- * @property integer $product_id
- * @property integer $language_id
- * @property string $name
- * @property string $description
- * @property string $meta_description
- * @property string $meta_keyword
- * @property string $tag
- *
- * @see CActiveRecord
- * @method OcProductDescription find() find($condition, array $params = array())
- * @method OcProductDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductDescription findBySql() findBySql($sql, array $params = array())
- * @method OcProductDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductDescription extends CActiveRecord

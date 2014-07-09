@@ -2,24 +2,9 @@
 /**
  * OcProductToDownload
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_to_download}}
- * @property integer $product_id
- * @property integer $download_id
- *
- * @see CActiveRecord
- * @method OcProductToDownload find() find($condition, array $params = array())
- * @method OcProductToDownload findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductToDownload findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductToDownload findBySql() findBySql($sql, array $params = array())
- * @method OcProductToDownload[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductToDownload[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductToDownload[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductToDownload[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductToDownload with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductToDownload extends CActiveRecord

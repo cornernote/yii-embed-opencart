@@ -2,7 +2,7 @@
 /**
  * OcOptionValue
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{option_value}}
  * @property integer $option_value_id
@@ -11,22 +11,27 @@
  * @property integer $sort_order
  *
  * Relations
- * @property OcOption $option
- * @property OcLanguage[] $languages
- * @property OcProductOptionValue[] $productOptionValues
+ * @property \OcOption $option
+ * @property \OcLanguage[] $languages
+ * @property \OcProductOptionValue[] $productOptionValues
  *
- * @see CActiveRecord
- * @method OcOptionValue find() find($condition, array $params = array())
- * @method OcOptionValue findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOptionValue findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOptionValue findBySql() findBySql($sql, array $params = array())
- * @method OcOptionValue[] findAll() findAll($condition = '', array $params = array())
- * @method OcOptionValue[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOptionValue[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOptionValue[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOptionValue with() with()
+ * @see \CActiveRecord
+ * @method \OcOptionValue find($condition = '', array $params = array())
+ * @method \OcOptionValue findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOptionValue findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOptionValue findBySql($sql, array $params = array())
+ * @method \OcOptionValue[] findAll($condition = '', array $params = array())
+ * @method \OcOptionValue[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOptionValue[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOptionValue[] findAllBySql($sql, array $params = array())
+ * @method \OcOptionValue with()
+ * @method \OcOptionValue together()
+ * @method \OcOptionValue cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOptionValue resetScope($resetDefault = true)
+ * @method \OcOptionValue populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOptionValue[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOptionValue extends CActiveRecord

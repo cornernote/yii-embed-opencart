@@ -2,7 +2,7 @@
 /**
  * OcOrderRecurringTransaction
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order_recurring_transaction}}
  * @property integer $order_recurring_transaction_id
@@ -12,20 +12,25 @@
  * @property string $type
  *
  * Relations
- * @property OcOrderRecurring $orderRecurring
+ * @property \OcOrderRecurring $orderRecurring
  *
- * @see CActiveRecord
- * @method OcOrderRecurringTransaction find() find($condition, array $params = array())
- * @method OcOrderRecurringTransaction findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderRecurringTransaction findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderRecurringTransaction findBySql() findBySql($sql, array $params = array())
- * @method OcOrderRecurringTransaction[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderRecurringTransaction[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderRecurringTransaction[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderRecurringTransaction[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderRecurringTransaction with() with()
+ * @see \CActiveRecord
+ * @method \OcOrderRecurringTransaction find($condition = '', array $params = array())
+ * @method \OcOrderRecurringTransaction findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderRecurringTransaction findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderRecurringTransaction findBySql($sql, array $params = array())
+ * @method \OcOrderRecurringTransaction[] findAll($condition = '', array $params = array())
+ * @method \OcOrderRecurringTransaction[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderRecurringTransaction[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderRecurringTransaction[] findAllBySql($sql, array $params = array())
+ * @method \OcOrderRecurringTransaction with()
+ * @method \OcOrderRecurringTransaction together()
+ * @method \OcOrderRecurringTransaction cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrderRecurringTransaction resetScope($resetDefault = true)
+ * @method \OcOrderRecurringTransaction populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrderRecurringTransaction[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderRecurringTransaction extends CActiveRecord

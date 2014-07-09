@@ -2,24 +2,9 @@
 /**
  * OcCategoryFilter
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{category_filter}}
- * @property integer $category_id
- * @property integer $filter_id
- *
- * @see CActiveRecord
- * @method OcCategoryFilter find() find($condition, array $params = array())
- * @method OcCategoryFilter findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCategoryFilter findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategoryFilter findBySql() findBySql($sql, array $params = array())
- * @method OcCategoryFilter[] findAll() findAll($condition = '', array $params = array())
- * @method OcCategoryFilter[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCategoryFilter[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategoryFilter[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCategoryFilter with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCategoryFilter extends CActiveRecord

@@ -2,27 +2,32 @@
 /**
  * OcLayout
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{layout}}
  * @property integer $layout_id
  * @property string $name
  *
  * Relations
- * @property OcLayoutRoute[] $layoutRoutes
+ * @property \OcLayoutRoute[] $layoutRoutes
  *
- * @see CActiveRecord
- * @method OcLayout find() find($condition, array $params = array())
- * @method OcLayout findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcLayout findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcLayout findBySql() findBySql($sql, array $params = array())
- * @method OcLayout[] findAll() findAll($condition = '', array $params = array())
- * @method OcLayout[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcLayout[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcLayout[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcLayout with() with()
+ * @see \CActiveRecord
+ * @method \OcLayout find($condition = '', array $params = array())
+ * @method \OcLayout findByPk($pk, $condition = '', array $params = array())
+ * @method \OcLayout findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcLayout findBySql($sql, array $params = array())
+ * @method \OcLayout[] findAll($condition = '', array $params = array())
+ * @method \OcLayout[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcLayout[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcLayout[] findAllBySql($sql, array $params = array())
+ * @method \OcLayout with()
+ * @method \OcLayout together()
+ * @method \OcLayout cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcLayout resetScope($resetDefault = true)
+ * @method \OcLayout populateRecord($attributes, $callAfterFind = true)
+ * @method \OcLayout[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcLayout extends CActiveRecord

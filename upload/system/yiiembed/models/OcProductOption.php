@@ -2,7 +2,7 @@
 /**
  * OcProductOption
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{product_option}}
  * @property integer $product_option_id
@@ -12,23 +12,28 @@
  * @property integer $required
  *
  * Relations
- * @property OcOrderOption[] $orderOptions
- * @property OcProduct $product
- * @property OcOption $option
- * @property OcProductOptionValue[] $productOptionValues
+ * @property \OcOrderOption[] $orderOptions
+ * @property \OcProduct $product
+ * @property \OcOption $option
+ * @property \OcProductOptionValue[] $productOptionValues
  *
- * @see CActiveRecord
- * @method OcProductOption find() find($condition, array $params = array())
- * @method OcProductOption findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductOption findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductOption findBySql() findBySql($sql, array $params = array())
- * @method OcProductOption[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductOption[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductOption[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductOption[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductOption with() with()
+ * @see \CActiveRecord
+ * @method \OcProductOption find($condition = '', array $params = array())
+ * @method \OcProductOption findByPk($pk, $condition = '', array $params = array())
+ * @method \OcProductOption findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProductOption findBySql($sql, array $params = array())
+ * @method \OcProductOption[] findAll($condition = '', array $params = array())
+ * @method \OcProductOption[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcProductOption[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProductOption[] findAllBySql($sql, array $params = array())
+ * @method \OcProductOption with()
+ * @method \OcProductOption together()
+ * @method \OcProductOption cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcProductOption resetScope($resetDefault = true)
+ * @method \OcProductOption populateRecord($attributes, $callAfterFind = true)
+ * @method \OcProductOption[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductOption extends CActiveRecord

@@ -2,7 +2,7 @@
 /**
  * OcBanner
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{banner}}
  * @property integer $banner_id
@@ -10,20 +10,25 @@
  * @property integer $status
  *
  * Relations
- * @property OcBannerImage[] $bannerImages
+ * @property \OcBannerImage[] $bannerImages
  *
- * @see CActiveRecord
- * @method OcBanner find() find($condition, array $params = array())
- * @method OcBanner findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcBanner findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcBanner findBySql() findBySql($sql, array $params = array())
- * @method OcBanner[] findAll() findAll($condition = '', array $params = array())
- * @method OcBanner[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcBanner[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcBanner[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcBanner with() with()
+ * @see \CActiveRecord
+ * @method \OcBanner find($condition = '', array $params = array())
+ * @method \OcBanner findByPk($pk, $condition = '', array $params = array())
+ * @method \OcBanner findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcBanner findBySql($sql, array $params = array())
+ * @method \OcBanner[] findAll($condition = '', array $params = array())
+ * @method \OcBanner[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcBanner[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcBanner[] findAllBySql($sql, array $params = array())
+ * @method \OcBanner with()
+ * @method \OcBanner together()
+ * @method \OcBanner cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcBanner resetScope($resetDefault = true)
+ * @method \OcBanner populateRecord($attributes, $callAfterFind = true)
+ * @method \OcBanner[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcBanner extends CActiveRecord

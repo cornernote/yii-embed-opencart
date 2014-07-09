@@ -2,7 +2,7 @@
 /**
  * OcReview
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{review}}
  * @property integer $review_id
@@ -16,21 +16,26 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcProduct $product
- * @property OcCustomer $customer
+ * @property \OcProduct $product
+ * @property \OcCustomer $customer
  *
- * @see CActiveRecord
- * @method OcReview find() find($condition, array $params = array())
- * @method OcReview findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcReview findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReview findBySql() findBySql($sql, array $params = array())
- * @method OcReview[] findAll() findAll($condition = '', array $params = array())
- * @method OcReview[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcReview[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReview[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcReview with() with()
+ * @see \CActiveRecord
+ * @method \OcReview find($condition = '', array $params = array())
+ * @method \OcReview findByPk($pk, $condition = '', array $params = array())
+ * @method \OcReview findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcReview findBySql($sql, array $params = array())
+ * @method \OcReview[] findAll($condition = '', array $params = array())
+ * @method \OcReview[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcReview[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcReview[] findAllBySql($sql, array $params = array())
+ * @method \OcReview with()
+ * @method \OcReview together()
+ * @method \OcReview cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcReview resetScope($resetDefault = true)
+ * @method \OcReview populateRecord($attributes, $callAfterFind = true)
+ * @method \OcReview[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcReview extends CActiveRecord

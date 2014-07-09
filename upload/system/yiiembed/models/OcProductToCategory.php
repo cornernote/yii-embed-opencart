@@ -2,24 +2,9 @@
 /**
  * OcProductToCategory
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_to_category}}
- * @property integer $product_id
- * @property integer $category_id
- *
- * @see CActiveRecord
- * @method OcProductToCategory find() find($condition, array $params = array())
- * @method OcProductToCategory findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductToCategory findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductToCategory findBySql() findBySql($sql, array $params = array())
- * @method OcProductToCategory[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductToCategory[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductToCategory[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductToCategory[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductToCategory with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductToCategory extends CActiveRecord

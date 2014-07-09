@@ -2,7 +2,7 @@
 /**
  * OcCountry
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{country}}
  * @property integer $country_id
@@ -14,23 +14,28 @@
  * @property integer $status
  *
  * Relations
- * @property OcAddress[] $addresses
- * @property OcAffiliate[] $affiliates
- * @property OcZone[] $zones
- * @property OcZoneToGeoZone[] $zoneToGeoZones
+ * @property \OcAddress[] $addresses
+ * @property \OcAffiliate[] $affiliates
+ * @property \OcZone[] $zones
+ * @property \OcZoneToGeoZone[] $zoneToGeoZones
  *
- * @see CActiveRecord
- * @method OcCountry find() find($condition, array $params = array())
- * @method OcCountry findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCountry findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCountry findBySql() findBySql($sql, array $params = array())
- * @method OcCountry[] findAll() findAll($condition = '', array $params = array())
- * @method OcCountry[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCountry[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCountry[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCountry with() with()
+ * @see \CActiveRecord
+ * @method \OcCountry find($condition = '', array $params = array())
+ * @method \OcCountry findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCountry findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCountry findBySql($sql, array $params = array())
+ * @method \OcCountry[] findAll($condition = '', array $params = array())
+ * @method \OcCountry[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCountry[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCountry[] findAllBySql($sql, array $params = array())
+ * @method \OcCountry with()
+ * @method \OcCountry together()
+ * @method \OcCountry cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCountry resetScope($resetDefault = true)
+ * @method \OcCountry populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCountry[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCountry extends CActiveRecord

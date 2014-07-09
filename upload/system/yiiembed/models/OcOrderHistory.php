@@ -2,7 +2,7 @@
 /**
  * OcOrderHistory
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order_history}}
  * @property integer $order_history_id
@@ -13,21 +13,26 @@
  * @property string $date_added
  *
  * Relations
- * @property OcOrder $order
- * @property OcOrderStatus $orderStatus
+ * @property \OcOrder $order
+ * @property \OcOrderStatus $orderStatus
  *
- * @see CActiveRecord
- * @method OcOrderHistory find() find($condition, array $params = array())
- * @method OcOrderHistory findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderHistory findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderHistory findBySql() findBySql($sql, array $params = array())
- * @method OcOrderHistory[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderHistory[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderHistory[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderHistory[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderHistory with() with()
+ * @see \CActiveRecord
+ * @method \OcOrderHistory find($condition = '', array $params = array())
+ * @method \OcOrderHistory findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderHistory findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderHistory findBySql($sql, array $params = array())
+ * @method \OcOrderHistory[] findAll($condition = '', array $params = array())
+ * @method \OcOrderHistory[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderHistory[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderHistory[] findAllBySql($sql, array $params = array())
+ * @method \OcOrderHistory with()
+ * @method \OcOrderHistory together()
+ * @method \OcOrderHistory cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrderHistory resetScope($resetDefault = true)
+ * @method \OcOrderHistory populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrderHistory[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderHistory extends CActiveRecord

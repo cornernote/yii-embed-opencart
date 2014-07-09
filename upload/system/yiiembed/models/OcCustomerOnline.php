@@ -2,7 +2,7 @@
 /**
  * OcCustomerOnline
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{customer_online}}
  * @property string $ip
@@ -12,20 +12,25 @@
  * @property string $date_added
  *
  * Relations
- * @property OcCustomer $customer
+ * @property \OcCustomer $customer
  *
- * @see CActiveRecord
- * @method OcCustomerOnline find() find($condition, array $params = array())
- * @method OcCustomerOnline findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerOnline findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerOnline findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerOnline[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerOnline[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerOnline[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerOnline[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerOnline with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomerOnline find($condition = '', array $params = array())
+ * @method \OcCustomerOnline findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerOnline findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerOnline findBySql($sql, array $params = array())
+ * @method \OcCustomerOnline[] findAll($condition = '', array $params = array())
+ * @method \OcCustomerOnline[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerOnline[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerOnline[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomerOnline with()
+ * @method \OcCustomerOnline together()
+ * @method \OcCustomerOnline cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomerOnline resetScope($resetDefault = true)
+ * @method \OcCustomerOnline populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomerOnline[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerOnline extends CActiveRecord

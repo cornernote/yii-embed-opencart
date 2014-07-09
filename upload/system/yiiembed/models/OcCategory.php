@@ -2,7 +2,7 @@
 /**
  * OcCategory
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{category}}
  * @property integer $category_id
@@ -16,26 +16,31 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcParent $parent
- * @property OcLanguage[] $languages
- * @property OcFilter[] $filters
- * @property OcPath[] $paths
- * @property OcStore[] $stores
- * @property OcCoupon[] $coupons
- * @property OcProduct[] $products
+ * @property \OcParent $parent
+ * @property \OcLanguage[] $languages
+ * @property \OcFilter[] $filters
+ * @property \OcPath[] $paths
+ * @property \OcStore[] $stores
+ * @property \OcCoupon[] $coupons
+ * @property \OcProduct[] $products
  *
- * @see CActiveRecord
- * @method OcCategory find() find($condition, array $params = array())
- * @method OcCategory findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCategory findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategory findBySql() findBySql($sql, array $params = array())
- * @method OcCategory[] findAll() findAll($condition = '', array $params = array())
- * @method OcCategory[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCategory[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCategory[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCategory with() with()
+ * @see \CActiveRecord
+ * @method \OcCategory find($condition = '', array $params = array())
+ * @method \OcCategory findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCategory findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCategory findBySql($sql, array $params = array())
+ * @method \OcCategory[] findAll($condition = '', array $params = array())
+ * @method \OcCategory[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCategory[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCategory[] findAllBySql($sql, array $params = array())
+ * @method \OcCategory with()
+ * @method \OcCategory together()
+ * @method \OcCategory cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCategory resetScope($resetDefault = true)
+ * @method \OcCategory populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCategory[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCategory extends CActiveRecord

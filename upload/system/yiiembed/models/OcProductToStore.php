@@ -2,24 +2,9 @@
 /**
  * OcProductToStore
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_to_store}}
- * @property integer $product_id
- * @property integer $store_id
- *
- * @see CActiveRecord
- * @method OcProductToStore find() find($condition, array $params = array())
- * @method OcProductToStore findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductToStore findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductToStore findBySql() findBySql($sql, array $params = array())
- * @method OcProductToStore[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductToStore[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductToStore[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductToStore[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductToStore with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductToStore extends CActiveRecord

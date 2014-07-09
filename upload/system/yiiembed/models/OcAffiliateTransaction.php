@@ -2,7 +2,7 @@
 /**
  * OcAffiliateTransaction
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{affiliate_transaction}}
  * @property integer $affiliate_transaction_id
@@ -13,21 +13,26 @@
  * @property string $date_added
  *
  * Relations
- * @property OcAffiliate $affiliate
- * @property OcOrder $order
+ * @property \OcAffiliate $affiliate
+ * @property \OcOrder $order
  *
- * @see CActiveRecord
- * @method OcAffiliateTransaction find() find($condition, array $params = array())
- * @method OcAffiliateTransaction findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcAffiliateTransaction findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAffiliateTransaction findBySql() findBySql($sql, array $params = array())
- * @method OcAffiliateTransaction[] findAll() findAll($condition = '', array $params = array())
- * @method OcAffiliateTransaction[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcAffiliateTransaction[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcAffiliateTransaction[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcAffiliateTransaction with() with()
+ * @see \CActiveRecord
+ * @method \OcAffiliateTransaction find($condition = '', array $params = array())
+ * @method \OcAffiliateTransaction findByPk($pk, $condition = '', array $params = array())
+ * @method \OcAffiliateTransaction findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcAffiliateTransaction findBySql($sql, array $params = array())
+ * @method \OcAffiliateTransaction[] findAll($condition = '', array $params = array())
+ * @method \OcAffiliateTransaction[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcAffiliateTransaction[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcAffiliateTransaction[] findAllBySql($sql, array $params = array())
+ * @method \OcAffiliateTransaction with()
+ * @method \OcAffiliateTransaction together()
+ * @method \OcAffiliateTransaction cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcAffiliateTransaction resetScope($resetDefault = true)
+ * @method \OcAffiliateTransaction populateRecord($attributes, $callAfterFind = true)
+ * @method \OcAffiliateTransaction[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcAffiliateTransaction extends CActiveRecord

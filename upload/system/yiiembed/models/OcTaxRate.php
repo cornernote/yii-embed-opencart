@@ -2,7 +2,7 @@
 /**
  * OcTaxRate
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{tax_rate}}
  * @property integer $tax_rate_id
@@ -14,22 +14,27 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcGeoZone $geoZone
- * @property OcCustomerGroup[] $customerGroups
- * @property OcTaxRule[] $taxRules
+ * @property \OcGeoZone $geoZone
+ * @property \OcCustomerGroup[] $customerGroups
+ * @property \OcTaxRule[] $taxRules
  *
- * @see CActiveRecord
- * @method OcTaxRate find() find($condition, array $params = array())
- * @method OcTaxRate findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcTaxRate findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcTaxRate findBySql() findBySql($sql, array $params = array())
- * @method OcTaxRate[] findAll() findAll($condition = '', array $params = array())
- * @method OcTaxRate[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcTaxRate[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcTaxRate[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcTaxRate with() with()
+ * @see \CActiveRecord
+ * @method \OcTaxRate find($condition = '', array $params = array())
+ * @method \OcTaxRate findByPk($pk, $condition = '', array $params = array())
+ * @method \OcTaxRate findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcTaxRate findBySql($sql, array $params = array())
+ * @method \OcTaxRate[] findAll($condition = '', array $params = array())
+ * @method \OcTaxRate[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcTaxRate[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcTaxRate[] findAllBySql($sql, array $params = array())
+ * @method \OcTaxRate with()
+ * @method \OcTaxRate together()
+ * @method \OcTaxRate cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcTaxRate resetScope($resetDefault = true)
+ * @method \OcTaxRate populateRecord($attributes, $callAfterFind = true)
+ * @method \OcTaxRate[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcTaxRate extends CActiveRecord

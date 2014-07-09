@@ -2,7 +2,7 @@
 /**
  * OcFilter
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{filter}}
  * @property integer $filter_id
@@ -10,23 +10,28 @@
  * @property integer $sort_order
  *
  * Relations
- * @property OcCategory[] $categories
- * @property OcFilterGroup $filterGroup
- * @property OcLanguage[] $languages
- * @property OcProduct[] $products
+ * @property \OcCategory[] $categories
+ * @property \OcFilterGroup $filterGroup
+ * @property \OcLanguage[] $languages
+ * @property \OcProduct[] $products
  *
- * @see CActiveRecord
- * @method OcFilter find() find($condition, array $params = array())
- * @method OcFilter findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcFilter findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcFilter findBySql() findBySql($sql, array $params = array())
- * @method OcFilter[] findAll() findAll($condition = '', array $params = array())
- * @method OcFilter[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcFilter[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcFilter[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcFilter with() with()
+ * @see \CActiveRecord
+ * @method \OcFilter find($condition = '', array $params = array())
+ * @method \OcFilter findByPk($pk, $condition = '', array $params = array())
+ * @method \OcFilter findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcFilter findBySql($sql, array $params = array())
+ * @method \OcFilter[] findAll($condition = '', array $params = array())
+ * @method \OcFilter[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcFilter[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcFilter[] findAllBySql($sql, array $params = array())
+ * @method \OcFilter with()
+ * @method \OcFilter together()
+ * @method \OcFilter cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcFilter resetScope($resetDefault = true)
+ * @method \OcFilter populateRecord($attributes, $callAfterFind = true)
+ * @method \OcFilter[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcFilter extends CActiveRecord

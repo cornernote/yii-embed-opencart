@@ -2,29 +2,9 @@
 /**
  * OcReturnReason
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{return_reason}}
- * @property integer $return_reason_id
- * @property integer $language_id
- * @property string $name
- *
- * Relations
- * @property OcReturn[] $returns
- * @property OcLanguage $language
- *
- * @see CActiveRecord
- * @method OcReturnReason find() find($condition, array $params = array())
- * @method OcReturnReason findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcReturnReason findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturnReason findBySql() findBySql($sql, array $params = array())
- * @method OcReturnReason[] findAll() findAll($condition = '', array $params = array())
- * @method OcReturnReason[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcReturnReason[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturnReason[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcReturnReason with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcReturnReason extends CActiveRecord

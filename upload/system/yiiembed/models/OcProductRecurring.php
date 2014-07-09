@@ -2,24 +2,9 @@
 /**
  * OcProductRecurring
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{product_recurring}}
- * @property integer $product_id
- * @property integer $store_id
- *
- * @see CActiveRecord
- * @method OcProductRecurring find() find($condition, array $params = array())
- * @method OcProductRecurring findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProductRecurring findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductRecurring findBySql() findBySql($sql, array $params = array())
- * @method OcProductRecurring[] findAll() findAll($condition = '', array $params = array())
- * @method OcProductRecurring[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProductRecurring[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProductRecurring[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProductRecurring with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProductRecurring extends CActiveRecord

@@ -2,24 +2,29 @@
 /**
  * OcCustomerBanIp
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{customer_ban_ip}}
  * @property integer $customer_ban_ip_id
  * @property string $ip
  *
- * @see CActiveRecord
- * @method OcCustomerBanIp find() find($condition, array $params = array())
- * @method OcCustomerBanIp findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerBanIp findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerBanIp findBySql() findBySql($sql, array $params = array())
- * @method OcCustomerBanIp[] findAll() findAll($condition = '', array $params = array())
- * @method OcCustomerBanIp[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCustomerBanIp[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCustomerBanIp[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCustomerBanIp with() with()
+ * @see \CActiveRecord
+ * @method \OcCustomerBanIp find($condition = '', array $params = array())
+ * @method \OcCustomerBanIp findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerBanIp findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerBanIp findBySql($sql, array $params = array())
+ * @method \OcCustomerBanIp[] findAll($condition = '', array $params = array())
+ * @method \OcCustomerBanIp[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCustomerBanIp[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCustomerBanIp[] findAllBySql($sql, array $params = array())
+ * @method \OcCustomerBanIp with()
+ * @method \OcCustomerBanIp together()
+ * @method \OcCustomerBanIp cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCustomerBanIp resetScope($resetDefault = true)
+ * @method \OcCustomerBanIp populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCustomerBanIp[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCustomerBanIp extends CActiveRecord

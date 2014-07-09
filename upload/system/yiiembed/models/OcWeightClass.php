@@ -2,28 +2,33 @@
 /**
  * OcWeightClass
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{weight_class}}
  * @property integer $weight_class_id
  * @property number $value
  *
  * Relations
- * @property OcProduct[] $products
- * @property OcLanguage[] $languages
+ * @property \OcProduct[] $products
+ * @property \OcLanguage[] $languages
  *
- * @see CActiveRecord
- * @method OcWeightClass find() find($condition, array $params = array())
- * @method OcWeightClass findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcWeightClass findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcWeightClass findBySql() findBySql($sql, array $params = array())
- * @method OcWeightClass[] findAll() findAll($condition = '', array $params = array())
- * @method OcWeightClass[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcWeightClass[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcWeightClass[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcWeightClass with() with()
+ * @see \CActiveRecord
+ * @method \OcWeightClass find($condition = '', array $params = array())
+ * @method \OcWeightClass findByPk($pk, $condition = '', array $params = array())
+ * @method \OcWeightClass findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcWeightClass findBySql($sql, array $params = array())
+ * @method \OcWeightClass[] findAll($condition = '', array $params = array())
+ * @method \OcWeightClass[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcWeightClass[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcWeightClass[] findAllBySql($sql, array $params = array())
+ * @method \OcWeightClass with()
+ * @method \OcWeightClass together()
+ * @method \OcWeightClass cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcWeightClass resetScope($resetDefault = true)
+ * @method \OcWeightClass populateRecord($attributes, $callAfterFind = true)
+ * @method \OcWeightClass[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcWeightClass extends CActiveRecord

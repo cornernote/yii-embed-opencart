@@ -2,7 +2,7 @@
 /**
  * OcLayoutRoute
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{layout_route}}
  * @property integer $layout_route_id
@@ -11,21 +11,26 @@
  * @property string $route
  *
  * Relations
- * @property OcLayout $layout
- * @property OcStore $store
+ * @property \OcLayout $layout
+ * @property \OcStore $store
  *
- * @see CActiveRecord
- * @method OcLayoutRoute find() find($condition, array $params = array())
- * @method OcLayoutRoute findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcLayoutRoute findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcLayoutRoute findBySql() findBySql($sql, array $params = array())
- * @method OcLayoutRoute[] findAll() findAll($condition = '', array $params = array())
- * @method OcLayoutRoute[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcLayoutRoute[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcLayoutRoute[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcLayoutRoute with() with()
+ * @see \CActiveRecord
+ * @method \OcLayoutRoute find($condition = '', array $params = array())
+ * @method \OcLayoutRoute findByPk($pk, $condition = '', array $params = array())
+ * @method \OcLayoutRoute findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcLayoutRoute findBySql($sql, array $params = array())
+ * @method \OcLayoutRoute[] findAll($condition = '', array $params = array())
+ * @method \OcLayoutRoute[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcLayoutRoute[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcLayoutRoute[] findAllBySql($sql, array $params = array())
+ * @method \OcLayoutRoute with()
+ * @method \OcLayoutRoute together()
+ * @method \OcLayoutRoute cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcLayoutRoute resetScope($resetDefault = true)
+ * @method \OcLayoutRoute populateRecord($attributes, $callAfterFind = true)
+ * @method \OcLayoutRoute[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcLayoutRoute extends CActiveRecord

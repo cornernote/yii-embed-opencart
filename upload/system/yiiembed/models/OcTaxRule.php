@@ -2,7 +2,7 @@
 /**
  * OcTaxRule
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{tax_rule}}
  * @property integer $tax_rule_id
@@ -12,21 +12,26 @@
  * @property integer $priority
  *
  * Relations
- * @property OcTaxClass $taxClass
- * @property OcTaxRate $taxRate
+ * @property \OcTaxClass $taxClass
+ * @property \OcTaxRate $taxRate
  *
- * @see CActiveRecord
- * @method OcTaxRule find() find($condition, array $params = array())
- * @method OcTaxRule findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcTaxRule findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcTaxRule findBySql() findBySql($sql, array $params = array())
- * @method OcTaxRule[] findAll() findAll($condition = '', array $params = array())
- * @method OcTaxRule[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcTaxRule[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcTaxRule[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcTaxRule with() with()
+ * @see \CActiveRecord
+ * @method \OcTaxRule find($condition = '', array $params = array())
+ * @method \OcTaxRule findByPk($pk, $condition = '', array $params = array())
+ * @method \OcTaxRule findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcTaxRule findBySql($sql, array $params = array())
+ * @method \OcTaxRule[] findAll($condition = '', array $params = array())
+ * @method \OcTaxRule[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcTaxRule[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcTaxRule[] findAllBySql($sql, array $params = array())
+ * @method \OcTaxRule with()
+ * @method \OcTaxRule together()
+ * @method \OcTaxRule cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcTaxRule resetScope($resetDefault = true)
+ * @method \OcTaxRule populateRecord($attributes, $callAfterFind = true)
+ * @method \OcTaxRule[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcTaxRule extends CActiveRecord

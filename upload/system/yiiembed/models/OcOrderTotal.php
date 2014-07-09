@@ -2,7 +2,7 @@
 /**
  * OcOrderTotal
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order_total}}
  * @property integer $order_total_id
@@ -14,20 +14,25 @@
  * @property integer $sort_order
  *
  * Relations
- * @property OcOrder $order
+ * @property \OcOrder $order
  *
- * @see CActiveRecord
- * @method OcOrderTotal find() find($condition, array $params = array())
- * @method OcOrderTotal findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderTotal findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderTotal findBySql() findBySql($sql, array $params = array())
- * @method OcOrderTotal[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderTotal[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderTotal[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderTotal[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderTotal with() with()
+ * @see \CActiveRecord
+ * @method \OcOrderTotal find($condition = '', array $params = array())
+ * @method \OcOrderTotal findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderTotal findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderTotal findBySql($sql, array $params = array())
+ * @method \OcOrderTotal[] findAll($condition = '', array $params = array())
+ * @method \OcOrderTotal[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderTotal[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderTotal[] findAllBySql($sql, array $params = array())
+ * @method \OcOrderTotal with()
+ * @method \OcOrderTotal together()
+ * @method \OcOrderTotal cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrderTotal resetScope($resetDefault = true)
+ * @method \OcOrderTotal populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrderTotal[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderTotal extends CActiveRecord

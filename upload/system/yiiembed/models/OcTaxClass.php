@@ -2,7 +2,7 @@
 /**
  * OcTaxClass
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{tax_class}}
  * @property integer $tax_class_id
@@ -12,21 +12,26 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcProduct[] $products
- * @property OcTaxRule[] $taxRules
+ * @property \OcProduct[] $products
+ * @property \OcTaxRule[] $taxRules
  *
- * @see CActiveRecord
- * @method OcTaxClass find() find($condition, array $params = array())
- * @method OcTaxClass findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcTaxClass findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcTaxClass findBySql() findBySql($sql, array $params = array())
- * @method OcTaxClass[] findAll() findAll($condition = '', array $params = array())
- * @method OcTaxClass[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcTaxClass[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcTaxClass[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcTaxClass with() with()
+ * @see \CActiveRecord
+ * @method \OcTaxClass find($condition = '', array $params = array())
+ * @method \OcTaxClass findByPk($pk, $condition = '', array $params = array())
+ * @method \OcTaxClass findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcTaxClass findBySql($sql, array $params = array())
+ * @method \OcTaxClass[] findAll($condition = '', array $params = array())
+ * @method \OcTaxClass[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcTaxClass[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcTaxClass[] findAllBySql($sql, array $params = array())
+ * @method \OcTaxClass with()
+ * @method \OcTaxClass together()
+ * @method \OcTaxClass cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcTaxClass resetScope($resetDefault = true)
+ * @method \OcTaxClass populateRecord($attributes, $callAfterFind = true)
+ * @method \OcTaxClass[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcTaxClass extends CActiveRecord

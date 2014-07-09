@@ -2,7 +2,7 @@
 /**
  * OcReturnHistory
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{return_history}}
  * @property integer $return_history_id
@@ -13,21 +13,26 @@
  * @property string $date_added
  *
  * Relations
- * @property OcReturn $return
- * @property OcReturnStatus $returnStatus
+ * @property \OcReturn $return
+ * @property \OcReturnStatus $returnStatus
  *
- * @see CActiveRecord
- * @method OcReturnHistory find() find($condition, array $params = array())
- * @method OcReturnHistory findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcReturnHistory findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturnHistory findBySql() findBySql($sql, array $params = array())
- * @method OcReturnHistory[] findAll() findAll($condition = '', array $params = array())
- * @method OcReturnHistory[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcReturnHistory[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcReturnHistory[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcReturnHistory with() with()
+ * @see \CActiveRecord
+ * @method \OcReturnHistory find($condition = '', array $params = array())
+ * @method \OcReturnHistory findByPk($pk, $condition = '', array $params = array())
+ * @method \OcReturnHistory findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcReturnHistory findBySql($sql, array $params = array())
+ * @method \OcReturnHistory[] findAll($condition = '', array $params = array())
+ * @method \OcReturnHistory[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcReturnHistory[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcReturnHistory[] findAllBySql($sql, array $params = array())
+ * @method \OcReturnHistory with()
+ * @method \OcReturnHistory together()
+ * @method \OcReturnHistory cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcReturnHistory resetScope($resetDefault = true)
+ * @method \OcReturnHistory populateRecord($attributes, $callAfterFind = true)
+ * @method \OcReturnHistory[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcReturnHistory extends CActiveRecord

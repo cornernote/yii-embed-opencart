@@ -2,7 +2,7 @@
 /**
  * OcCouponProduct
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{coupon_product}}
  * @property integer $coupon_product_id
@@ -10,21 +10,26 @@
  * @property integer $product_id
  *
  * Relations
- * @property OcCoupon $coupon
- * @property OcProduct $product
+ * @property \OcCoupon $coupon
+ * @property \OcProduct $product
  *
- * @see CActiveRecord
- * @method OcCouponProduct find() find($condition, array $params = array())
- * @method OcCouponProduct findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcCouponProduct findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCouponProduct findBySql() findBySql($sql, array $params = array())
- * @method OcCouponProduct[] findAll() findAll($condition = '', array $params = array())
- * @method OcCouponProduct[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcCouponProduct[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcCouponProduct[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcCouponProduct with() with()
+ * @see \CActiveRecord
+ * @method \OcCouponProduct find($condition = '', array $params = array())
+ * @method \OcCouponProduct findByPk($pk, $condition = '', array $params = array())
+ * @method \OcCouponProduct findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCouponProduct findBySql($sql, array $params = array())
+ * @method \OcCouponProduct[] findAll($condition = '', array $params = array())
+ * @method \OcCouponProduct[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcCouponProduct[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcCouponProduct[] findAllBySql($sql, array $params = array())
+ * @method \OcCouponProduct with()
+ * @method \OcCouponProduct together()
+ * @method \OcCouponProduct cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcCouponProduct resetScope($resetDefault = true)
+ * @method \OcCouponProduct populateRecord($attributes, $callAfterFind = true)
+ * @method \OcCouponProduct[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcCouponProduct extends CActiveRecord

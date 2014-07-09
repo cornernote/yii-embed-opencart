@@ -2,7 +2,7 @@
 /**
  * OcOrder
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order}}
  * @property integer $order_id
@@ -65,46 +65,51 @@
  * @property string $date_modified
  *
  * Relations
- * @property OcAffiliateTransaction[] $affiliateTransactions
- * @property OcCouponHistory[] $couponHistories
- * @property OcCustomerReward[] $customerRewards
- * @property OcCustomerTransaction[] $customerTransactions
- * @property OcStore $store
- * @property OcCustomer $customer
- * @property OcCustomerGroup $customerGroup
- * @property OcPaymentCountry $paymentCountry
- * @property OcPaymentZone $paymentZone
- * @property OcShippingCountry $shippingCountry
- * @property OcShippingZone $shippingZone
- * @property OcOrderStatus $orderStatus
- * @property OcAffiliate $affiliate
- * @property OcLanguage $language
- * @property OcCurrency $currency
- * @property OcOrderDownload[] $orderDownloads
- * @property OcOrderField[] $orderFields
- * @property OcOrderFraud $orderFraud
- * @property OcOrderHistory[] $orderHistories
- * @property OcOrderOption[] $orderOptions
- * @property OcOrderProduct[] $orderProducts
- * @property OcOrderRecurring[] $orderRecurrings
- * @property OcOrderTotal[] $orderTotals
- * @property OcOrderVoucher[] $orderVouchers
- * @property OcReturn[] $returns
- * @property OcVoucher[] $vouchers
- * @property OcVoucherHistory[] $voucherHistories
+ * @property \OcAffiliateTransaction[] $affiliateTransactions
+ * @property \OcCouponHistory[] $couponHistories
+ * @property \OcCustomerReward[] $customerRewards
+ * @property \OcCustomerTransaction[] $customerTransactions
+ * @property \OcStore $store
+ * @property \OcCustomer $customer
+ * @property \OcCustomerGroup $customerGroup
+ * @property \OcPaymentCountry $paymentCountry
+ * @property \OcPaymentZone $paymentZone
+ * @property \OcShippingCountry $shippingCountry
+ * @property \OcShippingZone $shippingZone
+ * @property \OcOrderStatus $orderStatus
+ * @property \OcAffiliate $affiliate
+ * @property \OcLanguage $language
+ * @property \OcCurrency $currency
+ * @property \OcOrderDownload[] $orderDownloads
+ * @property \OcOrderField[] $orderFields
+ * @property \OcOrderFraud $orderFraud
+ * @property \OcOrderHistory[] $orderHistories
+ * @property \OcOrderOption[] $orderOptions
+ * @property \OcOrderProduct[] $orderProducts
+ * @property \OcOrderRecurring[] $orderRecurrings
+ * @property \OcOrderTotal[] $orderTotals
+ * @property \OcOrderVoucher[] $orderVouchers
+ * @property \OcReturn[] $returns
+ * @property \OcVoucher[] $vouchers
+ * @property \OcVoucherHistory[] $voucherHistories
  *
- * @see CActiveRecord
- * @method OcOrder find() find($condition, array $params = array())
- * @method OcOrder findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrder findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrder findBySql() findBySql($sql, array $params = array())
- * @method OcOrder[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrder[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrder[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrder[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrder with() with()
+ * @see \CActiveRecord
+ * @method \OcOrder find($condition = '', array $params = array())
+ * @method \OcOrder findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrder findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrder findBySql($sql, array $params = array())
+ * @method \OcOrder[] findAll($condition = '', array $params = array())
+ * @method \OcOrder[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrder[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrder[] findAllBySql($sql, array $params = array())
+ * @method \OcOrder with()
+ * @method \OcOrder together()
+ * @method \OcOrder cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrder resetScope($resetDefault = true)
+ * @method \OcOrder populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrder[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrder extends CActiveRecord

@@ -2,7 +2,7 @@
 /**
  * OcOrderFraud
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{order_fraud}}
  * @property integer $order_id
@@ -60,21 +60,26 @@
  * @property string $date_added
  *
  * Relations
- * @property OcOrder $order
- * @property OcCustomer $customer
+ * @property \OcOrder $order
+ * @property \OcCustomer $customer
  *
- * @see CActiveRecord
- * @method OcOrderFraud find() find($condition, array $params = array())
- * @method OcOrderFraud findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOrderFraud findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderFraud findBySql() findBySql($sql, array $params = array())
- * @method OcOrderFraud[] findAll() findAll($condition = '', array $params = array())
- * @method OcOrderFraud[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOrderFraud[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOrderFraud[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOrderFraud with() with()
+ * @see \CActiveRecord
+ * @method \OcOrderFraud find($condition = '', array $params = array())
+ * @method \OcOrderFraud findByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderFraud findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderFraud findBySql($sql, array $params = array())
+ * @method \OcOrderFraud[] findAll($condition = '', array $params = array())
+ * @method \OcOrderFraud[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcOrderFraud[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcOrderFraud[] findAllBySql($sql, array $params = array())
+ * @method \OcOrderFraud with()
+ * @method \OcOrderFraud together()
+ * @method \OcOrderFraud cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcOrderFraud resetScope($resetDefault = true)
+ * @method \OcOrderFraud populateRecord($attributes, $callAfterFind = true)
+ * @method \OcOrderFraud[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOrderFraud extends CActiveRecord

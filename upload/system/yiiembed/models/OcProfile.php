@@ -2,7 +2,7 @@
 /**
  * OcProfile
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{profile}}
  * @property integer $profile_id
@@ -19,22 +19,27 @@
  * @property string $trial_cycle
  *
  * Relations
- * @property OcOrderRecurring[] $orderRecurrings
- * @property OcProductProfile[] $productProfiles
- * @property OcLanguage[] $languages
+ * @property \OcOrderRecurring[] $orderRecurrings
+ * @property \OcProductProfile[] $productProfiles
+ * @property \OcLanguage[] $languages
  *
- * @see CActiveRecord
- * @method OcProfile find() find($condition, array $params = array())
- * @method OcProfile findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcProfile findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProfile findBySql() findBySql($sql, array $params = array())
- * @method OcProfile[] findAll() findAll($condition = '', array $params = array())
- * @method OcProfile[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcProfile[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcProfile[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcProfile with() with()
+ * @see \CActiveRecord
+ * @method \OcProfile find($condition = '', array $params = array())
+ * @method \OcProfile findByPk($pk, $condition = '', array $params = array())
+ * @method \OcProfile findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProfile findBySql($sql, array $params = array())
+ * @method \OcProfile[] findAll($condition = '', array $params = array())
+ * @method \OcProfile[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcProfile[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcProfile[] findAllBySql($sql, array $params = array())
+ * @method \OcProfile with()
+ * @method \OcProfile together()
+ * @method \OcProfile cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcProfile resetScope($resetDefault = true)
+ * @method \OcProfile populateRecord($attributes, $callAfterFind = true)
+ * @method \OcProfile[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcProfile extends CActiveRecord

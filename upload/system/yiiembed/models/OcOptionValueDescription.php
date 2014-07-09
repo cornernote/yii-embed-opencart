@@ -2,26 +2,9 @@
 /**
  * OcOptionValueDescription
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{option_value_description}}
- * @property integer $option_value_id
- * @property integer $language_id
- * @property integer $option_id
- * @property string $name
- *
- * @see CActiveRecord
- * @method OcOptionValueDescription find() find($condition, array $params = array())
- * @method OcOptionValueDescription findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcOptionValueDescription findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOptionValueDescription findBySql() findBySql($sql, array $params = array())
- * @method OcOptionValueDescription[] findAll() findAll($condition = '', array $params = array())
- * @method OcOptionValueDescription[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcOptionValueDescription[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcOptionValueDescription[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcOptionValueDescription with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcOptionValueDescription extends CActiveRecord

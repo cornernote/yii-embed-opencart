@@ -2,7 +2,7 @@
 /**
  * OcUserGroup
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{user_group}}
  * @property integer $user_group_id
@@ -10,20 +10,25 @@
  * @property string $permission
  *
  * Relations
- * @property OcUser[] $users
+ * @property \OcUser[] $users
  *
- * @see CActiveRecord
- * @method OcUserGroup find() find($condition, array $params = array())
- * @method OcUserGroup findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcUserGroup findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcUserGroup findBySql() findBySql($sql, array $params = array())
- * @method OcUserGroup[] findAll() findAll($condition = '', array $params = array())
- * @method OcUserGroup[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcUserGroup[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcUserGroup[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcUserGroup with() with()
+ * @see \CActiveRecord
+ * @method \OcUserGroup find($condition = '', array $params = array())
+ * @method \OcUserGroup findByPk($pk, $condition = '', array $params = array())
+ * @method \OcUserGroup findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcUserGroup findBySql($sql, array $params = array())
+ * @method \OcUserGroup[] findAll($condition = '', array $params = array())
+ * @method \OcUserGroup[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcUserGroup[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcUserGroup[] findAllBySql($sql, array $params = array())
+ * @method \OcUserGroup with()
+ * @method \OcUserGroup together()
+ * @method \OcUserGroup cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcUserGroup resetScope($resetDefault = true)
+ * @method \OcUserGroup populateRecord($attributes, $callAfterFind = true)
+ * @method \OcUserGroup[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcUserGroup extends CActiveRecord

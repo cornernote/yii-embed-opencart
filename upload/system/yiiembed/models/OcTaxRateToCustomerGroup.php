@@ -2,24 +2,9 @@
 /**
  * OcTaxRateToCustomerGroup
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
- * Table {{tax_rate_to_customer_group}}
- * @property integer $tax_rate_id
- * @property integer $customer_group_id
- *
- * @see CActiveRecord
- * @method OcTaxRateToCustomerGroup find() find($condition, array $params = array())
- * @method OcTaxRateToCustomerGroup findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcTaxRateToCustomerGroup findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcTaxRateToCustomerGroup findBySql() findBySql($sql, array $params = array())
- * @method OcTaxRateToCustomerGroup[] findAll() findAll($condition = '', array $params = array())
- * @method OcTaxRateToCustomerGroup[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcTaxRateToCustomerGroup[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcTaxRateToCustomerGroup[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcTaxRateToCustomerGroup with() with()
- *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcTaxRateToCustomerGroup extends CActiveRecord

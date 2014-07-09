@@ -2,7 +2,7 @@
 /**
  * OcGeoZone
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{geo_zone}}
  * @property integer $geo_zone_id
@@ -12,21 +12,26 @@
  * @property string $date_added
  *
  * Relations
- * @property OcTaxRate[] $taxRates
- * @property OcZoneToGeoZone[] $zoneToGeoZones
+ * @property \OcTaxRate[] $taxRates
+ * @property \OcZoneToGeoZone[] $zoneToGeoZones
  *
- * @see CActiveRecord
- * @method OcGeoZone find() find($condition, array $params = array())
- * @method OcGeoZone findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcGeoZone findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcGeoZone findBySql() findBySql($sql, array $params = array())
- * @method OcGeoZone[] findAll() findAll($condition = '', array $params = array())
- * @method OcGeoZone[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcGeoZone[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcGeoZone[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcGeoZone with() with()
+ * @see \CActiveRecord
+ * @method \OcGeoZone find($condition = '', array $params = array())
+ * @method \OcGeoZone findByPk($pk, $condition = '', array $params = array())
+ * @method \OcGeoZone findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcGeoZone findBySql($sql, array $params = array())
+ * @method \OcGeoZone[] findAll($condition = '', array $params = array())
+ * @method \OcGeoZone[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcGeoZone[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcGeoZone[] findAllBySql($sql, array $params = array())
+ * @method \OcGeoZone with()
+ * @method \OcGeoZone together()
+ * @method \OcGeoZone cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcGeoZone resetScope($resetDefault = true)
+ * @method \OcGeoZone populateRecord($attributes, $callAfterFind = true)
+ * @method \OcGeoZone[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcGeoZone extends CActiveRecord

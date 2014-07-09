@@ -2,7 +2,7 @@
 /**
  * OcUser
  *
- * --- BEGIN GenerateProperties ---
+ * --- BEGIN ModelDoc ---
  *
  * Table {{user}}
  * @property integer $user_id
@@ -19,20 +19,25 @@
  * @property string $date_added
  *
  * Relations
- * @property OcUserGroup $userGroup
+ * @property \OcUserGroup $userGroup
  *
- * @see CActiveRecord
- * @method OcUser find() find($condition, array $params = array())
- * @method OcUser findByPk() findByPk($pk, $condition = '', array $params = array())
- * @method OcUser findByAttributes() findByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcUser findBySql() findBySql($sql, array $params = array())
- * @method OcUser[] findAll() findAll($condition = '', array $params = array())
- * @method OcUser[] findAllByPk() findAllByPk($pk, $condition = '', array $params = array())
- * @method OcUser[] findAllByAttributes() findAllByAttributes(array $attributes, $condition = '', array $params = array())
- * @method OcUser[] findAllBySql() findAllBySql($sql, array $params = array())
- * @method OcUser with() with()
+ * @see \CActiveRecord
+ * @method \OcUser find($condition = '', array $params = array())
+ * @method \OcUser findByPk($pk, $condition = '', array $params = array())
+ * @method \OcUser findByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcUser findBySql($sql, array $params = array())
+ * @method \OcUser[] findAll($condition = '', array $params = array())
+ * @method \OcUser[] findAllByPk($pk, $condition = '', array $params = array())
+ * @method \OcUser[] findAllByAttributes(array $attributes, $condition = '', array $params = array())
+ * @method \OcUser[] findAllBySql($sql, array $params = array())
+ * @method \OcUser with()
+ * @method \OcUser together()
+ * @method \OcUser cache($duration, $dependency = null, $queryCount = 1)
+ * @method \OcUser resetScope($resetDefault = true)
+ * @method \OcUser populateRecord($attributes, $callAfterFind = true)
+ * @method \OcUser[] populateRecords($data, $callAfterFind = true, $index = null)
  *
- * --- END GenerateProperties ---
+ * --- END ModelDoc ---
  */
 
 class OcUser extends CActiveRecord
