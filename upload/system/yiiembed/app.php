@@ -227,6 +227,9 @@ class OcWebApplication extends CWebApplication
             'messages' => array(
                 'class' => 'OcMessageSource',
             ),
+            'session' => array(
+                'autoStart' => false,
+            ),
             'urlManager' => array(
                 'class' => 'OcUrlManager',
             ),
