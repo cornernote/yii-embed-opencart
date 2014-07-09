@@ -6,13 +6,13 @@
  * @var $code string
  * @var $message string
  */
-$this->pageTitle = Yii::app()->name . ' - Error';
+$this->pageTitle = Yii::app()->name . ' - ' . Yii::t('site/index', 'heading_title');
 $this->breadcrumbs = array(
-    'Error',
+    Yii::t('site/index', 'heading_title'),
 );
 ?>
 
-<h2>Error <?php echo $code; ?></h2>
+<h2><?php echo Yii::t('site/index', 'heading_title') . ' ' . $code; ?></h2>
 
 <div class="error">
     <?php echo CHtml::encode($message); ?>

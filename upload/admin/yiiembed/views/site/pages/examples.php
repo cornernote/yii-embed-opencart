@@ -7,10 +7,9 @@
 $this->pageTitle = Yii::app()->name . ' - Examples';
 $this->breadcrumbs = array(
     Yii::app()->name => array('site/index'),
-    'Examples',
+    Yii::t('site/pages_examples', 'heading_title'),
 );
 ?>
-<h1>Examples</h1>
+<h1><?php echo Yii::t('site/pages_examples', 'heading_title'); ?></h1>
 
-<p>This is a "static" page. You may change the content of this page
-    by updating the file <code><?php echo __FILE__; ?></code>.</p>
+<p><?php echo Yii::t('site/pages_examples', 'text_change', array(':file' => __FILE__)); ?></p>

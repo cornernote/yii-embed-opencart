@@ -10,13 +10,13 @@ $this->breadcrumbs = array(
 );
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1><?php echo Yii::t('site/index', 'heading_title', array(':app_name' => CHtml::encode(Yii::app()->name))); ?></h1>
 
-<p>You may change the content of this page by modifying the following files:</p>
+<p><?php echo Yii::t('site/index', 'text_change'); ?>:</p>
 <ul>
-    <li>View file: <code><?php echo __FILE__; ?></code></li>
-    <li>Layout file: <code><?php echo realpath($this->getLayoutFile($this->layout)); ?></code></li>
-    <li>Container file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
+    <li><?php echo Yii::t('site/index', 'text_view_file'); ?>: <code><?php echo __FILE__; ?></code></li>
+    <li><?php echo Yii::t('site/index', 'text_layout_file'); ?>: <code><?php echo realpath($this->getLayoutFile($this->layout)); ?></code></li>
+    <li><?php echo Yii::t('site/index', 'text_container_file'); ?>: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
 </ul>
 
-<p>Browse to the <?php echo CHtml::link('examples page', Yii::app()->createUrl('site/page', array('view' => 'examples'))); ?> to see more examples of Yii-Embed for OpenCart.</p>
+<p><?php echo Yii::t('site/index', 'text_more_examples', array(':link'=>CHtml::link('examples page', array('site/page', 'view' => 'examples')))); ?></p>
