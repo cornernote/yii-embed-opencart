@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EXAMPLE SITE CONTROLLER - MODIFY TO SUIT
  */

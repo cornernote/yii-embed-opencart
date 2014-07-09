@@ -1,10 +1,11 @@
 <?php
+
 /**
  * EXAMPLE BASE CONTROLLER - MODIFY TO SUIT
  *
  * Controller is the customized base controller class.
  * All controller classes for this application should extend from this base class.
- * 
+ *
  * @property Config $config
  * @property Currency $currency
  * @property Tax $tax
@@ -17,12 +18,12 @@ class OcController extends CController
      * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
      */
     public $layout = '//layouts/column1';
-    
+
     /**
      * @var array context menu items. This property will be assigned to {@link CMenu::items}.
      */
     public $menu = array();
-    
+
     /**
      * @var array the breadcrumbs of the current page. The value of this property will
      * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
