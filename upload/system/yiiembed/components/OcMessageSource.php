@@ -25,21 +25,14 @@ class OcMessageSource extends CMessageSource
      */
     private $_registry = array();
 
-    protected function getRegistry()
-    {
-        if (!$this->_registry) {
-            $this->_registry = Yii::app()->registry;
-        }
-        return $this->_registry;
-    }
-
     /**
      * @param $category
      * @param $language
+     * @return array|void
      */
     protected function loadMessages($category, $language)
     {
-        $this->registry->load->language($category);
+        Yii::app()->registry->get('load')->language($category);
         $this->_messages[$category . '/' . $language] = true;
     }
 
@@ -54,7 +47,7 @@ class OcMessageSource extends CMessageSource
         if (!isset($this->_messages[$category . '/' . $language])) {
             $this->loadMessages($category, $language);
         }
-        $message = $this->registry->language->get($message);
+        $message = Yii::app()->registry->get('language')->get($message);
         if (!$message) {
             $message = parent::translateMessage($category, $message, $language);
         }

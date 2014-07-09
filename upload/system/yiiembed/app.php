@@ -58,16 +58,6 @@ class OcWebApplication extends CWebApplication
     }
 
     /**
-     * Returns the language that the user is using and the application should be targeted to.
-     * @return string the language that the user is using and the application should be targeted to.
-     * Defaults to the {@link sourceLanguage source language}.
-     */
-    public function getLanguage()
-    {
-        return $this->registry->config->get('config_language');
-    }
-
-    /**
      * Initializes the application.
      *
      * Overrides parent with the following features:
