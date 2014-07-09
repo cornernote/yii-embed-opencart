@@ -1,4 +1,5 @@
 <?php
+
 /**
  * OcWebApplication is a lightweight Yii application embedded into OpenCart.
  *
@@ -56,7 +57,7 @@ class OcWebApplication extends CWebApplication
         parent::__construct($app);
     }
 
-     /**
+    /**
      * Initializes the application.
      *
      * Overrides parent with the following features:
@@ -222,6 +223,9 @@ class OcWebApplication extends CWebApplication
                     'jquery.js' => false,
                     'jquery.min.js' => false,
                 ),
+            ),
+            'messages' => array(
+                'class' => 'OcMessageSource',
             ),
             'urlManager' => array(
                 'class' => 'OcUrlManager',
