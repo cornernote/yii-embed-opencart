@@ -32,7 +32,8 @@ class OcMessageSource extends CMessageSource
      */
     protected function loadMessages($category, $language)
     {
-        Yii::app()->registry->get('load')->language($category);
+        // suppress error thrown by OC language loader, let yii load it's own language
+        @Yii::app()->registry->get('load')->language($category);
         $this->_messages[$category . '/' . $language] = true;
     }
 
